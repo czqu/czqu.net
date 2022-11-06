@@ -30,7 +30,7 @@ jobs:
       - name: Set Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '17'
         # Cache node modules to accelerate
       - name: Get yarn cache directory path
         id: yarn-cache-dir-path
