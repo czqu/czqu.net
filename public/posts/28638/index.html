@@ -1,0 +1,2493 @@
+<!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="utf-8"><meta name="keywords" content="C语言程序设计现代方法答案, Czq&#39;s blog"><meta name="description" content="Chapter 2Answers to Selected Exercises2. [was #2] (a) The program contains one directive (#include) and four statements "><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="canonical" href="https://czqu.net/posts/28638/"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="renderer" content="webkit|ie-stand|ie-comp"><meta name="mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="referrer" content="no-referrer-when-downgrade"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-171260366-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-171260366-1")</script><title>C语言程序设计现代方法答案 | Czq&#39;s blog</title><link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css"><link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css"><link rel="stylesheet" type="text/css" href="/libs/aos/aos.css"><link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css"><link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css"><link rel="stylesheet" type="text/css" href="/css/matery.css"><link rel="stylesheet" type="text/css" href="/css/my.css"><script src="/libs/jquery/jquery-3.6.0.min.js"></script><meta name="generator" content="Hexo 6.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/atom.xml" title="Czq's blog" type="application/atom+xml"><link rel="alternate" href="/rss2.xml" title="Czq's blog" type="application/rss+xml"></head><body><header class="navbar-fixed"><nav id="headNav" class="bg-color nav-transparent"><div id="navContainer" class="nav-wrapper container"><div class="brand-logo"><a href="/" class="waves-effect waves-light"><img src="/medias/logo.png" class="logo-img" alt="LOGO"> <span class="logo-span">Czq&#39;s blog</span></a></div><a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href="/" class="waves-effect waves-light"><i class="fas fa-home" style="zoom:.6"></i> <span>首页</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fas fa-tags" style="zoom:.6"></i> <span>标签</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fas fa-bookmark" style="zoom:.6"></i> <span>分类</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fas fa-archive" style="zoom:.6"></i> <span>归档</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/about" class="waves-effect waves-light"><i class="fas fa-user-circle" style="zoom:.6"></i> <span>关于</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fas fa-comments" style="zoom:.6"></i> <span>留言板</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/links" class="waves-effect waves-light"><i class="fas fa-address-book" style="zoom:.6"></i> <span>友情链接</span></a></li><li class="hide-on-med-and-down nav-item"><a target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html" class="waves-effect waves-light"><i class="fab fa-opera" style="zoom:.6"></i> <span>虫洞</span></a></li><li><a href="#searchModal" class="modal-trigger waves-effect waves-light"><i id="searchIcon" class="fas fa-search" title="搜索" style="zoom:.85"></i></a></li></ul><div id="mobile-nav" class="side-nav sidenav"><div class="mobile-head bg-color"><img src="/medias/logo.png" class="logo-img circle responsive-img"><div class="logo-name">Czq&#39;s blog</div><div class="logo-desc">Czq&#39;s blog</div></div><ul class="menu-list mobile-menu-list"><li class="m-nav-item"><a href="/" class="waves-effect waves-light"><i class="fa-fw fas fa-home"></i> 首页</a></li><li class="m-nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fa-fw fas fa-tags"></i> 标签</a></li><li class="m-nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fa-fw fas fa-bookmark"></i> 分类</a></li><li class="m-nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fa-fw fas fa-archive"></i> 归档</a></li><li class="m-nav-item"><a href="/about" class="waves-effect waves-light"><i class="fa-fw fas fa-user-circle"></i> 关于</a></li><li class="m-nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fa-fw fas fa-comments"></i> 留言板</a></li><li class="m-nav-item"><a href="/links" class="waves-effect waves-light"><i class="fa-fw fas fa-address-book"></i> 友情链接</a></li><li class="m-nav-item"><a target="_blank" rel="noopener" href="https://www.foreverblog.cn/go.html" class="waves-effect waves-light"><i class="fa-fw fab fa-opera"></i> 虫洞</a></li></ul></div></div></nav></header><div class="bg-cover pd-header post-cover" style="background-image:url(/medias/featureimages/115.webp)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><h1 class="description center-align post-title">C语言程序设计现代方法答案</h1></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="/libs/tocbot/tocbot.css"><style>#articleContent h1::before,#articleContent h2::before,#articleContent h3::before,#articleContent h4::before,#articleContent h5::before,#articleContent h6::before{display:block;content:" ";height:100px;margin-top:-100px;visibility:hidden}#articleContent :focus{outline:0}.toc-fixed{position:fixed;top:64px}.toc-widget{width:345px;padding-left:20px}.toc-widget .toc-title{padding:35px 0 15px 17px;font-size:1.5rem;font-weight:700;line-height:1.5rem}.toc-widget ol{padding:0;list-style:none}#toc-content{padding-bottom:30px;overflow:auto}#toc-content ol{padding-left:10px}#toc-content ol li{padding-left:10px}#toc-content .toc-link:hover{color:#42b983;font-weight:700;text-decoration:underline}#toc-content .toc-link::before{background-color:transparent;max-height:25px;position:absolute;right:23.5vw;display:block}#toc-content .is-active-link{color:#42b983}#floating-toc-btn{position:fixed;right:15px;bottom:76px;padding-top:15px;margin-bottom:0;z-index:998}#floating-toc-btn .btn-floating{width:48px;height:48px}#floating-toc-btn .btn-floating i{line-height:48px;font-size:1.4rem}</style><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/C%E8%AF%AD%E8%A8%80/"><span class="chip bg-color">C语言</span> </a><a href="/tags/%E7%AD%94%E6%A1%88/"><span class="chip bg-color">答案</span></a></div></div><div class="col s5 right-align"></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2022-11-06</div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 11.7k</div><div class="info-break-policy"><i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp; 73 分</div><div id="busuanzi_container_page_pv" class="info-break-policy"><i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp; <span id="busuanzi_value_page_pv"></span></div></div></div><hr class="clearfix"><link rel="stylesheet" href="/libs/prism/prism.css"><div class="card-content article-card-content"><div id="articleContent"><h3 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h3><h4 id="Answers-to-Selected-Exercises"><a href="#Answers-to-Selected-Exercises" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] (a) The program contains one directive (<code>#include</code>) and four statements (three calls of <code>printf</code> and one <code>return</code>).</p><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">Parkinson's Law:
+Work expands so as to fill the time
+available for its completion.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p><strong>3.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int height = 8, length = 12, width = 10, volume;
+ 
+  volume = height * length * width;
+ 
+  printf("Dimensions: %dx%dx%d\n", length, width, height);
+  printf("Volume (cubic inches): %d\n", volume);
+  printf("Dimensional weight (pounds): %d\n", (volume + 165) / 166);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #6] Here’s one possible program:</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int i, j, k;
+  float x, y, z;
+ 
+  printf("Value of i: %d\n", i);
+  printf("Value of j: %d\n", j);
+  printf("Value of k: %d\n", k);
+ 
+  printf("Value of x: %g\n", x);
+  printf("Value of y: %g\n", y);
+  printf("Value of z: %g\n", z);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>When compiled using GCC and then executed, this program produced the following output:</p><pre class="line-numbers language-none"><code class="language-none">Value of i: 5618848
+Value of j: 0
+Value of k: 6844404
+Value of x: 3.98979e-34
+Value of y: 9.59105e-39
+Value of z: 9.59105e-39<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The values printed depend on many factors, so the chance that you’ll get exactly these numbers is small.</p><p><strong>5.</strong> [was #10] (a) is not legal because <code>100_bottles</code> begins with a digit.</p><p><strong>8.</strong> [was #12] There are 14 tokens: <code>a</code>, <code>=</code>, <code>(</code>, <code>3</code>, <code>*</code>, <code>q</code>, <code>-</code>, <code>p</code>, <code>*</code>, <code>p</code>, <code>)</code>, <code>/</code>, <code>3</code>, and <code>;</code>.</p><h4 id="Answers-to-Selected-Programming-Projects"><a href="#Answers-to-Selected-Programming-Projects" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>4.</strong> [was #8; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  float original_amount, amount_with_tax;
+ 
+  printf("Enter an amount: ");
+  scanf("%f", &amp;original_amount);
+  amount_with_tax = original_amount * 1.05f;
+  printf("With tax added: $%.2f\n", amount_with_tax);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The <code>amount_with_tax</code> variable is unnecessary. If we remove it, the program is slightly shorter:</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  float original_amount;
+ 
+  printf("Enter an amount: ");
+  scanf("%f", &amp;original_amount);
+  printf("With tax added: $%.2f\n", original_amount * 1.05f);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>Chapter 3</strong></p><p><strong>Answers to Selected Exercises</strong></p><p><strong>2.</strong> [was #2]</p><p>(a) printf(“%-8.1e”, x);<br>(b) printf(“%10.6e”, x);<br>(c) printf(“%-8.3f”, x);<br>(d) printf(“%6.0f”, x);</p><p><strong>5.</strong> [was #8] The values of x, i, and y will be 12.3, 45, and .6, respectively.</p><p><strong>Answers to Selected Programming Projects</strong></p><p><strong>1.</strong> [was #4; modified]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int month, day, year;</p><p>printf(“Enter a date (mm/dd/yyyy): “);</p><p>scanf(“%d/%d/%d”, &amp;month, &amp;day, &amp;year);</p><p>printf(“You entered the date %d%.2d%.2d\n”, year, month, day);</p><p>return 0;</p><p>}</p><p><strong>3.</strong> [was #6; modified]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int prefix, group, publisher, item, check_digit;</p><p>printf(“Enter ISBN: “);</p><p>scanf(“%d-%d-%d-%d-%d”, &amp;prefix, &amp;group, &amp;publisher, &amp;item, &amp;check_digit);</p><p>printf(“GS1 prefix: %d\n”, prefix);</p><p>printf(“Group identifier: %d\n”, group);</p><p>printf(“Publisher code: %d\n”, publisher);</p><p>printf(“Item number: %d\n”, item);</p><p>printf(“Check digit: %d\n”, check_digit);</p><p>/* The five printf calls can be combined as follows:</p><p>printf(“GS1 prefix: %d\nGroup identifier: %d\nPublisher code: %d\nItem number: %d\nCheck digit: %d\n”,</p><p>​ prefix, group, publisher, item, check_digit);</p><p>*/</p><p>return 0;</p><p>}</p><p><strong>Chapter 4</strong></p><p><strong>Answers to Selected Exercises</strong></p><p><strong>2.</strong> [was #2] Not in C89. Suppose that i is 9 and j is 7. The value of (-i)/j could be either –1 or –2, depending on the implementation. On the other hand, the value of -(i/j) is always –1, regardless of the implementation. In C99, on the other hand, the value of (-i)/j must be equal to the value of -(i/j).</p><p><strong>9.</strong> [was #6]</p><p>(a) 63 8<br>(b) 3 2 1<br>(c) 2 -1 3<br>(d) 0 0 0</p><p><strong>13.</strong> [was #8] The expression ++i is equivalent to (i += 1). The value of both expressions is i <em>after</em> the increment has been performed.</p><p><strong>Answers to Selected Programming Projects</strong></p><p><strong>2.</strong> [was #4]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int n;</p><p>printf(“Enter a three-digit number: “);</p><p>scanf(“%d”, &amp;n);</p><p>printf(“The reversal is: %d%d%d\n”, n % 10, (n / 10) % 10, n / 100);</p><p>return 0;</p><p>}</p><p><strong>Chapter 5</strong></p><p><strong>Answers to Selected Exercises</strong></p><p><strong>2.</strong> [was #2]</p><p>(a) 1<br>(b) 1<br>(c) 1<br>(d) 1</p><p><strong>4.</strong> [was #4] (i &gt; j) - (i &lt; j)</p><p><strong>6.</strong> [was #12] Yes, the statement is legal. When n is equal to 5, it does nothing, since 5 is not equal to –9.</p><p><strong>10.</strong> [was #16] The output is</p><p>onetwo</p><p>since there are no break statements after the cases.</p><p><strong>Answers to Selected Programming Projects</strong></p><p><strong>2.</strong> [was #6]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int hours, minutes;</p><p>printf(“Enter a 24-hour time: “);</p><p>scanf(“%d:%d”, &amp;hours, &amp;minutes);</p><p>printf(“Equivalent 12-hour time: “);</p><p>if (hours == 0)</p><p>printf(“12:%.2d AM\n”, minutes);</p><p>else if (hours &lt; 12)</p><p>printf(“%d:%.2d AM\n”, hours, minutes);</p><p>else if (hours == 12)</p><p>printf(“%d:%.2d PM\n”, hours, minutes);</p><p>else</p><p>printf(“%d:%.2d PM\n”, hours - 12, minutes);</p><p>return 0;</p><p>}</p><p><strong>4.</strong> [was #8; modified]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int speed;</p><p>printf(“Enter a wind speed in knots: “);</p><p>scanf(“%d”, &amp;speed);</p><p>if (speed &lt; 1)</p><p>printf(“Calm\n”);</p><p>else if (speed &lt;= 3)</p><p>printf(“Light air\n”);</p><p>else if (speed &lt;= 27)</p><p>printf(“Breeze\n”);</p><p>else if (speed &lt;= 47)</p><p>printf(“Gale\n”);</p><p>else if (speed &lt;= 63)</p><p>printf(“Storm\n”);</p><p>else</p><p>printf(“Hurricane\n”);</p><p>return 0;</p><p>}</p><p><strong>6.</strong> [was #10]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int check_digit, d, i1, i2, i3, i4, i5, j1, j2, j3, j4, j5,</p><p>first_sum, second_sum, total;</p><p>printf(“Enter the first (single) digit: “);</p><p>scanf(“%1d”, &amp;d);</p><p>printf(“Enter first group of five digits: “);</p><p>scanf(“%1d%1d%1d%1d%1d”, &amp;i1, &amp;i2, &amp;i3, &amp;i4, &amp;i5);</p><p>printf(“Enter second group of five digits: “);</p><p>scanf(“%1d%1d%1d%1d%1d”, &amp;j1, &amp;j2, &amp;j3, &amp;j4, &amp;j5);</p><p>printf(“Enter the last (single) digit: “);</p><p>scanf(“%1d”, &amp;check_digit);</p><p>first_sum = d + i2 + i4 + j1 + j3 + j5;</p><p>second_sum = i1 + i3 + i5 + j2 + j4;</p><p>total = 3 * first_sum + second_sum;</p><p>if (check_digit == 9 - ((total - 1) % 10))</p><p>printf(“VALID\n”);</p><p>else</p><p>printf(“NOT VALID\n”);</p><p>return 0;</p><p>}</p><p><strong>10.</strong> [was #14]</p><p>#include &lt;stdio.h&gt;</p><p>int main(void)</p><p>{</p><p>int grade;</p><p>printf(“Enter numerical grade: “);</p><p>scanf(“%d”, &amp;grade);</p><p>if (grade &lt; 0 || grade &gt; 100) {</p><p>printf(“Illegal grade\n”);</p><p>return 0;</p><p>}</p><p>switch (grade / 10) {</p><p>case 10:</p><p>case 9: printf(“Letter grade: A\n”);</p><p>​ break;</p><p>case 8: printf(“Letter grade: B\n”);</p><p>​ break;</p><p>case 7: printf(“Letter grade: C\n”);</p><p>​ break;</p><p>case 6: printf(“Letter grade: D\n”);</p><p>​ break;</p><p>case 5:</p><p>case 4:</p><p>case 3:</p><p>case 2:</p><p>case 1:</p><p>case 0: printf(“Letter grade: F\n”);</p><p>​ break;</p><p>}</p><p>return 0;</p><p>}</p><h3 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a>Chapter 6</h3><h4 id="Answers-to-Selected-Exercises-1"><a href="#Answers-to-Selected-Exercises-1" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>4.</strong> [was #10] (c) is not equivalent to (a) and (b), because <code>i</code> is incremented <em>before</em> the loop body is executed.</p><p><strong>10.</strong> [was #12] Consider the following <code>while</code> loop:</p><pre class="line-numbers language-none"><code class="language-none">while (…) {
+  …
+  continue;
+  …
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The equivalent code using <code>goto</code> would have the following appearance:</p><pre class="line-numbers language-none"><code class="language-none">while (…) {
+  …
+  goto loop_end;
+  …
+  loop_end: ;   /* null statement */
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>12.</strong> [was #14]</p><pre class="line-numbers language-none"><code class="language-none">for (d = 2; d * d &lt;= n; d++)
+  if (n % d == 0)
+    break;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>The <code>if</code> statement that follows the loop will need to be modified as well:</p><pre class="line-numbers language-none"><code class="language-none">if (d * d &lt;= n)
+  printf("%d is divisible by %d\n", n, d);
+else
+  printf("%d is prime\n", n);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong>14.</strong> [was #16] The problem is the semicolon at the end of the first line. If we remove it, the statement is now correct:</p><pre class="line-numbers language-none"><code class="language-none">if (n % 2 == 0)
+  printf("n is even\n");<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-1"><a href="#Answers-to-Selected-Programming-Projects-1" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>2.</strong> [was #2]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int m, n, remainder;
+ 
+  printf("Enter two integers: ");
+  scanf("%d%d", &amp;m, &amp;n);
+ 
+  while (n != 0) {
+    remainder = m % n;
+    m = n;
+    n = remainder;
+  }
+ 
+  printf("Greatest common divisor: %d\n", m);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  float commission, value;
+ 
+  printf("Enter value of trade: ");
+  scanf("%f", &amp;value);
+ 
+  while (value != 0.0f) {
+    if (value &lt; 2500.00f)
+      commission = 30.00f + .017f * value;
+    else if (value &lt; 6250.00f)
+      commission = 56.00f + .0066f * value;
+    else if (value &lt; 20000.00f)
+      commission = 76.00f + .0034f * value;
+    else if (value &lt; 50000.00f)
+      commission = 100.00f + .0022f * value;
+    else if (value &lt; 500000.00f)
+      commission = 155.00f + .0011f * value;
+    else
+      commission = 255.00f + .0009f * value;
+ 
+    if (commission &lt; 39.00f)
+      commission = 39.00f;
+ 
+    printf("Commission: $%.2f\n\n", commission);
+ 
+    printf("Enter value of trade: ");
+    scanf("%f", &amp;value);
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int i, n;
+ 
+  printf("Enter limit on maximum square: ");
+  scanf("%d", &amp;n);
+ 
+  for (i = 2; i * i &lt;= n; i += 2)
+    printf("%d\n", i * i);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>8.</strong> [was #8]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int i, n, start_day;
+ 
+  printf("Enter number of days in month: ");
+  scanf("%d", &amp;n);
+  printf("Enter starting day of the week (1=Sun, 7=Sat): ");
+  scanf("%d", &amp;start_day);
+ 
+  /* print any leading "blank dates" */
+  for (i = 1; i &lt; start_day; i++)
+    printf("   ");
+ 
+  /* now print the calendar */
+  for (i = 1; i &lt;= n; i++) {
+    printf("%3d", i);
+    if ((start_day + i - 1) % 7 == 0)
+      printf("\n");
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-7"><a href="#Chapter-7" class="headerlink" title="Chapter 7"></a>Chapter 7</h3><h4 id="Answers-to-Selected-Exercises-2"><a href="#Answers-to-Selected-Exercises-2" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>3.</strong> [was #4] (b) is not legal.</p><p><strong>4.</strong> [was #6] (d) is illegal, since <code>printf</code> requires a string, not a character, as its first argument.</p><p><strong>10.</strong> [was #14] <code>unsigned</code> <code>int</code>, because the <code>(int)</code> cast applies only to <code>j</code>, not <code>j</code> <code>*</code> <code>k</code>.</p><p><strong>12.</strong> [was #16] The value of <code>i</code> is converted to <code>float</code> and added to <code>f</code>, then the result is converted to <code>double</code> and stored in <code>d</code>.</p><p><strong>14.</strong> [was #18] No. Converting <code>f</code> to <code>int</code> will fail if the value stored in <code>f</code> exceeds the largest value of type <code>int</code>.</p><h4 id="Answers-to-Selected-Programming-Projects-2"><a href="#Answers-to-Selected-Programming-Projects-2" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #2] <code>short</code> <code>int</code> values are usually stored in 16 bits, causing failure at 182. <code>int</code> and <code>long</code> <code>int</code> values are usually stored in 32 bits, with failure occurring at 46341.</p><p><strong>2.</strong> [was #8]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int i, n;
+  char ch;
+ 
+  printf("This program prints a table of squares.\n");
+  printf("Enter number of entries in table: ");
+  scanf("%d", &amp;n);
+  ch = getchar();
+    /* dispose of new-line character following number of entries */
+    /* could simply be getchar(); */
+ 
+  for (i = 1; i &lt;= n; i++) {
+    printf("%10d%10d\n", i, i * i);
+    if (i % 24 == 0) {
+      printf("Press Enter to continue...");
+      ch = getchar();   /* or simply getchar(); */
+    }
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>5.</strong> [was #10]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int sum = 0;
+  char ch;
+ 
+  printf("Enter a word: ");
+ 
+  while ((ch = getchar()) != '\n')
+    switch (toupper(ch)) {
+      case 'D': case 'G':
+        sum += 2; break;
+      case 'B': case 'C': case 'M': case 'P':
+        sum += 3; break;
+      case 'F': case 'H': case 'V': case 'W': case 'Y':
+        sum += 4; break;
+      case 'K':
+        sum += 5; break;
+      case 'J': case 'X':
+        sum += 8; break;
+      case 'Q': case 'Z':
+        sum += 10; break;
+      default:
+        sum++; break;
+    }
+ 
+  printf("Scrabble value: %d\n", sum);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #12]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  printf("Size of int: %d\n", (int) sizeof(int));
+  printf("Size of short: %d\n", (int) sizeof(short));
+  printf("Size of long: %d\n", (int) sizeof(long));
+  printf("Size of float: %d\n", (int) sizeof(float));
+  printf("Size of double: %d\n", (int) sizeof(double));
+  printf("Size of long double: %d\n", (int) sizeof(long double));
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Since the type of a <code>sizeof</code> expression may vary from one implementation to another, it’s necessary in C89 to cast <code>sizeof</code> expressions to a known type before printing them. The sizes of the basic types are small numbers, so it’s safe to cast them to <code>int</code>. (In general, however, it’s best to cast <code>sizeof</code> expressions to <code>unsigned</code> <code>long</code> and print them using <code>%lu</code>.) In C99, we can avoid the cast by using the <code>%zu</code> conversion specification.</p><h3 id="Chapter-8"><a href="#Chapter-8" class="headerlink" title="Chapter 8"></a>Chapter 8</h3><h4 id="Answers-to-Selected-Exercises-3"><a href="#Answers-to-Selected-Exercises-3" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>1.</strong> [was #4] The problem with <code>sizeof(a)</code> <code>/</code> <code>sizeof(</code><em>t</em><code>)</code> is that it can’t easily be checked for correctness by someone reading the program. (The reader would have to locate the declaration of <code>a</code> and make sure that its elements have type <em>t</em>.)</p><p><strong>2.</strong> [was #8] To use a digit <code>d</code> (in character form) as a subscript into the array <code>a</code>, we would write <code>a[d-'0']</code>. This assumes that digits have consecutive codes in the underlying character set, which is true of ASCII and other popular character sets.</p><p><strong>7.</strong> [was #10]</p><pre class="line-numbers language-none"><code class="language-none">const int segments[10][7] = {{1, 1, 1, 1, 1, 1},
+                             {0, 1, 1},
+                             {1, 1, 0, 1, 1, 0, 1},
+                             {1, 1, 1, 1, 0, 0, 1},
+                             {0, 1, 1, 0, 0, 1, 1},
+                             {1, 0, 1, 1, 0, 1, 1},
+                             {1, 0, 1, 1, 1, 1, 1},
+                             {1, 1, 1},
+                             {1, 1, 1, 1, 1, 1, 1},
+                             {1, 1, 1, 1, 0, 1, 1}};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-3"><a href="#Answers-to-Selected-Programming-Projects-3" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>2.</strong> [was #2]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  int digit_count[10] = {0};
+  int digit;
+  long n;
+ 
+  printf("Enter a number: ");
+  scanf("%ld", &amp;n);
+ 
+  while (n &gt; 0) {
+    digit = n % 10;
+    digit_count[digit]++;
+    n /= 10;
+  }
+ 
+  printf ("Digit:      ");
+  for (digit = 0; digit &lt;= 9; digit++)
+    printf("%3d", digit);
+  printf("\nOccurrences:");
+  for (digit = 0; digit &lt;= 9; digit++)
+    printf("%3d", digit_count[digit]);
+  printf("\n");
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>5.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define NUM_RATES ((int) (sizeof(value) / sizeof(value[0])))
+#define INITIAL_BALANCE 100.00
+ 
+int main(void)
+{
+  int i, low_rate, month, num_years, year;
+  double value[5];
+ 
+  printf("Enter interest rate: ");
+  scanf("%d", &amp;low_rate);
+  printf("Enter number of years: ");
+  scanf("%d", &amp;num_years);
+ 
+  printf("\nYears");
+  for (i = 0; i &lt; NUM_RATES; i++) {
+    printf("%6d%%", low_rate + i);
+    value[i] = INITIAL_BALANCE;
+  }
+  printf("\n");
+ 
+  for (year = 1; year &lt;= num_years; year++) {
+    printf("%3d    ", year);
+    for (i = 0; i &lt; NUM_RATES; i++) {
+      for (month = 1; month &lt;= 12; month++)
+        value[i] += ((double) (low_rate + i) / 12) / 100.0 * value[i];
+      printf("%7.2f", value[i]);
+    }
+    printf("\n");
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>8.</strong> [was #12]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define NUM_QUIZZES  5
+#define NUM_STUDENTS 5
+ 
+int main(void)
+{
+  int grades[NUM_STUDENTS][NUM_QUIZZES];
+  int high, low, quiz, student, total;
+ 
+  for (student = 0; student &lt; NUM_STUDENTS; student++) {
+    printf("Enter grades for student %d: ", student + 1);
+    for (quiz = 0; quiz &lt; NUM_QUIZZES; quiz++)
+      scanf("%d", &amp;grades[student][quiz]);
+  }
+ 
+  printf("\nStudent  Total  Average\n");
+  for (student = 0; student &lt; NUM_STUDENTS; student++) {
+    printf("%4d      ", student + 1);
+    total = 0;
+    for (quiz = 0; quiz &lt; NUM_QUIZZES; quiz++)
+      total += grades[student][quiz];
+    printf("%3d     %3d\n", total, total / NUM_QUIZZES);
+  }
+ 
+  printf("\nQuiz  Average  High  Low\n");
+  for (quiz = 0; quiz &lt; NUM_QUIZZES; quiz++) {
+    printf("%3d     ", quiz + 1);
+    total = 0;
+    high = 0;
+    low = 100;
+    for (student = 0; student &lt; NUM_STUDENTS; student++) {
+      total += grades[student][quiz];
+      if (grades[student][quiz] &gt; high)
+        high = grades[student][quiz];
+      if (grades[student][quiz] &lt; low)
+        low = grades[student][quiz];
+    }
+    printf("%3d    %3d   %3d\n", total / NUM_STUDENTS, high, low);
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-9"><a href="#Chapter-9" class="headerlink" title="Chapter 9"></a>Chapter 9</h3><h4 id="Answers-to-Selected-Exercises-4"><a href="#Answers-to-Selected-Exercises-4" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2]</p><pre class="line-numbers language-none"><code class="language-none">int check(int x, int y, int n)
+{
+  return (x &gt;= 0 &amp;&amp; x &lt;= n - 1 &amp;&amp; y &gt;= 0 &amp;&amp; y &lt;= n - 1);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">int day_of_year(int month, int day, int year)
+{
+  int num_days[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+  int day_count = 0, i;
+ 
+  for (i = 1; i &lt; month; i++)
+    day_count += num_days[i-1];
+ 
+  /* adjust for leap years, assuming they are divisible by 4 */
+  if (year % 4 == 0 &amp;&amp; month &gt; 2)
+    day_count++;
+ 
+  return day_count + day;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Using the expression <code>year</code> <code>%</code> <code>4</code> <code>==</code> <code>0</code> to test for leap years is not completely correct. Centuries are special cases: if a year is a multiple of 100, then it must also be a multiple of 400 in order to be a leap year. The correct test is</p><pre class="line-numbers language-none"><code class="language-none">year % 4 == 0 &amp;&amp; (year % 100 != 0 || year % 400 == 0)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>6.</strong> [was #6; modified]</p><pre class="line-numbers language-none"><code class="language-none">int digit(int n, int k)
+{
+  int i;
+ 
+  for (i = 1; i &lt; k; i++)
+    n /= 10;
+ 
+  return n % 10;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>8.</strong> [was #8] (a) and (b) are valid prototypes. (c) is illegal, since it doesn’t specify the type of the parameter. (d) incorrectly specifies that <code>f</code> returns an <code>int</code> value in C89; in C99, omitting the return type is illegal.</p><p><strong>10.</strong> [was #10]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">int largest(int a[], int n)
+{
+  int i, max = a[0];
+ 
+  for (i = 1; i &lt; n; i++)
+    if (a[i] &gt; max)
+      max = a[i];
+ 
+  return max;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">int average(int a[], int n)
+{
+  int i, avg = 0;
+ 
+  for (i = 0; i &lt; n; i++)
+    avg += a[i];
+ 
+  return avg / n;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">int num_positive(int a[], int n)
+{
+  int i, count = 0;
+ 
+  for (i = 0; i &lt; n; i++)
+    if (a[i] &gt; 0)
+      count++;
+ 
+  return count;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>15.</strong> [was #12; modified]</p><pre class="line-numbers language-none"><code class="language-none">double median(double x, double y, double z)
+{
+  double result;
+ 
+  if (x &lt;= y)
+    if (y &lt;= z) result = y;
+    else if (x &lt;= z) result = z;
+    else result = x;
+  else {
+    if (z &lt;= y) result = y;
+    else if (x &lt;= z) result = x;
+    else result = z;
+  }
+ 
+  return result;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>17.</strong> [was #14]</p><pre class="line-numbers language-none"><code class="language-none">int fact(int n)
+{
+  int i, result = 1;
+ 
+  for (i = 2; i &lt;= n; i++)
+    result *= i;
+ 
+  return result;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>19.</strong> [was #16] The following program tests the <code>pb</code> function:</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+void pb(int n);
+ 
+int main(void)
+{
+  int n;
+ 
+  printf("Enter a number: ");
+  scanf("%d", &amp;n);
+ 
+  printf("Output of pb: ");
+  pb(n);
+  printf("\n");
+ 
+  return 0;
+}
+ 
+void pb(int n)
+{
+  if (n != 0) {
+    pb(n / 2);
+    putchar('0' + n % 2);
+  }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>pb</code> prints the binary representation of the argument <code>n</code>, assuming that <code>n</code> is greater than 0. (We also assume that digits have consecutive codes in the underlying character set.) For example:</p><pre class="line-numbers language-none"><code class="language-none">Enter a number: 53
+Output of pb: 110101<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>A trace of <code>pb</code>‘s execution would look like this:</p><p><code>pb(53)</code> finds that 53 is not equal to 0, so it calls<br><code>pb(26)</code>, which finds that 26 is not equal to 0, so it calls<br><code>pb(13)</code>, which finds that 13 is not equal to 0, so it calls<br><code>pb(6)</code>, which finds that 6 is not equal to 0, so it calls<br><code>pb(3)</code>, which finds that 3 is not equal to 0, so it calls<br><code>pb(1)</code>, which finds that 1 is not equal to 0, so it calls<br><code>pb(0)</code>, which finds that 0 <em>is</em> equal to 0, so it returns, causing<br><code>pb(1)</code> to print <code>1</code> and return, causing<br><code>pb(3)</code> to print <code>1</code> and return, causing<br><code>pb(6)</code> to print <code>0</code> and return, causing<br><code>pb(13)</code> to print <code>1</code> and return, causing<br><code>pb(26)</code> to print <code>0</code> and return, causing<br><code>pb(53)</code> to print <code>1</code> and return.</p><h3 id="Chapter-10"><a href="#Chapter-10" class="headerlink" title="Chapter 10"></a>Chapter 10</h3><h4 id="Answers-to-Selected-Exercises-5"><a href="#Answers-to-Selected-Exercises-5" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>1.</strong> [was #2] (a) <code>a</code>, <code>b</code>, and <code>c</code> are visible.<br>(b) <code>a</code>, and <code>d</code> are visible.<br>(c) <code>a</code>, <code>d</code>, and <code>e</code> are visible.<br>(d) <code>a</code> and <code>f</code> are visible.</p><h4 id="Answers-to-Selected-Programming-Projects-4"><a href="#Answers-to-Selected-Programming-Projects-4" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>3.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdbool.h&gt;   /* C99 only */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+#define NUM_CARDS 5
+#define RANK 0
+#define SUIT 1
+ 
+/* external variables */
+int hand[NUM_CARDS][2];
+/*    0    1
+    ____ ____
+ 0 |____|____|
+ 1 |____|____|
+ 2 |____|____|
+ 3 |____|____|
+ 4 |____|____|
+    rank suit
+*/
+ 
+bool straight, flush, four, three;
+int pairs;   /* can be 0, 1, or 2 */
+ 
+/* prototypes */
+void read_cards(void);
+void analyze_hand(void);
+void print_result(void);
+ 
+/**********************************************************
+ * main: Calls read_cards, analyze_hand, and print_result *
+ *       repeatedly.                                      *
+ **********************************************************/
+int main(void)
+{
+  for (;;) {
+    read_cards();
+    analyze_hand();
+    print_result();
+  }
+}
+ 
+/**********************************************************
+ * read_cards: Reads the cards into the external variable *
+ *             hand; checks for bad cards and duplicate   *
+ *             cards.                                     *
+ **********************************************************/
+void read_cards(void)
+{
+  char ch, rank_ch, suit_ch;
+  int i, rank, suit;
+  bool bad_card, duplicate_card;
+  int cards_read = 0;
+ 
+  while (cards_read &lt; NUM_CARDS) {
+    bad_card = false;
+ 
+    printf("Enter a card: ");
+ 
+    rank_ch = getchar();
+    switch (rank_ch) {
+      case '0':           exit(EXIT_SUCCESS);
+      case '2':           rank = 0; break;
+      case '3':           rank = 1; break;
+      case '4':           rank = 2; break;
+      case '5':           rank = 3; break;
+      case '6':           rank = 4; break;
+      case '7':           rank = 5; break;
+      case '8':           rank = 6; break;
+      case '9':           rank = 7; break;
+      case 't': case 'T': rank = 8; break;
+      case 'j': case 'J': rank = 9; break;
+      case 'q': case 'Q': rank = 10; break;
+      case 'k': case 'K': rank = 11; break;
+      case 'a': case 'A': rank = 12; break;
+      default:            bad_card = true;
+    }
+ 
+    suit_ch = getchar();
+    switch (suit_ch) {
+      case 'c': case 'C': suit = 0; break;
+      case 'd': case 'D': suit = 1; break;
+      case 'h': case 'H': suit = 2; break;
+      case 's': case 'S': suit = 3; break;
+      default:            bad_card = true;
+    }
+ 
+    while ((ch = getchar()) != '\n')
+      if (ch != ' ') bad_card = true;
+ 
+    if (bad_card) {
+      printf("Bad card; ignored.\n");
+      continue;
+    }
+ 
+    duplicate_card = false;
+    for (i = 0; i &lt; cards_read; i++)
+      if (hand[i][RANK] == rank &amp;&amp; hand[i][SUIT] == suit) {
+        printf("Duplicate card; ignored.\n");
+        duplicate_card = true;
+        break;
+      }
+ 
+    if (!duplicate_card) {
+      hand[cards_read][RANK] = rank;
+      hand[cards_read][SUIT] = suit;
+      cards_read++;
+    }
+  }
+}
+ 
+/**********************************************************
+ * analyze_hand: Determines whether the hand contains a   *
+ *               straight, a flush, four-of-a-kind,       *
+ *               and/or three-of-a-kind; determines the   *
+ *               number of pairs; stores the results into *
+ *               the external variables straight, flush,  *
+ *               four, three, and pairs.                  *
+ **********************************************************/
+void analyze_hand(void)
+{
+  int rank, suit, card, pass, run;
+ 
+  straight = true;
+  flush = true;
+  four = false;
+  three = false;
+  pairs = 0;
+ 
+  /* sort cards by rank */
+  for (pass = 1; pass &lt; NUM_CARDS; pass++)
+    for (card = 0; card &lt; NUM_CARDS - pass; card++) {
+      rank = hand[card][RANK];
+      suit = hand[card][SUIT];
+      if (hand[card+1][RANK] &lt; rank) {
+        hand[card][RANK] = hand[card+1][RANK];
+        hand[card][SUIT] = hand[card+1][SUIT];
+        hand[card+1][RANK] = rank;
+        hand[card+1][SUIT] = suit;
+      }
+    }
+ 
+  /* check for flush */
+  suit = hand[0][SUIT];
+  for (card = 1; card &lt; NUM_CARDS; card++)
+    if (hand[card][SUIT] != suit)
+      flush = false;
+ 
+  /* check for straight */
+  for (card = 0; card &lt; NUM_CARDS - 1; card++)
+    if (hand[card][RANK] + 1 != hand[card+1][RANK])
+      straight = false;
+ 
+  /* check for 4-of-a-kind, 3-of-a-kind, and pairs by
+     looking for "runs" of cards with identical ranks */
+  card = 0;
+  while (card &lt; NUM_CARDS) {
+    rank = hand[card][RANK];
+    run = 0;
+    do {
+      run++;
+      card++;
+    } while (card &lt; NUM_CARDS &amp;&amp; hand[card][RANK] == rank);
+    switch (run) {
+      case 2: pairs++;      break;
+      case 3: three = true; break;
+      case 4: four = true;  break;
+    }
+  }
+}
+ 
+/**********************************************************
+ * print_result: Prints the classification of the hand,   *
+ *               based on the values of the external      *
+ *               variables straight, flush, four, three,  *
+ *               and pairs.                               *
+ **********************************************************/
+void print_result(void)
+{
+  if (straight &amp;&amp; flush) printf("Straight flush");
+  else if (four)         printf("Four of a kind");
+  else if (three &amp;&amp;
+           pairs == 1)   printf("Full house");
+  else if (flush)        printf("Flush");
+  else if (straight)     printf("Straight");
+  else if (three)        printf("Three of a kind");
+  else if (pairs == 2)   printf("Two pairs");
+  else if (pairs == 1)   printf("Pair");
+  else                   printf("High card");
+ 
+  printf("\n\n");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>5.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdbool.h&gt;   /* C99 only */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+#define NUM_RANKS 13
+#define NUM_SUITS 4
+#define NUM_CARDS 5
+ 
+/* external variables */
+int num_in_rank[NUM_RANKS];
+int num_in_suit[NUM_SUITS];
+bool straight, flush, four, three;
+int pairs;   /* can be 0, 1, or 2 */
+ 
+/* prototypes */
+void read_cards(void);
+void analyze_hand(void);
+void print_result(void);
+ 
+/**********************************************************
+ * main: Calls read_cards, analyze_hand, and print_result *
+ *       repeatedly.                                      *
+ **********************************************************/
+int main(void)
+{
+  for (;;) {
+    read_cards();
+    analyze_hand();
+    print_result();
+  }
+}
+ 
+/**********************************************************
+ * read_cards: Reads the cards into the external          *
+ *             variables num_in_rank and num_in_suit;     *
+ *             checks for bad cards and duplicate cards.  *
+ **********************************************************/
+void read_cards(void)
+{
+  bool card_exists[NUM_RANKS][NUM_SUITS];
+  char ch, rank_ch, suit_ch;
+  int rank, suit;
+  bool bad_card;
+  int cards_read = 0;
+ 
+  for (rank = 0; rank &lt; NUM_RANKS; rank++) {
+    num_in_rank[rank] = 0;
+    for (suit = 0; suit &lt; NUM_SUITS; suit++)
+      card_exists[rank][suit] = false;
+  }
+ 
+  for (suit = 0; suit &lt; NUM_SUITS; suit++)
+    num_in_suit[suit] = 0;
+ 
+  while (cards_read &lt; NUM_CARDS) {
+    bad_card = false;
+ 
+    printf("Enter a card: ");
+ 
+    rank_ch = getchar();
+    switch (rank_ch) {
+      case '0':           exit(EXIT_SUCCESS);
+      case '2':           rank = 0; break;
+      case '3':           rank = 1; break;
+      case '4':           rank = 2; break;
+      case '5':           rank = 3; break;
+      case '6':           rank = 4; break;
+      case '7':           rank = 5; break;
+      case '8':           rank = 6; break;
+      case '9':           rank = 7; break;
+      case 't': case 'T': rank = 8; break;
+      case 'j': case 'J': rank = 9; break;
+      case 'q': case 'Q': rank = 10; break;
+      case 'k': case 'K': rank = 11; break;
+      case 'a': case 'A': rank = 12; break;
+      default:            bad_card = true;
+    }
+ 
+    suit_ch = getchar();
+    switch (suit_ch) {
+      case 'c': case 'C': suit = 0; break;
+      case 'd': case 'D': suit = 1; break;
+      case 'h': case 'H': suit = 2; break;
+      case 's': case 'S': suit = 3; break;
+      default:            bad_card = true;
+    }
+ 
+    while ((ch = getchar()) != '\n')
+      if (ch != ' ') bad_card = true;
+ 
+    if (bad_card)
+      printf("Bad card; ignored.\n");
+    else if (card_exists[rank][suit])
+      printf("Duplicate card; ignored.\n");
+    else {
+      num_in_rank[rank]++;
+      num_in_suit[suit]++;
+      card_exists[rank][suit] = true;
+      cards_read++;
+    }
+  }
+}
+ 
+/**********************************************************
+ * analyze_hand: Determines whether the hand contains a   *
+ *               straight, a flush, four-of-a-kind,       *
+ *               and/or three-of-a-kind; determines the   *
+ *               number of pairs; stores the results into *
+ *               the external variables straight, flush,  *
+ *               four, three, and pairs.                  *
+ **********************************************************/
+void analyze_hand(void)
+{
+  int num_consec = 0;
+  int rank, suit;
+ 
+  straight = false;
+  flush = false;
+  four = false;
+  three = false;
+  pairs = 0;
+ 
+  /* check for flush */
+  for (suit = 0; suit &lt; NUM_SUITS; suit++)
+    if (num_in_suit[suit] == NUM_CARDS)
+      flush = true;
+ 
+  /* check for straight */
+  rank = 0;
+  while (num_in_rank[rank] == 0) rank++;
+  for (; rank &lt; NUM_RANKS &amp;&amp; num_in_rank[rank] &gt; 0; rank++)
+    num_consec++;
+  if (num_consec == NUM_CARDS) {
+    straight = true;
+    return;
+  }
+ 
+  /* check for ace-low straight */
+  if (num_consec == NUM_CARDS - 1 &amp;&amp;
+      num_in_rank[0] &gt; 0 &amp;&amp; num_in_rank[NUM_RANKS-1] &gt; 0) {
+    straight = true;
+    return;
+  }
+ 
+  /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
+  for (rank = 0; rank &lt; NUM_RANKS; rank++) {
+    if (num_in_rank[rank] == 4) four = true;
+    if (num_in_rank[rank] == 3) three = true;
+    if (num_in_rank[rank] == 2) pairs++;
+  }
+}
+ 
+/**********************************************************
+ * print_result: Prints the classification of the hand,   *
+ *               based on the values of the external      *
+ *               variables straight, flush, four, three,  *
+ *               and pairs.                               *
+ **********************************************************/
+void print_result(void)
+{
+  if (straight &amp;&amp; flush) printf("Straight flush");
+  else if (four)         printf("Four of a kind");
+  else if (three &amp;&amp;
+           pairs == 1)   printf("Full house");
+  else if (flush)        printf("Flush");
+  else if (straight)     printf("Straight");
+  else if (three)        printf("Three of a kind");
+  else if (pairs == 2)   printf("Two pairs");
+  else if (pairs == 1)   printf("Pair");
+  else                   printf("High card");
+ 
+  printf("\n\n");
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-11"><a href="#Chapter-11" class="headerlink" title="Chapter 11"></a>Chapter 11</h3><h4 id="Answers-to-Selected-Exercises-6"><a href="#Answers-to-Selected-Exercises-6" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] (e), (f), and (i) are legal. (a) is illegal because <code>p</code> is a pointer to an integer and <code>i</code> is an integer. (b) is illegal because <code>*p</code> is an integer and <code>&amp;i</code> is a pointer to an integer. (c) is illegal because <code>&amp;p</code> is a pointer to a pointer to an integer and <code>q</code> is a pointer to an integer. (d) is illegal for reasons similar to (c). (g) is illegal because <code>p</code> is a pointer to an integer and <code>*q</code> is an integer. (h) is illegal because <code>*p</code> is an integer and <code>q</code> is a pointer to an integer.</p><p><strong>4.</strong> [was #4; modified]</p><pre class="line-numbers language-none"><code class="language-none">void swap(int *p, int *q)
+{
+  int temp;
+ 
+  temp = *p;
+  *p = *q;
+  *q = temp;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">void find_two_largest(int a[], int n, int *largest,
+                      int *second_largest)
+{
+  int i;
+ 
+  if (a[0] &gt; a[1]) {
+    *largest = a[0];
+    *second_largest = a[1];
+  } else {
+    *largest = a[1];
+    *second_largest = a[0];
+  }
+ 
+  for (i = 2; i &lt; n; i++)
+    if (a[i] &gt; *largest) {
+      *second_largest = *largest;
+      *largest = a[i];
+    } else if (a[i] &gt; *second_largest)
+      *second_largest = a[i];
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-12"><a href="#Chapter-12" class="headerlink" title="Chapter 12"></a>Chapter 12</h3><h4 id="Answers-to-Selected-Exercises-7"><a href="#Answers-to-Selected-Exercises-7" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] The statement is illegal because pointers cannot be added. Here’s a legal statement that has the desired effect:</p><pre class="line-numbers language-none"><code class="language-none">middle = low + (high - low) / 2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>The value of <code>(high</code> <code>-</code> <code>low)</code> <code>/</code> <code>2</code> is an integer, not a pointer, so it can legally be added to <code>low</code>.</p><p><strong>4.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">int *top_ptr;
+ 
+void make_empty(void)
+{
+  top_ptr = &amp;contents[0];
+}
+ 
+bool is_empty(void)
+{
+  return top_ptr == &amp;contents[0];
+}
+ 
+bool is_full(void)
+{
+  return top_ptr == &amp;contents[STACK_SIZE];
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #10; modified]</p><pre class="line-numbers language-none"><code class="language-none">int sum_array(const int a[], int n)
+{
+  int *p, sum;
+ 
+  sum = 0;
+  for (p = a; p &lt; a + n; p++)
+    sum += *p;
+  return sum;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>13.</strong> [was #12; modified]</p><pre class="line-numbers language-none"><code class="language-none">#define N 10
+ 
+double ident[N][N], *p;
+int num_zeros = N;
+ 
+for (p = &amp;ident[0][0]; p &lt;= &amp;ident[N-1][N-1]; p++)
+  if (num_zeros == N) {
+    *p = 1.0;
+    num_zeros = 0;
+  } else {
+    *p = 0.0;
+    num_zeros++;
+  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>15.</strong> [was #14]</p><pre class="line-numbers language-none"><code class="language-none">int *p;
+ 
+for (p = temperatures[i]; p &lt; temperatures[i] + 24; p++)
+  printf("%d ", *p);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-5"><a href="#Answers-to-Selected-Programming-Projects-5" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #4]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define MSG_LEN 80     /* maximum length of message */
+ 
+int main(void)
+{
+  char msg[MSG_LEN];
+  int i;
+ 
+  printf("Enter a message: ");
+  for (i = 0; i &lt; MSG_LEN; i++) {
+    msg[i] = getchar();
+    if (msg[i] == '\n')
+      break;
+  }
+ 
+  printf("Reversal is: ");
+  for (i--; i &gt;= 0; i--)
+    putchar(msg[i]);
+  putchar('\n');
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define MSG_LEN 80     /* maximum length of message */
+ 
+int main(void)
+{
+  char msg[MSG_LEN], *p;
+ 
+  printf("Enter a message: ");
+  for (p = &amp;msg[0]; p &lt; &amp;msg[MSG_LEN]; p++) {
+    *p = getchar();
+    if (*p == '\n')
+      break;
+  }
+ 
+  printf("Reversal is: ");
+  for (p--; p &gt;= &amp;msg[0]; p--)
+    putchar(*p);
+  putchar('\n');
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>3.</strong> [was #8]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define MSG_LEN 80     /* maximum length of message */
+ 
+int main(void)
+{
+  char msg[MSG_LEN], *p;
+ 
+  printf("Enter a message: ");
+  for (p = msg; p &lt; msg + MSG_LEN; p++) {
+    *p = getchar();
+    if (*p == '\n')
+      break;
+  }
+ 
+  printf("Reversal is: ");
+  for (p--; p &gt;= msg; p--)
+    putchar(*p);
+  putchar('\n');
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-13"><a href="#Chapter-13" class="headerlink" title="Chapter 13"></a>Chapter 13</h3><h4 id="Answers-to-Selected-Exercises-8"><a href="#Answers-to-Selected-Exercises-8" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2]</p><p>(a) Illegal; <code>p</code> is not a character.<br>(b) Legal; output is <code>a</code>.<br>(c) Legal; output is <code>abc</code>.<br>(d) Illegal; <code>*p</code> is not a pointer.</p><p><strong>4.</strong> [was #4]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">int read_line(char str[], int n)
+{
+  int ch, i = 0;
+ 
+  while ((ch = getchar()) != '\n')
+    if (i == 0 &amp;&amp; isspace(ch))
+      ;   /* ignore */
+    else if (i &lt; n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">int read_line(char str[], int n)
+{
+  int ch, i = 0;
+ 
+  while (!isspace(ch = getchar()))
+    if (i &lt; n)
+      str[i++] = ch;
+  str[i] = '\0';
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">int read_line(char str[], int n)
+{
+  int ch, i = 0;
+ 
+  do {
+    ch = getchar();
+    if (i &lt; n)
+      str[i++] = ch;
+  } while (ch != '\n');
+  str[i] = '\0';
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(d)</p><pre class="line-numbers language-none"><code class="language-none">int read_line(char str[], int n)
+{
+  int ch, i;
+ 
+  for (i = 0; i &lt; n; i++) {
+    ch = getchar();
+    if (ch == '\n')
+      break;
+    str[i] = ch;
+  }
+  str[i] = '\0';
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">void censor(char s[])
+{
+  int i;
+ 
+  for (i = 0; s[i] != '\0'; i++)
+    if (s[i] == 'f' &amp;&amp; s[i+1] == 'o' &amp;&amp; s[i+2] =='o')
+      s[i] = s[i+1] = s[i+2] = 'x';
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Note that the short-circuit evaluation of <code>&amp;&amp;</code> prevents the <code>if</code> statement from testing characters that follow the null character.</p><p><strong>8.</strong> [was #10] <code>tired-or-wired?</code></p><p><strong>10.</strong> [was #12] The value of <code>q</code> is undefined, so the call of <code>strcpy</code> attempts to copy the string pointed to by <code>p</code> into some unknown area of memory. Exercise 2 in Chapter 17 discusses how to write this function correctly.</p><p><strong>15.</strong> [was #8]</p><p>(a) 3<br>(b) 0<br>(c) The length of the longest prefix of the string <code>s</code> that consists entirely of characters from the string <code>t</code>. Or, equivalently, the position of the first character in <code>s</code> that is not also in <code>t</code>.</p><p><strong>16.</strong> [was #16]</p><pre class="line-numbers language-none"><code class="language-none">int count_spaces(const char *s)
+{
+  int count = 0;
+ 
+  while (*s)
+    if (*s++ == ' ')
+      count++;
+  return count;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-6"><a href="#Answers-to-Selected-Programming-Projects-6" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #14]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+#define WORD_LEN 20
+ 
+void read_line(char str[], int n);
+ 
+int main(void)
+{
+  char smallest_word[WORD_LEN+1],
+       largest_word[WORD_LEN+1],
+       current_word[WORD_LEN+1];
+ 
+  printf("Enter word: ");
+  read_line(current_word, WORD_LEN);
+  strcpy(smallest_word, strcpy(largest_word, current_word));
+ 
+  while (strlen(current_word) != 4) {
+    printf("Enter word: ");
+    read_line(current_word, WORD_LEN);
+    if (strcmp(current_word, smallest_word) &lt; 0)
+      strcpy(smallest_word, current_word);
+    if (strcmp(current_word, largest_word) &gt; 0)
+      strcpy(largest_word, current_word);
+  }
+ 
+  printf("\nSmallest word: %s\n", smallest_word);
+  printf("Largest word: %s\n", largest_word);
+ 
+  return 0;
+}
+ 
+void read_line(char str[], int n)
+{
+  int ch, i = 0;
+ 
+  while ((ch = getchar()) != '\n')
+    if (i &lt; n)
+      str[i++] = ch;
+  str[i] = '\0';
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #18]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  int i;
+ 
+  for (i = argc - 1; i &gt; 0; i--)
+    printf("%s ", argv[i]);
+  printf("\n");
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #20]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+#define NUM_PLANETS 9
+ 
+int string_equal(const char *s, const char *t);
+ 
+int main(int argc, char *argv[])
+{
+  char *planets[] = {"Mercury", "Venus", "Earth",
+                     "Mars", "Jupiter", "Saturn",
+                     "Uranus", "Neptune", "Pluto"};
+  int i, j;
+ 
+  for (i = 1; i &lt; argc; i++) {
+    for (j = 0; j &lt; NUM_PLANETS; j++)
+      if (string_equal(argv[i], planets[j])) {
+        printf("%s is planet %d\n", argv[i], j + 1);
+        break;
+      }
+    if (j == NUM_PLANETS)
+      printf("%s is not a planet\n", argv[i]);
+  }
+ 
+  return 0;
+}
+ 
+int string_equal(const char *s, const char *t)
+{
+  int i;
+ 
+  for (i = 0; toupper(s[i]) == toupper(t[i]); i++)
+    if (s[i] == '\0')
+      return 1;
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-14"><a href="#Chapter-14" class="headerlink" title="Chapter 14"></a>Chapter 14</h3><h4 id="Answers-to-Selected-Exercises-9"><a href="#Answers-to-Selected-Exercises-9" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] <code>#define NELEMS(a) ((int) (sizeof(a) / sizeof(a[0])))</code></p><p><strong>4.</strong> [was #4]</p><p>(a) One problem stems from the lack of parentheses around the replacement list. For example, the statement</p><pre class="line-numbers language-none"><code class="language-none">a = 1/AVG(b, c);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>will be replaced by</p><pre class="line-numbers language-none"><code class="language-none">a = 1/(b+c)/2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Even if we add the missing parentheses, though, the macro still has problems, because it needs parentheses around <code>x</code> and <code>y</code> in the replacement list. The preprocessor will turn the statement</p><pre class="line-numbers language-none"><code class="language-none">a = AVG(b&lt;c, c&gt;d);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>into</p><pre class="line-numbers language-none"><code class="language-none">a = ((b&lt;c+c&gt;d)/2);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>which is equivalent to</p><pre class="line-numbers language-none"><code class="language-none">a = ((b&lt;(c+c)&gt;d)/2);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Here’s the final (corrected) version of the macro:</p><pre class="line-numbers language-none"><code class="language-none">#define AVG(x,y) (((x)+(y))/2)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>(b) The problem is the lack of parentheses around the replacement list. For example,</p><pre class="line-numbers language-none"><code class="language-none">a = 1/AREA(b, c);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>becomes</p><pre class="line-numbers language-none"><code class="language-none">a = 1/(b)*(c);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Here’s the corrected macro:</p><pre class="line-numbers language-none"><code class="language-none">#define AREA(x,y) ((x)*(y))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>5.</strong> [was #6]</p><p>(a) The call of <code>putchar</code> expands into the following statement:</p><pre class="line-numbers language-none"><code class="language-none">putchar(('a'&lt;=(s[++i])&amp;&amp;(s[++i])&lt;='z'?(s[++i])-'a'+'A':(s[++i])));<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>The character <code>a</code> is less than or equal to <code>s[1]</code> (which is <code>b</code>), yielding a true condition. The character <code>s[2]</code> (which is <code>c</code>) is less than or equal to <code>z</code>, which is also true. The value printed is <code>s[3]-'a'+'A'</code>, which is <code>D</code> (assuming that the character set is ASCII).</p><p>(b) The character <code>a</code> is not less than or equal to <code>s[1]</code> (which is <code>1</code>) so the test condition is false. The value printed is <code>s[2]</code>, which is <code>2</code>.</p><p><strong>7.</strong> [was #8]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">long long_max(long x, long y)
+{
+  return x &gt; y ? x : y;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>The preprocessor would actually put all the tokens on one line, but this version is more readable.</p><p>(b) The problem with types such as <code>unsigned</code> <code>long</code> is that they require two words, which prevents <code>GENERIC_MAX</code> from creating the desired function name. For example, <code>GENERIC_MAX(unsigned</code> <code>long)</code> would expand into</p><pre class="line-numbers language-none"><code class="language-none">unsigned long unsigned long_max(unsigned long x, unsigned long y)
+{
+  return x &gt; y ? x : y;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>(c) To make <code>GENERIC_MAX</code> work with any basic type, use a type definition to rename the type:</p><pre class="line-numbers language-none"><code class="language-none">typedef unsigned long ULONG;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>We can now write <code>GENERIC_MAX(ULONG)</code>.</p><p><strong>12.</strong> [was #10] (c) and (e) will fail, since <code>M</code> is defined.</p><p><strong>14.</strong> [was #12; modified] Here’s what the program will look like after preprocessing:</p><pre class="line-numbers language-none"><code class="language-none">Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+Blank line
+ 
+int main(void)
+{
+  int a[= 10], i, j, k, m;
+ 
+Blank line
+  i = j;
+Blank line
+Blank line
+Blank line
+ 
+  i = 10 * j+1;
+  i = (x,y) x-y(j, k);
+  i = ((((j)*(j)))*(((j)*(j))));
+  i = (((j)*(j))*(j));
+  i = jk;
+  puts("i" "j");
+ 
+Blank line
+  i = SQR(j);
+Blank line
+  i = (j);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Some preprocessors delete white-space characters at the beginning of a line, so your results may vary. Three lines will cause errors when the program is compiled. Two contain syntax errors:</p><pre class="line-numbers language-none"><code class="language-none">int a[= 10], i, j, k, m;
+i = (x,y) x-y(j, k);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>The third refers to an undefined variable:</p><pre class="line-numbers language-none"><code class="language-none">i = jk;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="Chapter-15"><a href="#Chapter-15" class="headerlink" title="Chapter 15"></a>Chapter 15</h3><h4 id="Answers-to-Selected-Exercises-10"><a href="#Answers-to-Selected-Exercises-10" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] (b). Function definitions should not be put in a header file. If a function definition appears in a header file that is included by two (or more) source files, the program can’t be linked, since the linker will see two copies of the function.</p><p><strong>6.</strong> [was #8]</p><p>(a) <code>main.c</code>, <code>f1.c</code>, and <code>f2.c</code>.<br>(b) <code>f1.c</code> (assuming that <code>f1.h</code> is not affected by the change).<br>(c) <code>main.c</code>, <code>f1.c</code>, and <code>f2.c</code>, since all three include <code>f1.h</code>.<br>(d) <code>f1.c</code> and <code>f2.c</code>, since both include <code>f2.h</code>.</p><h3 id="Chapter-16"><a href="#Chapter-16" class="headerlink" title="Chapter 16"></a>Chapter 16</h3><h4 id="Answers-to-Selected-Exercises-11"><a href="#Answers-to-Selected-Exercises-11" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2; modified]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">struct {
+  double real, imaginary;
+} c1, c2, c3;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">struct {
+  double real, imaginary;
+} c1 = {0.0, 1.0}, c2 = {1.0, 0.0}, c3;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>(c) Only one statement is necessary:</p><pre class="line-numbers language-none"><code class="language-none">c1 = c2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>(d)</p><pre class="line-numbers language-none"><code class="language-none">c3.real = c1.real + c2.real;
+c3.imaginary = c1.imaginary + c2.imaginary;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #4; modified]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">typedef struct {
+  double real, imaginary;
+} Complex;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>(b) <code>Complex c1, c2, c3;</code></p><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">Complex make_complex(double real, double imaginary)
+{
+  Complex c;
+ 
+  c.real = real;
+  c.imaginary = imaginary;
+  return c;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(d)</p><pre class="line-numbers language-none"><code class="language-none">Complex add_complex(Complex c1, Complex c2)
+{
+  Complex c3;
+ 
+  c3.real = c1.real + c2.real;
+  c3.imaginary = c1.imaginary + c2.imaginary;
+  return c3;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>11.</strong> [was #10; modified] The <code>a</code> member will occupy 8 bytes, the union <code>e</code> will take 8 bytes (the largest member, <code>c</code>, is 8 bytes long), and the array <code>f</code> will require 4 bytes, so the total space allocated for <code>s</code> will be 20 bytes.</p><p><strong>14.</strong> [was #12; modified]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">double area(struct shape s)
+{
+  if (s.shape_kind == RECTANGLE)
+    return s.u.rectangle.height * s.u.rectangle.width;
+  else
+    return 3.14159 * s.u.circle.radius * s.u.circle.radius;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">struct shape move(struct shape s, int x, int y)
+{
+  struct shape new_shape = s;
+ 
+  new_shape.center.x += x;
+  new_shape.center.y += y;
+  return new_shape;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">struct shape scale(struct shape s, double c)
+{
+  struct shape new_shape = s;
+ 
+  if (new_shape.shape_kind == RECTANGLE) {
+    new_shape.u.rectangle.height *= c;
+    new_shape.u.rectangle.width *= c;
+  } else
+    new_shape.u.circle.radius *= c;
+ 
+  return new_shape;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>15.</strong> [was #14]</p><p>(a) <code>enum week_days {MON, TUE, WED, THU, FRI, SAT, SUN};</code><br>(b) <code>typedef enum {MON, TUE, WED, THU, FRI, SAT, SUN} Week_days;</code></p><p><strong>17.</strong> [was #16] All the statements are legal, since C allows integers and enumeration values to be mixed without restriction. Only (a), (d), and (e) are safe. (b) is not meaningful if <code>i</code> has a value other than 0 or 1. (c) will not yield a meaningful result if <code>b</code> has the value 1.</p><h4 id="Answers-to-Selected-Programming-Projects-7"><a href="#Answers-to-Selected-Programming-Projects-7" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #6; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+#define COUNTRY_COUNT \
+  ((int) (sizeof(country_codes) / sizeof(country_codes[0])))
+ 
+struct dialing_code {
+  char *country;
+  int code;
+};
+ 
+const struct dialing_code country_codes[] =
+  {{"Argentina",            54}, {"Bangladesh",      880},
+   {"Brazil",               55}, {"Burma (Myanmar)",  95},
+   {"China",                86}, {"Colombia",         57},
+   {"Congo, Dem. Rep. of", 243}, {"Egypt",            20},
+   {"Ethiopia",            251}, {"France",           33},
+   {"Germany",              49}, {"India",            91},
+   {"Indonesia",            62}, {"Iran",             98},
+   {"Italy",                39}, {"Japan",            81},
+   {"Mexico",               52}, {"Nigeria",         234},
+   {"Pakistan",             92}, {"Philippines",      63},
+   {"Poland",               48}, {"Russia",            7},
+   {"South Africa",         27}, {"South Korea",      82},
+   {"Spain",                34}, {"Sudan",           249},
+   {"Thailand",             66}, {"Turkey",           90},
+   {"Ukraine",             380}, {"United Kingdom",   44},
+   {"United States",         1}, {"Vietnam",          84}};
+ 
+int main(void)
+{
+  int code, i;
+ 
+  printf("Enter dialing code: ");
+  scanf("%d", &amp;code);
+ 
+  for (i = 0; i &lt; COUNTRY_COUNT; i++)
+    if (code == country_codes[i].code) {
+      printf("The country with dialing code %d is %s\n",
+             code, country_codes[i].country);
+      return 0;
+    }
+ 
+  printf("No corresponding country found\n");
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>3.</strong> [was #8]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include "readline.h"
+ 
+#define NAME_LEN 25
+#define MAX_PARTS 100
+ 
+struct part {
+  int number;
+  char name[NAME_LEN+1];
+  int on_hand;
+};
+ 
+int find_part(int number, const struct part inv[], int np);
+void insert(struct part inv[], int *np);
+void search(const struct part inv[], int np);
+void update(struct part inv[], int np);
+void print(const struct part inv[], int np);
+ 
+/**********************************************************
+ * main: Prompts the user to enter an operation code,     *
+ *       then calls a function to perform the requested   *
+ *       action. Repeats until the user enters the        *
+ *       command 'q'. Prints an error message if the user *
+ *       enters an illegal code.                          *
+ **********************************************************/
+int main(void)
+{
+  char code;
+  struct part inventory[MAX_PARTS];
+  int num_parts = 0;
+ 
+  for (;;) {
+    printf("Enter operation code: ");
+    scanf(" %c", &amp;code);
+    while (getchar() != '\n')   /* skips to end of line */
+      ;
+    switch (code) {
+      case 'i': insert(inventory, &amp;num_parts);
+                break;
+      case 's': search(inventory, num_parts);
+                break;
+      case 'u': update(inventory, num_parts);
+                break;
+      case 'p': print(inventory, num_parts);
+                break;
+      case 'q': return 0;
+      default:  printf("Illegal code\n");
+    }
+    printf("\n");
+  }
+}
+ 
+/**********************************************************
+ * find_part: Looks up a part number in the inv array.    *
+ *            Returns the array index if the part number  *
+ *            is found; otherwise, returns -1.            *
+ **********************************************************/
+int find_part(int number, const struct part inv[], int np)
+{
+  int i;
+ 
+  for (i = 0; i &lt; np; i++)
+    if (inv[i].number == number)
+      return i;
+  return -1;
+}
+ 
+/**********************************************************
+ * insert: Prompts the user for information about a new   *
+ *         part and then inserts the part into the inv    *
+ *         array. Prints an error message and returns     *
+ *         prematurely if the part already exists or the  *
+ *         array is full.                                 *
+ **********************************************************/
+void insert(struct part inv[], int *np)
+{
+  int part_number;
+ 
+  if (*np == MAX_PARTS) {
+    printf("Database is full; can't add more parts.\n");
+    return;
+  }
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;part_number);
+  if (find_part(part_number, inv, *np) &gt;= 0) {
+    printf("Part already exists.\n");
+    return;
+  }
+ 
+  inv[*np].number = part_number;
+  printf("Enter part name: ");
+  read_line(inv[*np].name, NAME_LEN);
+  printf("Enter quantity on hand: ");
+  scanf("%d", &amp;inv[*np].on_hand);
+  (*np)++;
+}
+ 
+/**********************************************************
+ * search: Prompts the user to enter a part number, then  *
+ *         looks up the part in the inv array. If the     *
+ *         part exists, prints the name and quantity on   *
+ *         hand; if not, prints an error message.         *
+ **********************************************************/
+void search(const struct part inv[], int np)
+{
+  int i, number;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number, inv, np);
+  if (i &gt;= 0) {
+    printf("Part name: %s\n", inv[i].name);
+    printf("Quantity on hand: %d\n", inv[i].on_hand);
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * update: Prompts the user to enter a part number.       *
+ *         Prints an error message if the part can't be   *
+ *         found in the inv array; otherwise, prompts the *
+ *         user to enter change in quantity on hand and   *
+ *         updates the array.                             *
+ **********************************************************/
+void update(struct part inv[], int np)
+{
+  int i, number, change;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number, inv, np);
+  if (i &gt;= 0) {
+    printf("Enter change in quantity on hand: ");
+    scanf("%d", &amp;change);
+    inv[i].on_hand += change;
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * print: Prints a listing of all parts in the inv array, *
+ *        showing the part number, part name, and         *
+ *        quantity on hand. Parts are printed in the      *
+ *        order in which they were entered into the       *
+ *        array.                                          *
+ **********************************************************/
+void print(const struct part inv[], int np)
+{
+  int i;
+ 
+  printf("Part Number   Part Name                  "
+         "Quantity on Hand\n");
+  for (i = 0; i &lt; np; i++)
+    printf("%7d       %-25s%11d\n", inv[i].number,
+           inv[i].name, inv[i].on_hand);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-17"><a href="#Chapter-17" class="headerlink" title="Chapter 17"></a>Chapter 17</h3><h4 id="Answers-to-Selected-Exercises-12"><a href="#Answers-to-Selected-Exercises-12" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2; modified]</p><pre class="line-numbers language-none"><code class="language-none">char *duplicate(const char *s)
+{
+  char *temp = malloc(strlen(s) + 1);
+ 
+  if (temp == NULL)
+    return NULL;
+ 
+  strcpy(temp, s);
+  return temp;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>5.</strong> [was #6] (b) and (c) are legal. (a) is illegal because it tries to reference a member of <code>d</code> without mentioning <code>d</code>. (d) is illegal because it uses <code>-&gt;</code> instead of <code>.</code> to reference the <code>c</code> member of <code>d</code>.</p><p><strong>7.</strong> [was #8] The first call of <code>free</code> will release the space for the first node in the list, making <code>p</code> a dangling pointer. Executing <code>p</code> <code>=</code> <code>p-&gt;next</code> to advance to the next node will have an undefined effect. Here’s a correct way to write the loop, using a temporary pointer that points to the node being deleted:</p><pre class="line-numbers language-none"><code class="language-none">struct node *temp;
+ 
+p = first;
+while (p != NULL) {
+  temp = p;
+  p = p-&gt;next;
+  free(temp);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>8.</strong> [was #10; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdbool.h&gt;   /* C99 only */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "stack.h"
+ 
+struct node {
+  int value;
+  struct node *next;
+};
+ 
+struct node *top = NULL;
+ 
+void make_empty(void)
+{
+  struct node *temp;
+ 
+  while (top != NULL) {
+    temp = top;
+    top = top-&gt;next;
+    free(temp);
+  }
+}
+ 
+bool is_empty(void)
+{
+  return top == NULL;
+}
+ 
+bool push(int i)
+{
+  struct node *new_node;
+ 
+  new_node = malloc(sizeof(struct node));
+  if (new_node == NULL)
+    return false;
+ 
+  new_node-&gt;value = i;
+  new_node-&gt;next = top;
+  top = new_node;
+ 
+  return true;
+}
+ 
+int pop(void)
+{
+  struct node *temp;
+  int i;
+ 
+  if (is_empty()) {
+    printf("*** Stack underflow; program terminated. ***\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  i = top-&gt;value;
+  temp = top;
+  top = top-&gt;next;
+  free(temp);
+ 
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>15.</strong> [was #12] The output of the program is</p><pre class="line-numbers language-none"><code class="language-none">Answer: 3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>The program tests the values of <code>f2(0)</code>, <code>f2(1)</code>, <code>f2(2)</code>, and so on, stopping when <code>f2</code> returns zero. It then prints the argument that was passed to <code>f2</code> to make it return zero.</p><p><strong>17.</strong> [was #14] Assuming that <code>compare</code> is the name of the comparison function, the following call of <code>qsort</code> will sort the last 50 elements of <code>a</code>:</p><pre class="line-numbers language-none"><code class="language-none">qsort(&amp;a[50], 50, sizeof(a[0]), compare);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-8"><a href="#Answers-to-Selected-Programming-Projects-8" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "readline.h"
+ 
+#define NAME_LEN 25
+#define INITIAL_PARTS 10
+ 
+struct part {
+  int number;
+  char name[NAME_LEN+1];
+  int on_hand;
+};
+ 
+struct part *inventory;
+int num_parts = 0;      /* number of parts currently stored */
+int max_parts = INITIAL_PARTS;   /* size of inventory array */
+ 
+int find_part(int number);
+void insert(void);
+void search(void);
+void update(void);
+void print(void);
+ 
+/**********************************************************
+ * main: Prompts the user to enter an operation code,     *
+ *       then calls a function to perform the requested   *
+ *       action. Repeats until the user enters the        *
+ *       command 'q'. Prints an error message if the user *
+ *       enters an illegal code.                          *
+ **********************************************************/
+int main(void)
+{
+  char code;
+ 
+  inventory = malloc(max_parts * sizeof(struct part));
+  if (inventory == NULL) {
+    printf("Can't allocate initial inventory space.\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  for (;;) {
+    printf("Enter operation code: ");
+    scanf(" %c", &amp;code);
+    while (getchar() != '\n')   /* skips to end of line */
+      ;
+    switch (code) {
+      case 'i': insert();
+                break;
+      case 's': search();
+                break;
+      case 'u': update();
+                break;
+      case 'p': print();
+                break;
+      case 'q': return 0;
+      default:  printf("Illegal code\n");
+    }
+    printf("\n");
+  }
+}
+ 
+/**********************************************************
+ * find_part: Looks up a part number in the inventory     *
+ *            array. Returns the array index if the part  *
+ *            number is found; otherwise, returns -1.     *
+ **********************************************************/
+int find_part(int number)
+{
+  int i;
+ 
+  for (i = 0; i &lt; num_parts; i++)
+    if (inventory[i].number == number)
+      return i;
+  return -1;
+}
+ 
+/**********************************************************
+ * insert: Prompts the user for information about a new   *
+ *         part and then inserts the part into the        *
+ *         database. Prints an error message and returns  *
+ *         prematurely if the part already exists or the  *
+ *         database is full.                              *
+ **********************************************************/
+void insert(void)
+{
+  int part_number;
+  struct part *temp;
+ 
+  if (num_parts == max_parts) {
+    max_parts *= 2;
+    temp = realloc(inventory, max_parts * sizeof(struct part));
+    if (temp == NULL) {
+      printf("Insufficient memory; can't add more parts.\n");
+      return;
+    }
+    inventory = temp;
+  }
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;part_number);
+  if (find_part(part_number) &gt;= 0) {
+    printf("Part already exists.\n");
+    return;
+  }
+ 
+  inventory[num_parts].number = part_number;
+  printf("Enter part name: ");
+  read_line(inventory[num_parts].name, NAME_LEN);
+  printf("Enter quantity on hand: ");
+  scanf("%d", &amp;inventory[num_parts].on_hand);
+  num_parts++;
+}
+ 
+/**********************************************************
+ * search: Prompts the user to enter a part number, then  *
+ *         looks up the part in the database. If the part *
+ *         exists, prints the name and quantity on hand;  *
+ *         if not, prints an error message.               *
+ **********************************************************/
+void search(void)
+{
+  int i, number;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number);
+  if (i &gt;= 0) {
+    printf("Part name: %s\n", inventory[i].name);
+    printf("Quantity on hand: %d\n", inventory[i].on_hand);
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * update: Prompts the user to enter a part number.       *
+ *         Prints an error message if the part doesn't    *
+ *         exist; otherwise, prompts the user to enter    *
+ *         change in quantity on hand and updates the     *
+ *         database.                                      *
+ **********************************************************/
+void update(void)
+{
+  int i, number, change;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number);
+  if (i &gt;= 0) {
+    printf("Enter change in quantity on hand: ");
+    scanf("%d", &amp;change);
+    inventory[i].on_hand += change;
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * print: Prints a listing of all parts in the database,  *
+ *        showing the part number, part name, and         *
+ *        quantity on hand. Parts are printed in the      *
+ *        order in which they were entered into the       *
+ *        database.                                       *
+ **********************************************************/
+void print(void)
+{
+  int i;
+ 
+  printf("Part Number   Part Name                  "
+         "Quantity on Hand\n");
+  for (i = 0; i &lt; num_parts; i++)
+    printf("%7d       %-25s%11d\n", inventory[i].number,
+           inventory[i].name, inventory[i].on_hand);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>2.</strong> [was #16]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "readline.h"
+ 
+#define NAME_LEN 25
+#define MAX_PARTS 100
+ 
+struct part {
+  int number;
+  char name[NAME_LEN+1];
+  int on_hand;
+} inventory[MAX_PARTS];
+ 
+int num_parts = 0;   /* number of parts currently stored */
+ 
+int find_part(int number);
+void insert(void);
+void search(void);
+void update(void);
+void print(void);
+int compare_parts(const void *p, const void *q);
+ 
+/**********************************************************
+ * main: Prompts the user to enter an operation code,     *
+ *       then calls a function to perform the requested   *
+ *       action. Repeats until the user enters the        *
+ *       command 'q'. Prints an error message if the user *
+ *       enters an illegal code.                          *
+ **********************************************************/
+int main(void)
+{
+  char code;
+ 
+  for (;;) {
+    printf("Enter operation code: ");
+    scanf(" %c", &amp;code);
+    while (getchar() != '\n')   /* skips to end of line */
+      ;
+    switch (code) {
+      case 'i': insert();
+                break;
+      case 's': search();
+                break;
+      case 'u': update();
+                break;
+      case 'p': print();
+                break;
+      case 'q': return 0;
+      default:  printf("Illegal code\n");
+    }
+    printf("\n");
+  }
+}
+ 
+/**********************************************************
+ * find_part: Looks up a part number in the inventory     *
+ *            array. Returns the array index if the part  *
+ *            number is found; otherwise, returns -1.     *
+ **********************************************************/
+int find_part(int number)
+{
+  int i;
+ 
+  for (i = 0; i &lt; num_parts; i++)
+    if (inventory[i].number == number)
+      return i;
+  return -1;
+}
+ 
+/**********************************************************
+ * insert: Prompts the user for information about a new   *
+ *         part and then inserts the part into the        *
+ *         database. Prints an error message and returns  *
+ *         prematurely if the part already exists or the  *
+ *         database is full.                              *
+ **********************************************************/
+void insert(void)
+{
+  int part_number;
+ 
+  if (num_parts == MAX_PARTS) {
+    printf("Database is full; can't add more parts.\n");
+    return;
+  }
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;part_number);
+  if (find_part(part_number) &gt;= 0) {
+    printf("Part already exists.\n");
+    return;
+  }
+ 
+  inventory[num_parts].number = part_number;
+  printf("Enter part name: ");
+  read_line(inventory[num_parts].name, NAME_LEN);
+  printf("Enter quantity on hand: ");
+  scanf("%d", &amp;inventory[num_parts].on_hand);
+  num_parts++;
+}
+ 
+/**********************************************************
+ * search: Prompts the user to enter a part number, then  *
+ *         looks up the part in the database. If the part *
+ *         exists, prints the name and quantity on hand;  *
+ *         if not, prints an error message.               *
+ **********************************************************/
+void search(void)
+{
+  int i, number;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number);
+  if (i &gt;= 0) {
+    printf("Part name: %s\n", inventory[i].name);
+    printf("Quantity on hand: %d\n", inventory[i].on_hand);
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * update: Prompts the user to enter a part number.       *
+ *         Prints an error message if the part doesn't    *
+ *         exist; otherwise, prompts the user to enter    *
+ *         change in quantity on hand and updates the     *
+ *         database.                                      *
+ **********************************************************/
+void update(void)
+{
+  int i, number, change;
+ 
+  printf("Enter part number: ");
+  scanf("%d", &amp;number);
+  i = find_part(number);
+  if (i &gt;= 0) {
+    printf("Enter change in quantity on hand: ");
+    scanf("%d", &amp;change);
+    inventory[i].on_hand += change;
+  } else
+    printf("Part not found.\n");
+}
+ 
+/**********************************************************
+ * print: Sorts the inventory array by part number, then  *
+ *        prints a listing of all parts in the database,  *
+ *        showing the part number, part name, and         *
+ *        quantity on hand.                               *
+ **********************************************************/
+void print(void)
+{
+  int i;
+ 
+  qsort(inventory, num_parts, sizeof(struct part), compare_parts);
+  printf("Part Number   Part Name                  "
+         "Quantity on Hand\n");
+  for (i = 0; i &lt; num_parts; i++)
+    printf("%7d       %-25s%11d\n", inventory[i].number,
+           inventory[i].name, inventory[i].on_hand);
+}
+ 
+int compare_parts(const void *p, const void *q)
+{
+  return ((struct part *) p)-&gt;number - ((struct part *) q)-&gt;number;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-18"><a href="#Chapter-18" class="headerlink" title="Chapter 18"></a>Chapter 18</h3><h4 id="Answers-to-Selected-Exercises-13"><a href="#Answers-to-Selected-Exercises-13" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2]</p><p>(a) <code>extern</code><br>(b) <code>static</code><br>(c) <code>extern</code> and <code>static</code> (when applied to a local variable)</p><p><strong>4.</strong> [was #4] If <code>f</code> has never been called previously, the value of <code>f(10)</code> will be 0. If <code>f</code> has been called five times previously, the value of <code>f(10)</code> will be 50, since <code>j</code> is incremented once per call.</p><p><strong>8.</strong> [was #6; modified]</p><p>(a) <code>x</code> is an array of ten pointers to functions. Each function takes an <code>int</code> argument and returns a character.<br>(b) <code>x</code> is a function that returns a pointer to an array of five integers.<br>(c) <code>x</code> is a function with no arguments that returns a pointer to a function with an <code>int</code> argument that returns a pointer to a <code>float</code> value.<br>(d) <code>x</code> is a function with two arguments. The first argument is an integer, and the second is a pointer to a function with an <code>int</code> argument and no return value. <code>x</code> returns a pointer to a function with an <code>int</code> argument and no return value. (Although this example may seem artificially complex, the <code>signal</code> function—part of the standard C library—has exactly this prototype. See p. 632 for a discussion of <code>signal</code>.)</p><p><strong>10.</strong> [was #8]</p><p>(a) <code>char *(*p)(char *);</code><br>(b) <code>void *f(struct t *p, long int n)(void);</code><br>(c) <code>void (*a[])(void) = {insert, search, update, print};</code><br>(d) <code>struct t (*b[10])(int, int);</code></p><p><strong>13.</strong> [was #10] (a), (c), and (d) are legal. (b) is illegal; the initializer for a variable with static storage duration must be a constant expression, and <code>i</code> <code>*</code> <code>i</code> doesn’t qualify.</p><p><strong>15.</strong> [was #12] (a). Variables with static storage duration are initialized to zero by default; variables with automatic storage duration have no default initial value.</p><h3 id="Chapter-19"><a href="#Chapter-19" class="headerlink" title="Chapter 19"></a>Chapter 19</h3><h4 id="Answers-to-Selected-Exercises-14"><a href="#Answers-to-Selected-Exercises-14" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "stack.h"
+ 
+#define PUBLIC  /* empty */
+#define PRIVATE static
+ 
+struct node {
+  int data;
+  struct node *next;
+};
+ 
+PRIVATE struct node *top = NULL;
+ 
+PRIVATE void terminate(const char *message)
+{
+  printf("%s\n", message);
+  exit(EXIT_FAILURE);
+}
+ 
+PUBLIC void make_empty(void)
+{
+  while (!is_empty())
+    pop();
+}
+ 
+PUBLIC bool is_empty(void)
+{
+  return top == NULL;
+}
+ 
+PUBLIC bool is_full(void)
+{
+  return false;
+}
+ 
+PUBLIC void push(int i)
+{
+  struct node *new_node = malloc(sizeof(struct node));
+  if (new_node == NULL)
+    terminate("Error in push: stack is full.");
+ 
+  new_node-&gt;data = i;
+  new_node-&gt;next = top;
+  top = new_node;
+}
+ 
+PUBLIC int pop(void)
+{
+  struct node *old_top;
+  int i;
+ 
+  if (is_empty())
+    terminate("Error in pop: stack is empty.");
+ 
+  old_top = top;
+  i = top-&gt;data;
+  top = top-&gt;next;
+  free(old_top);
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #4; modified]</p><p>(a) Contents of <code>stack.c</code> file:</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "stack.h"
+ 
+static void terminate(const char *message)
+{
+  printf("%s\n", message);
+  exit(EXIT_FAILURE);
+}
+ 
+void make_empty(Stack *s)
+{
+  s-&gt;top = 0;
+}
+ 
+bool is_empty(const Stack *s)
+{
+  return s-&gt;top == 0;
+}
+ 
+bool is_full(const Stack *s)
+{
+  return s-&gt;top == STACK_SIZE;
+}
+ 
+void push(Stack *s, int i)
+{
+  if (is_full(s))
+    terminate("Error in push: stack is full.");
+  s-&gt;contents[s-&gt;top++] = i;
+}
+ 
+int pop(Stack *s)
+{
+  if (is_empty(s))
+    terminate("Error in pop: stack is empty.");
+  return s-&gt;contents[--s-&gt;top];
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b) Contents of <code>stack.h</code> file:</p><pre class="line-numbers language-none"><code class="language-none">#ifndef STACK_H
+#define STACK_H
+ 
+#include &lt;stdbool.h&gt;   /* C99 only */
+ 
+struct node {
+  int data;
+  struct node *next;
+};
+ 
+typedef struct node *Stack;
+ 
+void make_empty(Stack *s);
+bool is_empty(const Stack *s);
+bool is_full(const Stack *s);
+void push(Stack *s, int i);
+int pop(Stack *s);
+ 
+#endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Contents of <code>stack.c</code> file:</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include "stack.h"
+ 
+static void terminate(const char *message)
+{
+  printf("%s\n", message);
+  exit(EXIT_FAILURE);
+}
+ 
+void make_empty(Stack *s)
+{
+  while (!is_empty(s))
+    pop(s);
+}
+ 
+bool is_empty(const Stack *s)
+{
+  return *s == NULL;
+}
+ 
+bool is_full(const Stack *s)
+{
+  return false;
+}
+ 
+void push(Stack *s, int i)
+{
+  struct node *new_node = malloc(sizeof(struct node));
+  if (new_node == NULL)
+    terminate("Error in push: stack is full.");
+ 
+  new_node-&gt;data = i;
+  new_node-&gt;next = *s;
+  *s = new_node;
+}
+ 
+int pop(Stack *s)
+{
+  struct node *old_top;
+  int i;
+ 
+  if (is_empty(s))
+    terminate("Error in pop: stack is empty.");
+ 
+  old_top = *s;
+  i = (*s)-&gt;data;
+  *s = (*s)-&gt;next;
+  free(old_top);
+  return i;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-20"><a href="#Chapter-20" class="headerlink" title="Chapter 20"></a>Chapter 20</h3><h4 id="Answers-to-Selected-Exercises-15"><a href="#Answers-to-Selected-Exercises-15" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2] To toggle a bit in a variable <code>i</code>, apply the exclusive-or operator (<code>^</code>) to <code>i</code> and a mask with a 1 bit in the desired position, then store the result back into <code>i</code>. To toggle bit 4, for example, use the statement</p><pre class="line-numbers language-none"><code class="language-none">i = i ^ 0x0010;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>or, more concisely,</p><pre class="line-numbers language-none"><code class="language-none">i ^= 0x0010;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>4.</strong> [was #4] ``</p><pre class="line-numbers language-none"><code class="language-none">#define MK_COLOR(r,g,b) ((long) (b) &lt;&lt; 16 | (g) &lt;&lt; 8 | (r))<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>6.</strong> [was #6; modified]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+ 
+unsigned short swap_bytes(unsigned short i);
+ 
+int main(void)
+{
+  unsigned short i;
+ 
+  printf("Enter a hexadecimal number (up to four digits): ");
+  scanf("%hx", &amp;i);
+  printf("Number with bytes swapped: %hx\n", swap_bytes(i));
+  return 0;
+}
+ 
+unsigned short swap_bytes(unsigned short i)
+{
+  unsigned short high_byte = i &lt;&lt; 8;
+  unsigned short low_byte = i &gt;&gt; 8;
+ 
+  return high_byte | low_byte;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">unsigned short swap_bytes(unsigned short i)
+{
+  return i &lt;&lt; 8 | i &gt;&gt; 8;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><strong>8.</strong> [was #8]</p><p>(a) The value of <code>~0</code> is a number containing all 1 bits. Shifting this number to the left by <code>n</code> places yields a result of the form 1…10…0, where there are <code>n</code> 0 bits. Applying the <code>~</code> operator to that number yields a result of the form 0…01…1, where there are <code>n</code> 1 bits.</p><p>(b) It returns a bit-field within <code>i</code> of length <code>n</code> starting at position <code>m</code>. Positions are assumed to be numbered starting from the rightmost bit, which is position 0.</p><p><strong>14.</strong> [was #9]</p><pre class="line-numbers language-none"><code class="language-none">struct IEEE_float {
+  unsigned int fraction: 23;   /* members may need to be reversed */
+  unsigned int exponent: 8;
+  unsigned int sign: 1;
+};<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-21"><a href="#Chapter-21" class="headerlink" title="Chapter 21"></a>Chapter 21</h3><h4 id="Answers-to-Selected-Exercises-16"><a href="#Answers-to-Selected-Exercises-16" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>7.</strong> [was #4]</p><p>(a) <code>&lt;time.h&gt;</code><br>(b) <code>&lt;ctype.h&gt;</code><br>(c) <code>&lt;limits.h&gt;</code><br>(d) <code>&lt;math.h&gt;</code><br>(e) <code>&lt;limits.h&gt;</code><br>(f) <code>&lt;float.h&gt;</code><br>(g) <code>&lt;string.h&gt;</code><br>(h) <code>&lt;stdio.h&gt;</code></p><h3 id="Chapter-22"><a href="#Chapter-22" class="headerlink" title="Chapter 22"></a>Chapter 22</h3><h4 id="Answers-to-Selected-Exercises-17"><a href="#Answers-to-Selected-Exercises-17" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2]</p><p>(a) <code>"rb+"</code><br>(b) <code>"a"</code><br>(c) <code>"rb"</code><br>(d) <code>"r"</code></p><p><strong>4.</strong> [was #4]</p><p>(a) <code>00000083.736</code><br>(b) <code>00000029749.</code><br>(c) <code>001.0549e+09</code><br>(d) <code>002.3522e-05</code></p><p><strong>6.</strong> [was #6] <code>printf(widget == 1 ? "%d widget" : "%d widgets", widget);</code></p><p><strong>8.</strong> [was #8] No. The difference is that <code>"%1s"</code> will store a null character after it reads and stores a nonblank character; <code>" %c"</code> will store only the nonblank character. As a result, the two format strings must be used differently:</p><pre class="line-numbers language-none"><code class="language-none">char c, s[2];
+ 
+scanf(" %c", &amp;c);  /* stores a nonblank character into c */
+scanf("%1s", s);   /* stores a nonblank character into s[0]
+                      and a null character into s[1] */
+ <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>10.</strong> [was #10] Revise the program’s <code>while</code> loop as follows:</p><pre class="line-numbers language-none"><code class="language-none">while ((ch = getc(source_fp)) != EOF)
+  if (putc(ch, dest_fp) == EOF) {
+    fprintf(stderr, "Error during writing; copy terminated\n");
+    exit(EXIT_FAILURE);
+  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>14.</strong> [was #18]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">char *fget_string(char *s, int n, FILE *stream)
+{
+  int ch, len = 0;
+ 
+  while (len &lt; n - 1) {
+    if ((ch = getc(stream)) == EOF) {
+      if (len == 0 || ferror(stream))
+        return NULL;
+      break;
+    }
+    s[len++] = ch;
+    if (ch == '\n')
+      break;
+  }
+ 
+  s[len] = '\0';
+  return s;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">int fput_string(const char *s, FILE *stream)
+{
+  while (*s != '\0') {
+    if (putc(*s, stream) == EOF)
+      return EOF;
+    s++;
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>15.</strong> [was #22]</p><p>(a) <code>fseek(fp, n * 64L, SEEK_SET);</code><br>(b) <code>fseek(fp, -64L, SEEK_END);</code><br>(c) <code>fseek(fp, 64L, SEEK_CUR);</code><br>(d) <code>fseek(fp, -128L, SEEK_CUR);</code></p><h4 id="Answers-to-Selected-Programming-Projects-9"><a href="#Answers-to-Selected-Programming-Projects-9" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>2.</strong> [was #12]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  int ch;
+ 
+  if (argc != 2) {
+    fprintf(stderr, "usage: toupper file\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((fp = fopen(argv[1], "r")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  while ((ch = getc(fp)) != EOF)
+    putchar(toupper(ch));
+ 
+  fclose(fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #14]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  int count = 0;
+ 
+  if (argc != 2) {
+    fprintf(stderr, "usage: cntchar file\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((fp = fopen(argv[1], "r")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  while (getc(fp) != EOF)
+    count++;
+ 
+  printf("There are %d characters in %s\n", count, argv[1]);
+ 
+  fclose(fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdbool.h&gt;   /* C99 only */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  int ch, count = 0;
+  bool in_word;
+ 
+  if (argc != 2) {
+    fprintf(stderr, "usage: cntword file\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((fp = fopen(argv[1], "r")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  in_word = false;
+  while ((ch = getc(fp)) != EOF)
+    if (isspace(ch))
+      in_word = false;
+    else if (!in_word) {
+      in_word = true;
+      count++;
+    }
+ 
+  printf("There are %d words in %s\n", count, argv[1]);
+ 
+  fclose(fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  int ch, count = 0;
+ 
+  if (argc != 2) {
+    fprintf(stderr, "usage: cntline file\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((fp = fopen(argv[1], "r")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  while((ch = getc(fp)) != EOF)
+    if (ch == '\n')
+      count++;
+ 
+  printf("There are %d lines in %s\n", count, argv[1]);
+ 
+  fclose(fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #16; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(int argc, char *argv[])
+{
+  FILE *fp;
+  int i, n, offset;
+  unsigned char buffer[10];
+ 
+  if (argc != 2) {
+    fprintf(stderr, "usage: viewfile file\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((fp = fopen(argv[1], "rb")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  printf("Offset              Bytes              Characters\n");
+  printf("------  -----------------------------  ----------\n");
+ 
+  for (offset = 0;; offset += 10) {
+    n = fread(buffer, 1, 10, fp);
+    if (n == 0)
+      break;
+ 
+    printf("%6d  ", offset);
+    for (i = 0; i &lt; n; i++)
+      printf("%.2X ", buffer[i]);
+    for (; i &lt; 10; i++)
+      printf("   ");
+    printf(" ");
+    for (i = 0; i &lt; n; i++) {
+      if (!isprint(buffer[i]))
+        buffer[i] = '.';
+      printf("%c", buffer[i]);
+    }
+    printf("\n");
+  }
+ 
+  fclose(fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>9.</strong> [was #20]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+ 
+#define NAME_LEN 25
+ 
+struct part {
+  int number;
+  char name[NAME_LEN + 1];
+  int on_hand;
+};
+ 
+int main(int argc, char *argv[])
+{
+  FILE *in_fp1, *in_fp2, *out_fp;
+  int num_read1, num_read2;
+  struct part part1, part2;
+ 
+  if (argc != 4) {
+    fprintf(stderr, "usage: merge infile1 infile2 outfile\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((in_fp1 = fopen(argv[1], "rb")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[1]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((in_fp2 = fopen(argv[2], "rb")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[2]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  if ((out_fp = fopen(argv[3], "wb")) == NULL) {
+    fprintf(stderr, "Can't open %s\n", argv[3]);
+    exit(EXIT_FAILURE);
+  }
+ 
+  num_read1 = fread(&amp;part1, sizeof(struct part), 1, in_fp1);
+  num_read2 = fread(&amp;part2, sizeof(struct part), 1, in_fp2);
+  while (num_read1 == 1 &amp;&amp; num_read2 == 1)
+    /* successfully read records from both files */
+    if (part1.number &lt; part2.number) {
+      fwrite(&amp;part1, sizeof(struct part), 1, out_fp);
+      num_read1 = fread(&amp;part1, sizeof(struct part), 1, in_fp1);
+    } else if (part1.number &gt; part2.number) {
+      fwrite(&amp;part2, sizeof(struct part), 1, out_fp);
+      num_read2 = fread(&amp;part2, sizeof(struct part), 1, in_fp2);
+    } else {
+      /* part numbers are equal */
+      if (strcmp(part1.name, part2.name) != 0)
+        fprintf(stderr,
+                "Names don't match for part %d; using the name %s\n",
+                part1.number, part1.name);
+      part1.on_hand += part2.on_hand;
+      fwrite(&amp;part1, sizeof(struct part), 1, out_fp);
+      num_read1 = fread(&amp;part1, sizeof(struct part), 1, in_fp1);
+      num_read2 = fread(&amp;part2, sizeof(struct part), 1, in_fp2);
+    }
+ 
+  /* copy rest of file1 to output file */
+  while (num_read1 == 1) {
+    fwrite(&amp;part1, sizeof(struct part), 1, out_fp);
+    num_read1 = fread(&amp;part1, sizeof(struct part), 1, in_fp1);
+  }
+ 
+  /* copy rest of file2 to output file */
+  while (num_read2 == 1) {
+    fwrite(&amp;part2, sizeof(struct part), 1, out_fp);
+    num_read2 = fread(&amp;part2, sizeof(struct part), 1, in_fp2);
+  }
+ 
+  fclose(in_fp1);
+  fclose(in_fp2);
+  fclose(out_fp);
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-23"><a href="#Chapter-23" class="headerlink" title="Chapter 23"></a>Chapter 23</h3><h4 id="Answers-to-Selected-Exercises-18"><a href="#Answers-to-Selected-Exercises-18" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>1.</strong> [was #2; modified]</p><pre class="line-numbers language-none"><code class="language-none">double round_nearest(double x, int n)
+{
+  double power = pow(10.0, n);
+ 
+  if (x &lt; 0.0)
+    return ceil(x * power - 0.5) / power;
+  else
+    return floor(x * power + 0.5) / power;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #6]</p><p>(a) <code>memmove</code><br>(b) <code>memmove</code> (we can’t use <code>strcpy</code> because its behavior is undefined when the source of the copy overlaps with the destination)<br>(c) <code>strncpy</code><br>(d) <code>memcpy</code></p><p><strong>8.</strong> [was #8]</p><pre class="line-numbers language-none"><code class="language-none">int numchar(const char *s, char ch)
+{
+  int count = 0;
+ 
+  s = strchr(s, ch);
+  while (s != NULL) {
+    count++;
+    s = strchr(s + 1, ch);
+  }
+ 
+  return count;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>10.</strong> [was #10]</p><pre class="line-numbers language-none"><code class="language-none">if (strstr("foo#bar#baz", str) != NULL) …<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>The assumptions are that <code>str</code> is at least three characters long and doesn’t contain the <code>#</code> character.</p><p><strong>11.</strong> [was #12] <code>memset(&amp;s[strlen(s)-n], '!', n);</code></p><h4 id="Answers-to-Selected-Programming-Projects-10"><a href="#Answers-to-Selected-Programming-Projects-10" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>2.</strong> [was #4; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;ctype.h&gt;
+#include &lt;stdbool.h&gt;   /* C99 only */
+#include &lt;stdio.h&gt;
+ 
+int main(void)
+{
+  bool nonblank_seen = false;
+  int ch;
+ 
+  while ((ch = getchar()) != EOF) {
+    if (nonblank_seen)
+      putchar(ch);
+    else if (!isspace(ch)) {
+      nonblank_seen = true;
+      putchar(ch);
+    }
+    if (ch == '\n')
+      nonblank_seen = false;
+  }
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-24"><a href="#Chapter-24" class="headerlink" title="Chapter 24"></a>Chapter 24</h3><h4 id="Answers-to-Selected-Exercises-19"><a href="#Answers-to-Selected-Exercises-19" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>4.</strong> [was #2]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">double try_math_fcn(double (*f)(double), double x, const char *msg)
+{
+  double result;
+ 
+  errno = 0;
+  result = (*f)(x);
+  if (errno != 0) {
+    perror(msg);
+    exit(EXIT_FAILURE);
+  }
+  return result;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">#define TRY_MATH_FCN(f,x) try_math_fcn(f, x, "Error in call of " #f)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>5.</strong> [was #4]</p><pre class="line-numbers language-none"><code class="language-none">int main(void)
+{
+  char code;
+ 
+  for (;;) {
+    setjmp(env);
+    printf("Enter operation code: ");
+    scanf(" %c", &amp;code);
+    while (getchar() != '\n')   /* skips to end of line */
+      ;
+    switch (code) {
+      case 'i': insert();
+                break;
+      case 's': search();
+                break;
+      case 'u': update();
+                break;
+      case 'p': print();
+                break;
+      case 'q': return 0;
+      default:  printf("Illegal code\n");
+    }
+    printf("\n");
+  }
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>The <code>jmp_buf</code> variable <code>env</code> will need to be global, rather than local to <code>main</code>, so that the function performing the <code>longjmp</code> will be able to supply it as an argument.</p><h3 id="Chapter-25"><a href="#Chapter-25" class="headerlink" title="Chapter 25"></a>Chapter 25</h3><h4 id="Answers-to-Selected-Exercises-20"><a href="#Answers-to-Selected-Exercises-20" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>6.</strong> [was #4; modified]</p><pre class="line-numbers language-none"><code class="language-none">while ((orig_char = getchar()) != EOF) ??&lt;
+  new_char = orig_char ??' KEY;
+  if (isprint(orig_char) &amp;&amp; isprint(new_char))
+    putchar(new_char);
+  else
+    putchar(orig_char);
+??&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-11"><a href="#Answers-to-Selected-Programming-Projects-11" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #2]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;locale.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+ 
+int main(void)
+{
+  char *temp, *C_locale;
+ 
+  temp = setlocale(LC_ALL, NULL);
+    /* "C" is the current locale by default */
+  if (temp == NULL) {
+    printf("\"C\" locale information not available\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  C_locale = malloc(strlen(temp) + 1);
+  if (C_locale == NULL) {
+    printf("Can't allocate space to store locale information\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  strcpy(C_locale, temp);
+ 
+  temp = setlocale(LC_ALL, "");
+  if (temp == NULL) {
+    printf("Native locale information not available\n");
+    exit(EXIT_FAILURE);
+  }
+ 
+  if (strcmp(temp, C_locale) == 0)
+    printf("Native locale is the same as the \"C\" locale\n");
+  else
+    printf("Native locale is not the same as the \"C\" locale\n");
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="Chapter-26"><a href="#Chapter-26" class="headerlink" title="Chapter 26"></a>Chapter 26</h3><h4 id="Answers-to-Selected-Exercises-21"><a href="#Answers-to-Selected-Exercises-21" class="headerlink" title="Answers to Selected Exercises"></a>Answers to Selected Exercises</h4><p><strong>2.</strong> [was #2]</p><pre class="line-numbers language-none"><code class="language-none">void int_printf(const char *format, ...)
+{
+  va_list ap;
+  const char *p;
+  int digit, i, power, temp;
+ 
+  va_start(ap, format);
+ 
+  for (p = format; *p != '\0'; p++) {
+    if (*p != '%') {
+      putchar(*p);
+      continue;
+    }
+ 
+    if (*++p == 'd') {
+      i = va_arg(ap, int);
+      if (i &lt; 0) {
+        i = -i;
+        putchar('-');
+      }
+ 
+      temp = i;
+      power = 1;
+      while (temp &gt; 9) {
+        temp /= 10;
+        power *= 10;
+      }
+ 
+      do {
+        digit = i / power;
+        putchar(digit + '0');
+        i -= digit * power;
+        power /= 10;
+      } while (i &gt; 0);
+    }
+  }
+ 
+  va_end(ap);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>7.</strong> [was #4] The statement converts the string that <code>p</code> points to into a long integer, storing the result in <code>value</code>. <code>p</code> is left pointing to the first character not included in the conversion. The base used for the conversion is 10.</p><p><strong>9.</strong> [was #6]</p><pre class="line-numbers language-none"><code class="language-none">double rand_double(void)
+{
+  return (double) rand() / (RAND_MAX + 1);
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h4 id="Answers-to-Selected-Programming-Projects-12"><a href="#Answers-to-Selected-Programming-Projects-12" class="headerlink" title="Answers to Selected Programming Projects"></a>Answers to Selected Programming Projects</h4><p><strong>1.</strong> [was #8]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+ 
+int main(void)
+{
+  int count = 1000;
+ 
+  while (count-- &gt; 0)
+    printf("%d", rand() &amp; 1);
+  printf("\n");
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b) For generating numbers in the range 0 to <code>N</code> <code>-</code> <code>1</code>, the formula <code>rand()</code> <code>/</code> <code>(RAND_MAX</code> <code>/</code> <code>N</code> <code>+</code> <code>1)</code> often gives better results than <code>rand()</code> <code>%</code> <code>N</code>. For example, if <code>N</code> is 2 and <code>RAND_MAX</code> is 32767, the formula works out to <code>rand()</code> <code>/</code> 16384, which yields 0 if the return value of <code>rand</code> is less than 16384 and 1 if it’s greater than or equal to 16384.</p><p><strong>3.</strong> [was #10; modified]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+ 
+#define N 1000
+ 
+int compare_ints(const void *p, const void *q);
+ 
+int main(void)
+{
+  int a[N], i;
+  clock_t start_clock;
+ 
+  for (i = 0; i &lt; N; i++)
+    a[i] = N - i;
+ 
+  start_clock = clock();
+  qsort(a, N, sizeof(a[0]), compare_ints);
+ 
+  printf("Time used to sort %d integers: %g sec.\n", N,
+         (clock() - start_clock) / (double) CLOCKS_PER_SEC);
+ 
+  return 0;
+}
+ 
+int compare_ints(const void *p, const void *q)
+{
+  return *(int *)p - *(int *)q;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>4.</strong> [was #12]</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+ 
+int main(void)
+{
+  struct tm t;
+  int n;
+ 
+  /* initialize unused members */
+  t.tm_sec = t.tm_min = t.tm_hour = 0;
+  t.tm_isdst = -1;
+ 
+  printf("Enter month (1-12): ");
+  scanf("%d", &amp;t.tm_mon);
+  t.tm_mon--;
+ 
+  printf("Enter day (1-31): ");
+  scanf("%d", &amp;t.tm_mday);
+ 
+  printf("Enter year: ");
+  scanf("%d", &amp;t.tm_year);
+  t.tm_year -= 1900;
+ 
+  printf("Enter number of days in future: ");
+  scanf("%d", &amp;n);
+ 
+  t.tm_mday += n;
+  mktime(&amp;t);
+  printf("\nFuture date: %d/%d/%d\n",
+         t.tm_mon + 1, t.tm_mday, t.tm_year + 1900);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><strong>6.</strong> [was #14]</p><p>(a)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+ 
+int main(void)
+{
+  time_t current = time(NULL);
+  struct tm *ptr;
+  char date_time[37];
+ 
+  ptr = localtime(&amp;current);
+  strftime(date_time, sizeof(date_time), "%A, %B %d, %Y  %I:%M", ptr);
+  printf("%s%c\n", date_time, ptr-&gt;tm_hour &lt;= 11 ? 'a' : 'p');
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(b)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+ 
+int main(void)
+{
+  time_t current = time(NULL);
+  char date_time[22];
+ 
+  strftime(date_time, sizeof(date_time), "%a, %d %b %y  %H:%M",
+           localtime(&amp;current));
+  puts(date_time);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>(c)</p><pre class="line-numbers language-none"><code class="language-none">#include &lt;stdio.h&gt;
+#include &lt;time.h&gt;
+ 
+int main(void)
+{
+  time_t current = time(NULL);
+  struct tm *ptr;
+  char date[9], time[12];
+ 
+  ptr = localtime(&amp;current);
+  strftime(date, sizeof(date), "%m/%d/%y", ptr);
+  strftime(time, sizeof(time), "%I:%M:%S %p", ptr);
+ 
+  /* print date and time, suppressing leading zero in hours */
+  printf("%s  %s\n", date, time[0] == '0' ? &amp;time[1] : time);
+ 
+  return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></div><hr><div class="reprint" id="reprint-statement"><div class="reprint__author"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-user">文章作者: </i></span><span class="reprint-info"><a href="/about" rel="external nofollow noreferrer">Czq</a></span></div><div class="reprint__type"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-link">文章链接: </i></span><span class="reprint-info"><a href="https://czqu.net/posts/28638/">https://czqu.net/posts/28638/</a></span></div><div class="reprint__notice"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-copyright">版权声明: </i></span><span class="reprint-info">本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a> 许可协议。转载请注明来源 !</span></div></div><script async defer>function navToReprintStatement(){$("html, body").animate({scrollTop:$("#reprint-statement").offset().top-80},800)}document.addEventListener("copy",function(t){M.toast({html:'<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>'})})</script><div class="tag_share" style="display:block"><div class="post-meta__tag-list" style="display:inline-block"><div class="article-tag"><a href="/tags/C%E8%AF%AD%E8%A8%80/"><span class="chip bg-color">C语言</span> </a><a href="/tags/%E7%AD%94%E6%A1%88/"><span class="chip bg-color">答案</span></a></div></div><div class="post_share" style="zoom:80%;width:fit-content;display:inline-block;float:right;margin:-.15rem 0"><link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css"><div id="article-share"><div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div><script src="/libs/share/js/social-share.min.js"></script></div></div></div></div></div><style>.valine-card{margin:1.5rem auto}.valine-card .card-content{padding:20px 20px 5px 20px}#vcomments textarea{box-sizing:border-box;background:url(/medias/comment_bg.webp) 100% 100% no-repeat}#vcomments p{margin:2px 2px 10px;font-size:1.05rem;line-height:1.78rem}#vcomments blockquote p{text-indent:.2rem}#vcomments a{padding:0 2px;color:#4cbf30;font-weight:500;text-decoration:none}#vcomments img{max-width:100%;height:auto;cursor:pointer}#vcomments ol li{list-style-type:decimal}#vcomments ol,ul{display:block;padding-left:2em;word-spacing:.05rem}#vcomments ul li,ol li{display:list-item;line-height:1.8rem;font-size:1rem}#vcomments ul li{list-style-type:disc}#vcomments ul ul li{list-style-type:circle}#vcomments table,td,th{padding:12px 13px;border:1px solid #dfe2e5}#vcomments table,td,th{border:0}table tr:nth-child(2n),thead{background-color:#fafafa}#vcomments table th{background-color:#f2f2f2;min-width:80px}#vcomments table td{min-width:80px}#vcomments h1{font-size:1.85rem;font-weight:700;line-height:2.2rem}#vcomments h2{font-size:1.65rem;font-weight:700;line-height:1.9rem}#vcomments h3{font-size:1.45rem;font-weight:700;line-height:1.7rem}#vcomments h4{font-size:1.25rem;font-weight:700;line-height:1.5rem}#vcomments h5{font-size:1.1rem;font-weight:700;line-height:1.4rem}#vcomments h6{font-size:1rem;line-height:1.3rem}#vcomments p{font-size:1rem;line-height:1.5rem}#vcomments hr{margin:12px 0;border:0;border-top:1px solid #ccc}#vcomments blockquote{margin:15px 0;border-left:5px solid #42b983;padding:1rem .8rem .3rem .8rem;color:#666;background-color:rgba(66,185,131,.1)}#vcomments pre{font-family:monospace,monospace;padding:1.2em;margin:.5em 0;background:#272822;overflow:auto;border-radius:.3em;tab-size:4}#vcomments code{font-family:monospace,monospace;padding:1px 3px;font-size:.92rem;color:#e96900;background-color:#f8f8f8;border-radius:2px}#vcomments pre code{font-family:monospace,monospace;padding:0;color:#e8eaf6;background-color:#272822}#vcomments pre[class*=language-]{padding:1.2em;margin:.5em 0}#vcomments code[class*=language-],pre[class*=language-]{color:#e8eaf6}#vcomments [type=checkbox]:not(:checked),[type=checkbox]:checked{position:inherit;margin-left:-1.3rem;margin-right:.4rem;margin-top:-1px;vertical-align:middle;left:unset;visibility:visible}#vcomments b,strong{font-weight:700}#vcomments dfn{font-style:italic}#vcomments small{font-size:85%}#vcomments cite{font-style:normal}#vcomments mark{background-color:#fcf8e3;padding:.2em}#vcomments table,td,th{padding:12px 13px;border:1px solid #dfe2e5}table tr:nth-child(2n),thead{background-color:#fafafa}#vcomments table th{background-color:#f2f2f2;min-width:80px}#vcomments table td{min-width:80px}#vcomments [type=checkbox]:not(:checked),[type=checkbox]:checked{position:inherit;margin-left:-1.3rem;margin-right:.4rem;margin-top:-1px;vertical-align:middle;left:unset;visibility:visible}</style><div class="card valine-card" data-aos="fade-up"><div class="comment_headling" style="font-size:20px;font-weight:700;position:relative;padding-left:20px;top:15px;padding-bottom:5px"><i class="fas fa-comments fa-fw" aria-hidden="true"></i> <span>评论</span></div><div id="vcomments" class="card-content" style="display:grid"></div></div><script src="/libs/valine/av-min.js"></script><script src="/libs/valine/Valine.min.js"></script><script>new Valine({el:"#vcomments",appId:"jyqeuqhvETNamBu9astovTHb-gzGzoHsz",appKey:"O3d5BeP2Fm9WMhiRHcvW13vN",notify:!1,verify:!1,visitor:!0,avatar:"mm",pageSize:"10",lang:"zh-cn",placeholder:"just go go",meta:["nick","mail","link"],path:window.location.pathname,serverURLs:"https://lc-api.czqu.ren",recordIP:!0})</script><article id="prenext-posts" class="prev-next articles"><div class="row article-row"><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge left-badge text-color"><i class="fas fa-chevron-left"></i>&nbsp;上一篇</div><div class="card"><a href="/posts/5423/"><div class="card-image"><img src="/medias/featureimages/thumbnail/36.webp" class="responsive-img" alt="简单抵御疑似黑客的ssh登录"> <span class="card-title">简单抵御疑似黑客的ssh登录</span></div></a><div class="card-content article-content"><div class="summary block-with-text"></div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2020-11-13 </span><span class="publish-author"><i class="fas fa-user fa-fw"></i> Czq</span></div></div><div class="card-action article-tags"><a href="/tags/Linux/"><span class="chip bg-color">Linux</span> </a><a href="/tags/%E8%BF%90%E7%BB%B4/"><span class="chip bg-color">运维</span></a></div></div></div><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div><div class="card"><a href="/posts/53930/"><div class="card-image"><img src="/medias/featureimages/thumbnail/45.webp" class="responsive-img" alt="Linux内存管理"> <span class="card-title">Linux内存管理</span></div></a><div class="card-content article-content"><div class="summary block-with-text"></div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2020-11-13 </span><span class="publish-author"><i class="fas fa-user fa-fw"></i> Czq</span></div></div><div class="card-action article-tags"><a href="/tags/Linux/"><span class="chip bg-color">Linux</span></a></div></div></div></div></article></div><script>$("#articleContent").on("copy",function(e){var n,t,o,i;void 0===window.getSelection||(""+(n=window.getSelection())).length<Number.parseInt("120")||(t=document.getElementsByTagName("body")[0],(o=document.createElement("div")).style.position="absolute",o.style.left="-99999px",t.appendChild(o),o.appendChild(n.getRangeAt(0).cloneContents()),"PRE"===n.getRangeAt(0).commonAncestorContainer.nodeName&&(o.innerHTML="<pre>"+o.innerHTML+"</pre>"),i=document.location.href,o.innerHTML+='<br />来源: Czq&#39;s blog<br />文章作者: Czq<br />文章链接: <a href="'+i+'">'+i+"</a><br />本文章著作权归作者所有，任何形式的转载都请注明出处。",n.selectAllChildren(o),window.setTimeout(function(){t.removeChild(o)},200))})</script><script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script><script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script><script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script><script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script></div><div id="toc-aside" class="expanded col l3 hide-on-med-and-down"><div class="toc-widget card" style="background-color:#fff"><div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div><div id="toc-content"></div></div></div></div><div id="floating-toc-btn" class="hide-on-med-and-down"><a class="btn-floating btn-large bg-color"><i class="fas fa-list-ul"></i></a></div><script src="/libs/tocbot/tocbot.min.js"></script><script>$(function(){tocbot.init({tocSelector:"#toc-content",contentSelector:"#articleContent",headingsOffset:-(.4*$(window).height()-45),collapseDepth:Number("0"),headingSelector:"h2, h3, h4"});let t=parseInt(.4*$(window).height()-64),e=$(".toc-widget");$(window).scroll(function(){$(window).scrollTop()>t?e.addClass("toc-fixed"):e.removeClass("toc-fixed")});const n="expanded";let i=$("#toc-aside"),l=$("#main-content");$("#floating-toc-btn .btn-floating").click(function(){i.hasClass(n)?(i.removeClass(n).hide(),l.removeClass("l9")):(i.addClass(n).show(),l.addClass("l9"));var e="artDetail",o="prenext-posts";if(0!==(e=$("#"+e)).length){let t=e.width();450<=t?t+=21:350<=t&&t<450?t+=18:300<=t&&t<350?t+=16:t+=14,$("#"+o).width(t)}})})</script></main><footer class="page-footer bg-color"><link rel="stylesheet" href="/libs/aplayer/APlayer.min.css"><style>.aplayer .aplayer-lrc p{display:none;font-size:12px;font-weight:700;line-height:16px!important}.aplayer .aplayer-lrc p.aplayer-lrc-current{display:none;font-size:15px;color:#42b983}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-66px!important}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0!important}</style><div><div class="row"><meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2204388891" fixed="true" autoplay theme="#42b983" loop order="random" preload="none" volume="0.7" list-folded="true"></meting-js></div></div><script src="/libs/aplayer/APlayer.min.js"></script><script src="/libs/aplayer/Meting.min.js"></script><div class="container row center-align" style="margin-bottom:0!important"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">2019-2022</span>&nbsp; <a href="/about" target="_blank">Czq</a> <span id="busuanzi_container_site_pv">&nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp; <span id="busuanzi_value_site_pv" class="white-color"></span> </span><span id="busuanzi_container_site_uv">&nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp; <span id="busuanzi_value_site_uv" class="white-color"></span></span><br><br></div><div class="col s12 m4 l4 social-link social-statis"><a href="mailto:mail@czqu.net" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i> </a><a href="https://www.zhihu.com/people/czqu" class="tooltipped" target="_blank" data-tooltip="关注我的知乎: https://www.zhihu.com/people/czqu" data-position="top" data-delay="50"><i class="fab fa-zhihu1">知</i> </a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script type="text/javascript">$(function(){!function(t,r,s){"use strict";$.ajax({url:t,dataType:"xml",success:function(t){var e=$("entry",t).map(function(){return{title:$("title",this).text(),content:$("content",this).text(),url:$("url",this).text()}}).get(),t=document.getElementById(r),n=document.getElementById(s);t.addEventListener("input",function(){var o='<ul class="search-result-list">',h=this.value.trim().toLowerCase().split(/[\s\-]+/);n.innerHTML="",this.value.trim().length<=0||(e.forEach(function(t){var n,e,r,s=!0,i=t.title.trim().toLowerCase(),l=t.content.trim().replace(/<[^>]+>/g,"").toLowerCase(),a=0===(a=t.url).indexOf("/")?t.url:"/"+a,c=-1,u=-1;""!==i&&""!==l&&h.forEach(function(t,e){n=i.indexOf(t),c=l.indexOf(t),n<0&&c<0?s=!1:(c<0&&(c=0),0===e&&(u=c))}),s&&(o+="<li><a href='"+a+"' class='search-result-title'>"+i+"</a>",a=t.content.trim().replace(/<[^>]+>/g,""),0<=u&&(t=u+80,(t=0===(e=(e=u-20)<0?0:e)?100:t)>a.length&&(t=a.length),r=a.substr(e,t),h.forEach(function(t){var e=new RegExp(t,"gi");r=r.replace(e,'<em class="search-keyword">'+t+"</em>")}),o+='<p class="search-result">'+r+"...</p>"),o+="</li>")}),o+="</ul>",n.innerHTML=o)})}})}("/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="/libs/materialize/materialize.min.js"></script><script src="/libs/masonry/masonry.pkgd.min.js"></script><script src="/libs/aos/aos.js"></script><script src="/libs/scrollprogress/scrollProgress.min.js"></script><script src="/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="/js/matery.js"></script><script type="text/javascript">var windowWidth=$(window).width();768<windowWidth&&document.write('<script type="text/javascript" src="/libs/others/sakura-small.js"><\/script>')</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script"),t=(e.src="https://hm.baidu.com/hm.js?8f8f5f2c3391eef9edfa4562cd53acd3",document.getElementsByTagName("script")[0]);t.parentNode.insertBefore(e,t)}()</script><script>!function(){var t=document.createElement("script"),e=window.location.protocol.split(":")[0],e=(t.src="https"===e?"https://zz.bdstatic.com/linksubmit/push.js":"http://push.zhanzhang.baidu.com/push.js",document.getElementsByTagName("script")[0]);e.parentNode.insertBefore(t,e)}()</script><script src="/libs/others/clicklove.js" async></script><script async src="/libs/others/busuanzi.pure.mini.js"></script><script type="text/javascript" size="150" alpha="0.6" zindex="-1" src="/libs/background/ribbon-refresh.min.js" async></script><script src="/libs/instantpage/instantpage.js" type="module"></script></body></html>

@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /tags/
+Disallow: /categories/
+Allow:/
+
+sitemap: https://czqu.net/sitemap.xml
+sitemap: https://czqu.net/baidusitemap.xml
+sitemap: https://czqu.net/atom.xml
+sitemap: https://czqu.net/rss2.xml
