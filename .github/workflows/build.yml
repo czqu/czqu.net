@@ -16,15 +16,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }} # `GH_TOKEN` is a secret that contains your PAT
           path: _source
           ref: main
-      - name: Checkout themes
-        uses: actions/checkout@v3
-        with:
-          repository: czqu/hexo-theme-matery
-          token: ${{ secrets.GH_TOKEN }} # `GH_TOKEN` is a secret that contains your PAT
-          path: _source/themes/matery
-          ref: myself
-      - name: delete file
-        run: rm $GITHUB_WORKSPACE/_source/themes/matery/*.yml
       - name: move file
         run:  mv -f $GITHUB_WORKSPACE/_source/*  $GITHUB_WORKSPACE 
       - name: Set Node.js
