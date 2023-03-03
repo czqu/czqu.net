@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: web_page
+      - name: clean pre version
+        run:  rm -rf $GITHUB_WORKSPACE/public
       - name: Checkout pre
         uses: actions/checkout@v3
         with:
