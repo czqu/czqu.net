@@ -6,7 +6,7 @@
   <link href="https://czqu.net/atom.xml" rel="self"/>
   
   <link href="https://czqu.net/"/>
-  <updated>2023-03-03T17:40:03.245Z</updated>
+  <updated>2023-03-03T17:46:26.550Z</updated>
   <id>https://czqu.net/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://czqu.net/posts/20069/"/>
     <id>https://czqu.net/posts/20069/</id>
     <published>2023-03-03T16:56:00.000Z</published>
-    <updated>2023-03-03T17:40:03.245Z</updated>
+    <updated>2023-03-03T17:46:26.550Z</updated>
     
     
       
@@ -44,7 +44,7 @@
     <link href="https://czqu.net/posts/3655275722/"/>
     <id>https://czqu.net/posts/3655275722/</id>
     <published>2023-03-03T16:14:00.000Z</published>
-    <updated>2023-03-03T17:40:03.285Z</updated>
+    <updated>2023-03-03T17:46:26.582Z</updated>
     
     
     <summary type="html">The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</summary>
@@ -63,7 +63,7 @@
     <link href="https://czqu.net/posts/1231995594/"/>
     <id>https://czqu.net/posts/1231995594/</id>
     <published>2022-03-14T16:27:14.000Z</published>
-    <updated>2023-03-03T17:40:03.177Z</updated>
+    <updated>2023-03-03T17:46:26.494Z</updated>
     
     
       
@@ -88,7 +88,7 @@
     <link href="https://czqu.net/posts/33090/"/>
     <id>https://czqu.net/posts/33090/</id>
     <published>2021-11-13T05:10:11.000Z</published>
-    <updated>2023-03-03T17:40:03.165Z</updated>
+    <updated>2023-03-03T17:46:26.482Z</updated>
     
     
       
@@ -111,7 +111,7 @@
     <link href="https://czqu.net/posts/3450539282/"/>
     <id>https://czqu.net/posts/3450539282/</id>
     <published>2021-10-05T01:25:00.000Z</published>
-    <updated>2023-03-03T17:40:03.289Z</updated>
+    <updated>2023-03-03T17:46:26.586Z</updated>
     
     
       
@@ -137,7 +137,7 @@
     <link href="https://czqu.net/posts/3655275721/"/>
     <id>https://czqu.net/posts/3655275721/</id>
     <published>2021-09-30T15:16:00.000Z</published>
-    <updated>2023-03-03T17:40:03.285Z</updated>
+    <updated>2023-03-03T17:46:26.582Z</updated>
     
     
     <summary type="html">CNAME记录指向vercel会影响了CAA记录导致的SSL证书无法签发，导致出现&quot;验证失败，您的CAA配置不允许当前CA为您签发证书，请修改为：symantec.com或digicert.com&quot;的错误</summary>
@@ -156,7 +156,7 @@
     <link href="https://czqu.net/posts/823464988/"/>
     <id>https://czqu.net/posts/823464988/</id>
     <published>2021-09-30T01:25:00.000Z</published>
-    <updated>2023-03-03T17:40:03.173Z</updated>
+    <updated>2023-03-03T17:46:26.490Z</updated>
     
     
       
@@ -179,7 +179,7 @@
     <link href="https://czqu.net/posts/1115750794/"/>
     <id>https://czqu.net/posts/1115750794/</id>
     <published>2021-09-30T01:15:00.000Z</published>
-    <updated>2023-03-03T17:40:03.189Z</updated>
+    <updated>2023-03-03T17:46:26.502Z</updated>
     
     
       
@@ -205,7 +205,7 @@
     <link href="https://czqu.net/posts/2220992601/"/>
     <id>https://czqu.net/posts/2220992601/</id>
     <published>2021-09-28T14:23:05.000Z</published>
-    <updated>2023-03-03T17:40:03.209Z</updated>
+    <updated>2023-03-03T17:46:26.522Z</updated>
     
     
       
@@ -228,7 +228,7 @@
     <link href="https://czqu.net/posts/1037488110/"/>
     <id>https://czqu.net/posts/1037488110/</id>
     <published>2021-09-28T11:32:11.000Z</published>
-    <updated>2023-03-03T17:40:03.285Z</updated>
+    <updated>2023-03-03T17:46:26.582Z</updated>
     
     
       
@@ -254,7 +254,7 @@
     <link href="https://czqu.net/posts/2603939427/"/>
     <id>https://czqu.net/posts/2603939427/</id>
     <published>2021-09-28T02:05:30.000Z</published>
-    <updated>2023-03-03T17:40:03.189Z</updated>
+    <updated>2023-03-03T17:46:26.502Z</updated>
     
     
       
@@ -278,7 +278,7 @@
     <link href="https://czqu.net/posts/3664919065/"/>
     <id>https://czqu.net/posts/3664919065/</id>
     <published>2021-09-24T16:27:14.000Z</published>
-    <updated>2023-03-03T17:40:03.177Z</updated>
+    <updated>2023-03-03T17:46:26.494Z</updated>
     
     
       
@@ -302,7 +302,7 @@
     <link href="https://czqu.net/posts/25908/"/>
     <id>https://czqu.net/posts/25908/</id>
     <published>2021-05-17T07:44:32.000Z</published>
-    <updated>2023-03-03T17:40:03.261Z</updated>
+    <updated>2023-03-03T17:46:26.566Z</updated>
     
     
       
@@ -323,7 +323,7 @@
     <link href="https://czqu.net/posts/49861/"/>
     <id>https://czqu.net/posts/49861/</id>
     <published>2020-11-28T07:44:32.000Z</published>
-    <updated>2023-03-03T17:40:03.257Z</updated>
+    <updated>2023-03-03T17:46:26.562Z</updated>
     
     
       
@@ -344,7 +344,7 @@
     <link href="https://czqu.net/posts/27992/"/>
     <id>https://czqu.net/posts/27992/</id>
     <published>2020-11-17T02:13:51.000Z</published>
-    <updated>2023-03-03T17:40:03.189Z</updated>
+    <updated>2023-03-03T17:46:26.506Z</updated>
     
     
       
@@ -371,7 +371,7 @@
     <link href="https://czqu.net/posts/59173/"/>
     <id>https://czqu.net/posts/59173/</id>
     <published>2020-11-17T01:51:06.000Z</published>
-    <updated>2023-03-03T17:40:03.193Z</updated>
+    <updated>2023-03-03T17:46:26.506Z</updated>
     
     
       
@@ -400,7 +400,7 @@
     <link href="https://czqu.net/posts/58638/"/>
     <id>https://czqu.net/posts/58638/</id>
     <published>2020-11-14T09:23:48.000Z</published>
-    <updated>2023-03-03T17:40:03.205Z</updated>
+    <updated>2023-03-03T17:46:26.518Z</updated>
     
     
       
@@ -423,7 +423,7 @@
     <link href="https://czqu.net/posts/35865/"/>
     <id>https://czqu.net/posts/35865/</id>
     <published>2020-11-14T03:08:16.000Z</published>
-    <updated>2023-03-03T17:40:03.209Z</updated>
+    <updated>2023-03-03T17:46:26.522Z</updated>
     
     
       
@@ -445,7 +445,7 @@
     <link href="https://czqu.net/posts/5772/"/>
     <id>https://czqu.net/posts/5772/</id>
     <published>2020-11-13T09:01:18.000Z</published>
-    <updated>2023-03-03T17:40:03.181Z</updated>
+    <updated>2023-03-03T17:46:26.498Z</updated>
     
     
       
@@ -470,7 +470,7 @@
     <link href="https://czqu.net/posts/33535/"/>
     <id>https://czqu.net/posts/33535/</id>
     <published>2020-11-13T07:49:03.000Z</published>
-    <updated>2023-03-03T17:40:03.213Z</updated>
+    <updated>2023-03-03T17:46:26.526Z</updated>
     
     
       
