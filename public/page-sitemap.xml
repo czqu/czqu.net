@@ -11,7 +11,7 @@
     
     <url>
         <loc>https://czqu.net/links/</loc>
-        <lastmod>2023-03-03T15:39:30.436Z</lastmod>
+        <lastmod>2023-03-03T15:45:24.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -20,7 +20,7 @@
     
     <url>
         <loc>https://czqu.net/tags/</loc>
-        <lastmod>2023-03-03T15:39:30.436Z</lastmod>
+        <lastmod>2023-03-03T15:45:24.742Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -29,7 +29,7 @@
     
     <url>
         <loc>https://czqu.net/categories/</loc>
-        <lastmod>2023-03-03T15:39:30.256Z</lastmod>
+        <lastmod>2023-03-03T15:45:24.566Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -38,7 +38,7 @@
     
     <url>
         <loc>https://czqu.net/contact/</loc>
-        <lastmod>2023-03-03T15:39:30.256Z</lastmod>
+        <lastmod>2023-03-03T15:45:24.566Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -47,16 +47,7 @@
     
     <url>
         <loc>https://czqu.net/about/</loc>
-        <lastmod>2023-03-03T15:39:30.252Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    
-    
-    <url>
-        <loc>https://czqu.net/404.html</loc>
-        <lastmod>2023-03-03T15:39:30.124Z</lastmod>
+        <lastmod>2023-03-03T15:45:24.562Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
