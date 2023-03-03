@@ -45,7 +45,7 @@ jobs:
         with:
           ref: web_page_pre
       - name: clean pre version
-        run:  rm -rf $GITHUB_WORKSPACE/public
+        run:  rm -rf $GITHUB_WORKSPACE/public && mkdir  $GITHUB_WORKSPACE/public/
       - name: copy
         run: cp -r -f ~/_the_next/* $GITHUB_WORKSPACE/public 
       - name: Import GPG key
