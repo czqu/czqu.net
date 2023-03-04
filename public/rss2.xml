@@ -9,8 +9,52 @@
     <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Believe you can and you&#39;re halfway there.</description>
-    <pubDate>Sat, 04 Mar 2023 00:56:00 GMT</pubDate>
+    <pubDate>Sat, 04 Mar 2023 12:14:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to Retrieve User IPv4 and IPv6 Addresses in a Spring Boot Application</title>
+      <link>https://czqu.net/posts/1268933518/</link>
+      <guid>https://czqu.net/posts/1268933518/</guid>
+      <pubDate>Sat, 04 Mar 2023 12:14:00 GMT</pubDate>
+      
+      <description>This blog post covers how to retrieve the current request context and user IP addresses in a Spring Boot application, providing useful information for logging and security purposes.</description>
+      
+      
+      
+      
+      <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
+      
+      
+      <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
+      
+      
+      <comments>https://czqu.net/posts/1268933518/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Java Thread Context: How to Determine Whether You&#39;re in a Request Context</title>
+      <link>https://czqu.net/posts/2685105031/</link>
+      <guid>https://czqu.net/posts/2685105031/</guid>
+      <pubDate>Sat, 04 Mar 2023 11:14:00 GMT</pubDate>
+      
+      <description>Java Thread Context: How to Determine Whether You&#39;re in a Request Context.</description>
+      
+      
+      
+      
+      <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
+      
+      
+      <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
+      
+      <category domain="https://czqu.net/tags/Trap/">Trap</category>
+      
+      
+      <comments>https://czqu.net/posts/2685105031/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Wireshark Basic Usage</title>
@@ -49,12 +93,39 @@
       
       
       
-      <category domain="https://czqu.net/tags/Backend-development/">Backend development</category>
+      <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
       
       <category domain="https://czqu.net/tags/Trap/">Trap</category>
       
       
       <comments>https://czqu.net/posts/3655275721/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
+      <link>https://czqu.net/posts/56389/</link>
+      <guid>https://czqu.net/posts/56389/</guid>
+      <pubDate>Fri, 03 Mar 2023 10:00:00 GMT</pubDate>
+      
+        
+        
+          
+          
+      <description>&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt; If you’re experiencing an</description>
+          
+        
+      
+      
+      
+      
+      <category domain="https://czqu.net/categories/Life-Hacks/">Life Hacks</category>
+      
+      
+      <category domain="https://czqu.net/tags/Life-Hacks/">Life Hacks</category>
+      
+      
+      <comments>https://czqu.net/posts/56389/#disqus_thread</comments>
       
     </item>
     

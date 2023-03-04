@@ -6,7 +6,7 @@
   <link href="https://czqu.net/atom.xml" rel="self"/>
   
   <link href="https://czqu.net/"/>
-  <updated>2023-03-04T00:56:00.000Z</updated>
+  <updated>2023-03-04T12:14:00.000Z</updated>
   <id>https://czqu.net/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to Retrieve User IPv4 and IPv6 Addresses in a Spring Boot Application</title>
+    <link href="https://czqu.net/posts/1268933518/"/>
+    <id>https://czqu.net/posts/1268933518/</id>
+    <published>2023-03-04T12:14:00.000Z</published>
+    <updated>2023-03-04T12:14:00.000Z</updated>
+    
+    
+    <summary type="html">This blog post covers how to retrieve the current request context and user IP addresses in a Spring Boot application, providing useful information for logging and security purposes.</summary>
+    
+    
+    
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    
+    
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java Thread Context: How to Determine Whether You&#39;re in a Request Context</title>
+    <link href="https://czqu.net/posts/2685105031/"/>
+    <id>https://czqu.net/posts/2685105031/</id>
+    <published>2023-03-04T11:14:00.000Z</published>
+    <updated>2023-03-04T11:14:00.000Z</updated>
+    
+    
+    <summary type="html">Java Thread Context: How to Determine Whether You&#39;re in a Request Context.</summary>
+    
+    
+    
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    
+    
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
+    
+    <category term="Trap" scheme="https://czqu.net/tags/Trap/"/>
+    
+  </entry>
   
   <entry>
     <title>Wireshark Basic Usage</title>
@@ -52,9 +92,34 @@
     
     
     
-    <category term="Backend development" scheme="https://czqu.net/tags/Backend-development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
     
     <category term="Trap" scheme="https://czqu.net/tags/Trap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
+    <link href="https://czqu.net/posts/56389/"/>
+    <id>https://czqu.net/posts/56389/</id>
+    <published>2023-03-03T10:00:00.000Z</published>
+    <updated>2023-03-03T10:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt; If you’re experiencing an</summary>
+        
+      
+    
+    
+    
+    <category term="Life Hacks" scheme="https://czqu.net/categories/Life-Hacks/"/>
+    
+    
+    <category term="Life Hacks" scheme="https://czqu.net/tags/Life-Hacks/"/>
     
   </entry>
   

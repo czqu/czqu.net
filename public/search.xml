@@ -3,6 +3,98 @@
     <entry>
       
       
+      <title>How to Retrieve User IPv4 and IPv6 Addresses in a Spring Boot Application</title>
+      
+      
+      <link href="/posts/1268933518/"/>
+      
+      
+      <url>/posts/1268933518/</url>
+      
+      
+        
+      <content type="html"><![CDATA[<p>When building a web application, it’s often necessary to retrieve the IP address of the user who is accessing the application. This information can be useful for various purposes, such as security, analytics, and customization. In this tutorial, we will explore how to retrieve both IPv4 and IPv6 addresses of a user in a Spring Boot application.</p><h2 id="Retrieving-User-IP-Address"><a href="#Retrieving-User-IP-Address" class="headerlink" title="Retrieving User IP Address"></a>Retrieving User IP Address</h2><p>In Spring Boot, we can retrieve the IP address of a user by injecting a <code>HttpServletRequest</code> object into our controller class and calling its <code>getRemoteAddr()</code> method. For example:</p><pre class="line-numbers language-none"><code class="language-none">@RestControllerpublic class UserController {    @Autowired    private HttpServletRequest request;    @GetMapping("/user/ip")    public String getUserIP() {        String ipAddress = request.getRemoteAddr();        return ipAddress;    }}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In the above code, we have injected a <code>HttpServletRequest</code> object using the <code>@Autowired</code> annotation and defined a <code>getUserIP()</code> method that returns the IP address of the user. The <code>getRemoteAddr()</code> method of the <code>HttpServletRequest</code> object returns the IP address of the client or the last proxy that sent the request.</p><p>However, this method may not always return the correct IP address. In some cases, the IP address may be the address of a proxy server or load balancer rather than the actual user’s IP address. To obtain the correct IP address, we can check for the <code>X-Forwarded-For</code> header, which is a standard header used by proxies to indicate the originating IP address of a client connecting to a web server through the proxy. Here’s an updated version of the code that checks for the <code>X-Forwarded-For</code> header:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RestController</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">private</span> <span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">;</span>    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/ip"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserIP</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">String</span> ipAddress <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token string">"X-Forwarded-For"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>ipAddress <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token operator">||</span> ipAddress<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token string">"unknown"</span><span class="token punctuation">.</span><span class="token function">equalsIgnoreCase</span><span class="token punctuation">(</span>ipAddress<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            ipAddress <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getRemoteAddr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> ipAddress<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In the above code, we first check for the <code>X-Forwarded-For</code> header using the <code>getHeader()</code> method of the <code>HttpServletRequest</code> object. If the header is not present or its value is empty or “unknown”, we fall back to the <code>getRemoteAddr()</code> method to obtain the IP address.</p><h2 id="Retrieving-User-IPv4-and-IPv6-Addresses"><a href="#Retrieving-User-IPv4-and-IPv6-Addresses" class="headerlink" title="Retrieving User IPv4 and IPv6 Addresses"></a>Retrieving User IPv4 and IPv6 Addresses</h2><p>To retrieve the IPv4 and IPv6 addresses of a user, we can use the <code>InetAddress</code> class from the <code>java.net</code> package. Here’s an updated version of the code that retrieves both IPv4 and IPv6 addresses:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RestController</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">{</span>    <span class="token annotation punctuation">@Autowired</span>    <span class="token keyword">private</span> <span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">;</span>    <span class="token annotation punctuation">@GetMapping</span><span class="token punctuation">(</span><span class="token string">"/user/ip"</span><span class="token punctuation">)</span>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getUserIP</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">UnknownHostException</span> <span class="token punctuation">{</span>        <span class="token class-name">InetAddress</span> inetAddress <span class="token operator">=</span> <span class="token class-name">InetAddress</span><span class="token punctuation">.</span><span class="token function">getByName</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">getRemoteAddr</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token class-name">String</span> ipAddress <span class="token operator">=</span> inetAddress<span class="token punctuation">.</span><span class="token function">getHostAddress</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">if</span> <span class="token punctuation">(</span>inetAddress <span class="token keyword">instanceof</span> <span class="token class-name">Inet6Address</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>            <span class="token comment">// IPv6 address</span>        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>            <span class="token comment">// IPv4 address</span>        <span class="token punctuation">}</span>        <span class="token keyword">return</span> ipAddress<span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In the above code, we first obtain an <code>InetAddress</code> object using the <code>getByName()</code> method of the <code>InetAddress</code> class and passing in the IP address obtained from the <code>getRemoteAddr()</code> method of the <code>HttpServletRequest</code> object. We then call the <code>getHostAddress()</code> method of the <code>InetAddress</code> object to obtain the IP address in string format. Finally, we check whether the <code>InetAddress</code> object is an instance of <code>Inet6Address</code>, which represents an IPv6 address, and perform any additional processing if necessary.</p><p>With this code, we can retrieve both IPv4 and IPv6 addresses of a user in a Spring Boot application. However, keep in mind that not all users may have an IPv6 address, so it’s important to handle this case accordingly.</p>]]></content>
+      
+      
+      
+      
+      <categories>
+        
+          
+          
+        <category> Backend Development </category>
+        
+          
+      
+      </categories>
+      
+      
+      
+        
+      <tags>
+        
+            
+            
+        <tag> Backend Development </tag>
+        
+            
+        
+      </tags>
+      
+      
+    
+    </entry>
+    <entry>
+      
+      
+      <title>Java Thread Context: How to Determine Whether You're in a Request Context</title>
+      
+      
+      <link href="/posts/2685105031/"/>
+      
+      
+      <url>/posts/2685105031/</url>
+      
+      
+        
+      <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>When developing Java web applications, it is often necessary to check whether the current thread is in a request context. A request context is a context that holds information about a single HTTP request and is typically used in web applications. In this blog post, we will explore how to determine whether the current thread is in a request context using Spring Framework’s <code>RequestContextHolder</code> class.</p><h2 id="The-RequestContextHolder-Class"><a href="#The-RequestContextHolder-Class" class="headerlink" title="The RequestContextHolder Class"></a>The RequestContextHolder Class</h2><p>The <code>RequestContextHolder</code> class is a utility class provided by Spring Framework that allows you to bind the current HTTP request and response to the current thread. It provides access to the current request and response objects and allows you to access request attributes.</p><h2 id="Checking-if-the-Current-Thread-is-in-a-Request-Context"><a href="#Checking-if-the-Current-Thread-is-in-a-Request-Context" class="headerlink" title="Checking if the Current Thread is in a Request Context"></a>Checking if the Current Thread is in a Request Context</h2><p>To check if the current thread is in a request context, we can use the <code>RequestContextHolder.getRequestAttributes()</code> method. This method returns the current request attributes associated with the current thread. If there are no request attributes associated with the current thread, it means that the current thread is not in a request context.</p><p>Here’s an example implementation of a <code>RequestContextChecker</code> class that uses <code>RequestContextHolder</code> to check if the current thread is in a request context:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>context<span class="token punctuation">.</span>request<span class="token punctuation">.</span></span><span class="token class-name">RequestAttributes</span></span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token import"><span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>context<span class="token punctuation">.</span>request<span class="token punctuation">.</span></span><span class="token class-name">RequestContextHolder</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RequestContextChecker</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isCurrentThreadInRequestContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token class-name">RequestAttributes</span> requestAttributes <span class="token operator">=</span> <span class="token class-name">RequestContextHolder</span><span class="token punctuation">.</span><span class="token function">getRequestAttributes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">return</span> requestAttributes <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In the code above, the <code>isCurrentThreadInRequestContext()</code> method calls <code>RequestContextHolder.getRequestAttributes()</code> to get the request attributes associated with the current thread. If there are request attributes associated with the current thread, the method returns <code>true</code>. Otherwise, it returns <code>false</code>.</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>In this  post, we’ve seen how to check if the current thread is in a request context using Spring Framework’s <code>RequestContextHolder</code> class. By using <code>RequestContextHolder.getRequestAttributes()</code>, we can determine if the current thread is in a request context and take appropriate actions based on the result. It’s important to note that this method is only applicable to web applications that use Spring Framework. For other types of request contexts, you may need to use a different method to determine if the current thread is in a request context.</p>]]></content>
+      
+      
+      
+      
+      <categories>
+        
+          
+          
+        <category> Backend Development </category>
+        
+          
+      
+      </categories>
+      
+      
+      
+        
+      <tags>
+        
+            
+            
+        <tag> Backend Development </tag>
+        
+            
+            
+        <tag> Trap </tag>
+        
+            
+        
+      </tags>
+      
+      
+    
+    </entry>
+    <entry>
+      
+      
       <title>Wireshark Basic Usage</title>
       
       
@@ -55,11 +147,55 @@
         
             
             
-        <tag> Backend development </tag>
+        <tag> Backend Development </tag>
         
             
             
         <tag> Trap </tag>
+        
+            
+        
+      </tags>
+      
+      
+    
+    </entry>
+    <entry>
+      
+      
+      <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
+      
+      
+      <link href="/posts/56389/"/>
+      
+      
+      <url>/posts/56389/</url>
+      
+      
+        
+      <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p> If you’re experiencing an issue with your Bluetooth earphones where only one side has sound, you might have been searching for solutions online. Unfortunately, not all online advice is reliable. To help fellow users, I’m sharing my tested solution to this problem.</p><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol><li><p>Unpair your earphones from your phone.</p></li><li><p>With both earphones turned on, press and hold the power button for 5 seconds until they turn off. Release the button once they turn off. (Both earphones’ lights should not be on during this process. Skip this step if your earphones are already turned off.)</p></li><li><p>Press and hold both earphones again. When the LED lights start flashing white, keep pressing until they flash red and white twice. (This step is crucial as it clears the previous configuration information on the earphones. Remember to unpair and turn off Bluetooth on your phone.)</p></li><li><p>Turn on the right earphone first and then the left. (Make sure the earphones are inside the charging case. Taking out the right earphone will automatically turn it on, so start with the right one first.)</p></li><li><p>The right earphone should start flashing quickly. When the left earphone stops flashing, the earphones are paired successfully.</p></li><li><p>Pair the earphones with your phone again through the Bluetooth settings.</p></li></ol><p>By following these steps, you should be able to fix the one-sided sound issue on your Redmi Bluetooth earphones.</p>]]></content>
+      
+      
+      
+      
+      <categories>
+        
+          
+          
+        <category> Life Hacks </category>
+        
+          
+      
+      </categories>
+      
+      
+      
+        
+      <tags>
+        
+            
+            
+        <tag> Life Hacks </tag>
         
             
         

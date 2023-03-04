@@ -4,17 +4,22 @@
 
     <sitemap>
         <loc>https://czqu.net/post-sitemap.xml</loc>
-        <lastmod>2023-03-04T00:56:00.000Z</lastmod>
+        <lastmod>2023-03-04T12:14:00.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://czqu.net/page-sitemap.xml</loc>
-        <lastmod>2023-03-04T13:29:54.629Z</lastmod>
+        <lastmod>2023-03-04T16:44:27.127Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://czqu.net/category-sitemap.xml</loc>
+        <lastmod>2023-03-04T12:14:00.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://czqu.net/tag-sitemap.xml</loc>
-        <lastmod>2023-03-04T00:56:00.000Z</lastmod>
+        <lastmod>2023-03-04T12:14:00.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>
