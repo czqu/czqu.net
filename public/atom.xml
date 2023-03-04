@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Czq&#39;s Blog</title>
   
-  <subtitle>Czq&#39;s Blog</subtitle>
+  <subtitle>Believe you can and you&#39;re halfway there.</subtitle>
   <link href="https://czqu.net/atom.xml" rel="self"/>
   
   <link href="https://czqu.net/"/>
-  <updated>2023-03-03T16:56:00.000Z</updated>
+  <updated>2023-03-04T00:56:00.000Z</updated>
   <id>https://czqu.net/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Wireshark Basic Usage</title>
     <link href="https://czqu.net/posts/20069/"/>
     <id>https://czqu.net/posts/20069/</id>
-    <published>2023-03-03T16:56:00.000Z</published>
-    <updated>2023-03-03T16:56:00.000Z</updated>
+    <published>2023-03-04T00:56:00.000Z</published>
+    <updated>2023-03-04T00:56:00.000Z</updated>
     
     
       
@@ -43,8 +43,8 @@
     <title>The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</title>
     <link href="https://czqu.net/posts/3655275721/"/>
     <id>https://czqu.net/posts/3655275721/</id>
-    <published>2023-03-03T16:14:00.000Z</published>
-    <updated>2023-03-03T16:14:00.000Z</updated>
+    <published>2023-03-04T00:14:00.000Z</published>
+    <updated>2023-03-04T00:14:00.000Z</updated>
     
     
     <summary type="html">The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</summary>

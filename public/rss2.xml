@@ -8,15 +8,15 @@
     
     <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
-    <description>Czq&#39;s Blog</description>
-    <pubDate>Fri, 03 Mar 2023 16:56:00 GMT</pubDate>
+    <description>Believe you can and you&#39;re halfway there.</description>
+    <pubDate>Sat, 04 Mar 2023 00:56:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>Wireshark Basic Usage</title>
       <link>https://czqu.net/posts/20069/</link>
       <guid>https://czqu.net/posts/20069/</guid>
-      <pubDate>Fri, 03 Mar 2023 16:56:00 GMT</pubDate>
+      <pubDate>Sat, 04 Mar 2023 00:56:00 GMT</pubDate>
       
         
         
@@ -41,7 +41,7 @@
       <title>The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</title>
       <link>https://czqu.net/posts/3655275721/</link>
       <guid>https://czqu.net/posts/3655275721/</guid>
-      <pubDate>Fri, 03 Mar 2023 16:14:00 GMT</pubDate>
+      <pubDate>Sat, 04 Mar 2023 00:14:00 GMT</pubDate>
       
       <description>The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</description>
       
