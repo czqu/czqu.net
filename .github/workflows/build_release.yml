@@ -9,6 +9,10 @@ jobs:
   auto:
     runs-on: ubuntu-latest
     steps:
+      - name: set python 
+        uses: actions/setup-python@v4 
+        with:
+          python-version: 'pypy3.9' 
       - name: Checkout source
         uses: actions/checkout@v3
         with:
@@ -42,6 +46,8 @@ jobs:
         run: cd $GITHUB_WORKSPACE/cn/ && yarn install --prefer-offline --frozen-lockfile
       - name: build for cn
         run: cd $GITHUB_WORKSPACE/cn/ && yarn build
+      - name: set search all
+        run: cd $GITHUB_WORKSPACE/ && python $GITHUB_WORKSPACE/search.py 
       - name: mv file
         run: mkdir $GITHUB_WORKSPACE/public/cn/ && mv -f $GITHUB_WORKSPACE/cn/public/*  $GITHUB_WORKSPACE/public/cn/ && cd $GITHUB_WORKSPACE/
       - name: clean
