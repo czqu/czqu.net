@@ -1,0 +1,627 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>算法与数据结构学习笔记：链表 | Czq's Blog</title><meta name="author" content="Czq"><meta name="copyright" content="Czq"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="核心知识点 null异常处理  dummy node 哑巴节点  双指针&#x2F;快慢指针  插入一个节点到排序链表  从一个链表中移除一个节点  翻转链表  合并两个链表  找到链表的中间节点   例题：83. 删除排序链表中的重复元素 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。 示例 1: 输入: 1-&gt;1-&gt;2输出: 1-&gt;2示例 2: 输入: 1-&gt;1-"><meta property="og:type" content="article"><meta property="og:title" content="算法与数据结构学习笔记：链表"><meta property="og:url" content="https://czqu.net/posts/26939/index.html"><meta property="og:site_name" content="Czq&#39;s Blog"><meta property="og:description" content="核心知识点 null异常处理  dummy node 哑巴节点  双指针&#x2F;快慢指针  插入一个节点到排序链表  从一个链表中移除一个节点  翻转链表  合并两个链表  找到链表的中间节点   例题：83. 删除排序链表中的重复元素 给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。 示例 1: 输入: 1-&gt;1-&gt;2输出: 1-&gt;2示例 2: 输入: 1-&gt;1-"><meta property="og:locale"><meta property="og:image" content="https://czqu.net/img/Doraemon.png"><meta property="article:published_time" content="2020-07-24T04:01:00.000Z"><meta property="article:modified_time" content="2020-07-24T04:01:00.000Z"><meta property="article:author" content="Czq"><meta property="article:tag" content="cpp"><meta property="article:tag" content="数据结构"><meta property="article:tag" content="算法"><meta property="article:tag" content="链表"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://czqu.net/img/Doraemon.png"><link rel="shortcut icon" href="/cn/img/Doraemon.png"><link rel="canonical" href="https://czqu.net/posts/26939/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/cn/css/index.css"><link rel="stylesheet" href="/cn/pluginsSrc/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload='this.media="all"'><link rel="stylesheet" href="/cn/pluginsSrc/@fancyapps/ui/dist/fancybox.css" media="print" onload='this.media="all"'><script async src="https://www.googletagmanager.com/gtag/js?id=G-H9BD1N5K2S"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H9BD1N5K2S")</script><script>const GLOBAL_CONFIG={root:"/cn/",algolia:void 0,localSearch:{path:"/cn/search.xml",preload:!0,languages:{hits_empty:"找不到您查询的内容：${query}"}},translate:void 0,noticeOutdate:{limitDay:500,position:"top",messagePrev:"It has been",messageNext:"days since the last update, the content of the article may be outdated."},highlight:{plugin:"prismjs",highlightCopy:!0,highlightLang:!0,highlightHeightLimit:!1},copy:{success:"复制成功",error:"复制错误",noSupport:"浏览器不支持"},relativeDate:{homepage:!1,post:!1},runtime:"",date_suffix:{just:"刚刚",min:"分钟前",hour:"小时前",day:"天前",month:"个月前"},copyright:{limitCount:50,languages:{author:"作者: Czq",link:"链接: ",source:"来源: Czq's Blog",info:"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},lightbox:"fancybox",Snackbar:void 0,source:{justifiedGallery:{js:"/cn/pluginsSrc/flickr-justified-gallery/dist/fjGallery.min.js",css:"/cn/pluginsSrc/flickr-justified-gallery/dist/fjGallery.css"}},isPhotoFigcaption:!1,islazyload:!0,isAnchor:!1,percent:{toc:!0,rightside:!1}}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"算法与数据结构学习笔记：链表",isPost:!0,isHome:!1,isHighlightShrink:!1,isToc:!0,postUpdate:"2020-07-24 12:01:00"}</script><noscript><style type="text/css">#nav{opacity:1}.justified-gallery img{opacity:1}#post-meta time,#recent-posts time{display:inline!important}</style></noscript><script>(e=>{e.saveToLocal={set:function(e,t,a){0!==a&&(a=864e5*a,t={value:t,expiry:(new Date).getTime()+a},localStorage.setItem(e,JSON.stringify(t)))},get:function(e){var t=localStorage.getItem(e);if(t){t=JSON.parse(t);if(!((new Date).getTime()>t.expiry))return t.value;localStorage.removeItem(e)}}},e.getScript=o=>new Promise((t,e)=>{const a=document.createElement("script");a.src=o,a.async=!0,a.onerror=e,a.onload=a.onreadystatechange=function(){var e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(a.onload=a.onreadystatechange=null,t())},document.head.appendChild(a)}),e.getCSS=(o,n=!1)=>new Promise((t,e)=>{const a=document.createElement("link");a.rel="stylesheet",a.href=o,n&&(a.id=n),a.onerror=e,a.onload=a.onreadystatechange=function(){var e=this.readyState;e&&"loaded"!==e&&"complete"!==e||(a.onload=a.onreadystatechange=null,t())},document.head.appendChild(a)}),e.activateDarkMode=function(){document.documentElement.setAttribute("data-theme","dark"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","#0d0d0d")},e.activateLightMode=function(){document.documentElement.setAttribute("data-theme","light"),null!==document.querySelector('meta[name="theme-color"]')&&document.querySelector('meta[name="theme-color"]').setAttribute("content","#ffffff")};e=saveToLocal.get("theme"),"dark"===e?activateDarkMode():"light"===e&&activateLightMode(),e=saveToLocal.get("aside-status");void 0!==e&&("hide"===e?document.documentElement.classList.add("hide-aside"):document.documentElement.classList.remove("hide-aside"));/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)&&document.documentElement.classList.add("apple")})(window)</script><meta name="generator" content="Hexo 6.3.0"><style>.github-emoji{position:relative;display:inline-block;width:1.2em;min-height:1.2em;overflow:hidden;vertical-align:top;color:transparent}.github-emoji>span{position:relative;z-index:10}.github-emoji .fancybox,.github-emoji img{margin:0!important;padding:0!important;border:none!important;outline:0!important;text-decoration:none!important;user-select:none!important;cursor:auto!important}.github-emoji img{height:1.2em!important;width:1.2em!important;position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;user-select:none!important;cursor:auto!important}.github-emoji-fallback{color:inherit}.github-emoji-fallback img{opacity:0!important}</style><link rel="alternate" href="/cn/atom.xml" title="Czq's Blog" type="application/atom+xml"><link rel="alternate" href="/cn/rss2.xml" title="Czq's Blog" type="application/rss+xml"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader={endLoading:()=>{document.body.style.overflow="auto",document.getElementById("loading-box").classList.add("loaded")},initLoading:()=>{document.body.style.overflow="",document.getElementById("loading-box").classList.remove("loaded")}};window.addEventListener("load",()=>{preloader.endLoading()})</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/cn/img/Doraemon.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="sidebar-site-data site-data is-center"><a href="/cn/archives/"><div class="headline">文章</div><div class="length-num">70</div></a><a href="/cn/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/cn/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/cn/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/cn/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/cn/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/cn/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/cn/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(https://today.czqu.net/pic/today.webp)"><nav id="nav"><span id="blog-info"><a href="/cn/" title="Czq's Blog"><span class="site-name">Czq's Blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/cn/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/cn/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/cn/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/cn/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/cn/links/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">算法与数据结构学习笔记：链表</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-07-24T04:01:00.000Z" title="发表于 2020-07-24 12:01:00">2020-07-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-07-24T04:01:00.000Z" title="更新于 2020-07-24 12:01:00">2020-07-24</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title="算法与数据结构学习笔记：链表"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="核心知识点"><a href="#核心知识点" class="headerlink" title="核心知识点"></a>核心知识点</h3><ul><li><p>null异常处理</p></li><li><p>dummy node 哑巴节点</p></li><li><p>双指针/快慢指针</p></li><li><p>插入一个节点到排序链表</p></li><li><p>从一个链表中移除一个节点</p></li><li><p>翻转链表</p></li><li><p>合并两个链表</p></li><li><p>找到链表的中间节点</p></li></ul><h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><h4 id="83-删除排序链表中的重复元素"><a href="#83-删除排序链表中的重复元素" class="headerlink" title="83. 删除排序链表中的重复元素"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list/">83. 删除排序链表中的重复元素</a></h4><blockquote><p>给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。</p><p>示例 1:</p><p>输入: 1-&gt;1-&gt;2<br>输出: 1-&gt;2<br>示例 2:</p><p>输入: 1-&gt;1-&gt;2-&gt;3-&gt;3<br>输出: 1-&gt;2-&gt;3</p></blockquote><h5 id="直接法："><a href="#直接法：" class="headerlink" title="直接法："></a><strong>直接法：</strong></h5><p>链表是有序的，所以直接更改当前结点的 next 指针，跳过下一个结点并直接指向下一个结点之后的结点即可。</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">deleteDuplicates</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode <span class="token operator">*</span>current<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token comment">//null异常处理</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>current<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>current<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//一直删除，直到下一个不重复 </span>
+            <span class="token comment">// 想想如果把while改成if怎么样</span>
+            <span class="token comment">//把current-&gt;next!=NULL删除会怎么样</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>current<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>current<span class="token operator">-&gt;</span>val<span class="token operator">==</span>current<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                current<span class="token operator">-&gt;</span>next<span class="token operator">=</span>current<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">//移动到下一个节点</span>
+            current<span class="token operator">=</span>current<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>时间复杂度：O(n)，因为列表中的每个结点都检查一次以确定它是否重复，所以总运行时间为 O(n)，其中 n是列表中的结点数。</p></li><li><p>空间复杂度：O(1)，没有使用额外的空间。</p></li></ul><h4 id="82-删除排序链表中的重复元素-II"><a href="#82-删除排序链表中的重复元素-II" class="headerlink" title="82. 删除排序链表中的重复元素 II"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/">82. 删除排序链表中的重复元素 II</a></h4><blockquote><p>给定一个排序链表，删除所有含有重复数字的节点，只保留原始链表中 没有重复出现 的数字。</p><p>示例 1:</p><p>输入: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5<br>输出: 1-&gt;2-&gt;5<br>示例 2:</p><p>输入: 1-&gt;1-&gt;1-&gt;2-&gt;3<br>输出: 2-&gt;3</p></blockquote><h5 id="利用哑结点-："><a href="#利用哑结点-：" class="headerlink" title="利用哑结点 ："></a><strong>利用哑结点</strong> ：</h5><p>为了防止删除头结点的极端情况发生，先创建空结点dummy，使dummy指向传入的head结点。</p><p>然后创建一个cur指针指向dummy，比较cur的后两个结点，看他们是否相同。</p><p>如果相同，则说明cur后有重复元素，此时创建一个temp指针指向第一个重复元素，即cur-&gt;next;</p><p>通过循环进行去重，循环结束后temp指向的是这群重复元素的最后一个，依照题意此时temp的下一个才是我们想要的。</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">deleteDuplicates</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//设置哑结点 防止删除头结点的情况发生后的问题</span>
+        ListNode <span class="token operator">*</span>dummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        dummy<span class="token operator">-&gt;</span>next<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>cur<span class="token operator">=</span>dummy<span class="token punctuation">;</span><span class="token comment">//cur 指向哑结点</span>
+
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//比较cur后两个结点</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>val<span class="token operator">==</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//去重</span>
+                ListNode <span class="token operator">*</span>temp<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>temp<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>temp<span class="token operator">-&gt;</span>val<span class="token operator">==</span>temp<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    temp<span class="token operator">=</span>temp<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">//temp前的重复结点都跳过了，现在我们跳过temp</span>
+                cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>temp<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//如果cur后两个结点不重复，直接前移</span>
+                cur<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li><p>时间复杂度：O(n)</p></li><li><p>空间复杂度：O(1)</p></li></ul><h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a></h4><blockquote><p>反转一个单链表。</p><p><strong>示例:</strong></p><p>输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL<br>输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL</p></blockquote><h5 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h5><p>如图，定义两个指针，pre在前 cur在后,temp 保存向前的pre指针的临时指针</p><p>每次进行一次局部翻转，</p><p>当pre到达尾部的时候终止，此时cur指向最后一个节点。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/cn/posts/26939/9ce26a709147ad9ce6152d604efc1cc19a33dc5d467ed2aae5bc68463fdd2888.gif" alt="img"></p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">reverseList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">/*定义两个指针，pre在前 cur在后
+         *当pre到达尾部的时候终止，此时cur指向最后一个节点
+         */</span>
+        ListNode <span class="token operator">*</span>pre<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>cur<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>temp<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>pre<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            temp<span class="token operator">=</span>pre<span class="token punctuation">;</span><span class="token comment">//临时存储pre</span>
+            pre<span class="token operator">=</span>pre<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span><span class="token comment">//pre指向下一个节点</span>
+            temp<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span><span class="token comment">//翻转指针</span>
+            cur<span class="token operator">=</span>temp<span class="token punctuation">;</span><span class="token comment">//cur指针向前移动一步</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> cur<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="92-反转链表-II"><a href="#92-反转链表-II" class="headerlink" title="92. 反转链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reverse-linked-list-ii/">92. 反转链表 II</a></h4><blockquote><p>反转从位置 <em>m</em> 到 <em>n</em> 的链表。请使用一趟扫描完成反转。</p><p><strong>说明:</strong><br>1 ≤ <em>m</em> ≤ <em>n</em> ≤ 链表长度。</p><p><strong>示例:</strong></p><pre class="line-numbers language-none"><code class="language-none">&gt;输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
+&gt;输出: 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></blockquote><h5 id="迭代法："><a href="#迭代法：" class="headerlink" title="迭代法："></a>迭代法：</h5><p>参考上题，先遍历到 m 处，再翻转</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">reverseBetween</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">,</span> <span class="token keyword">int</span> m<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+        ListNode <span class="token operator">*</span>pre<span class="token punctuation">,</span><span class="token operator">*</span>cur<span class="token punctuation">;</span>
+        pre<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        cur<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        
+		<span class="token comment">//遍历到m节点，如果只有一个节点，跳过，这里cur会为空但是后面翻转链表的时候就不是了</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>m<span class="token operator">&gt;</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cur<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+            pre<span class="token operator">=</span>pre<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            m<span class="token operator">--</span><span class="token punctuation">;</span>
+            n<span class="token operator">--</span><span class="token punctuation">;</span>
+            
+        <span class="token punctuation">}</span>
+
+		<span class="token comment">//m节点的前一个节点</span>
+        ListNode<span class="token operator">*</span>con<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+        ListNode<span class="token operator">*</span>temp<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token comment">//用于保存被翻转链表的第一个节点</span>
+        ListNode<span class="token operator">*</span>front<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+        
+      
+        
+		<span class="token comment">//反转m-n的节点</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">--</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            temp<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+            pre<span class="token operator">=</span>pre<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            temp<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            cur<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        
+		<span class="token comment">//如果不只是一个节点，那么就把指针指向被翻转的链表的最后一个节点</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>con<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            con<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">//否则直接输出此节点</span>
+            head<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//被翻转的链表原来的头变尾</span>
+        front<span class="token operator">-&gt;</span>next<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/merge-two-sorted-lists/">21. 合并两个有序链表</a></h4><blockquote><p>将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</p><p>示例：</p><p>输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4<br>输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</p></blockquote><h5 id="迭代法：-1"><a href="#迭代法：-1" class="headerlink" title="迭代法："></a>迭代法：</h5><p>直接连接各个节点</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">mergeTwoLists</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> l1<span class="token punctuation">,</span> ListNode<span class="token operator">*</span> l2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        ListNode <span class="token operator">*</span>dummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>cur<span class="token operator">=</span>dummy<span class="token punctuation">;</span>
+        <span class="token comment">//将小的节点接到哑结点为头的链表中</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l1<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>l2<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>l1<span class="token operator">-&gt;</span>val<span class="token operator">&gt;</span>l2<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+               cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l2<span class="token punctuation">;</span>
+               cur<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+               l2<span class="token operator">=</span>l2<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l1<span class="token punctuation">;</span>
+                cur<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                l1<span class="token operator">=</span>l1<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+
+        <span class="token punctuation">}</span>
+        
+        <span class="token comment">//处理剩下的节点</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>l1<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l1<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>l2<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l2<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="86-分隔链表"><a href="#86-分隔链表" class="headerlink" title="86. 分隔链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/partition-list/">86. 分隔链表</a></h4><blockquote><p>给定一个链表和一个特定值 x，对链表进行分隔，使得所有小于 x 的节点都在大于或等于 x 的节点之前。</p><p>你应当保留两个分区中每个节点的初始相对位置。</p><p>示例:</p><p>输入: head = 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;2, x = 3<br>输出: 1-&gt;2-&gt;2-&gt;4-&gt;3-&gt;5</p></blockquote><p><strong>当头节点不确定的时候，使用哑巴节点</strong></p><p>将大于 x 的节点，放到另外一个链表，最后连接这两个链表</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">partition</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>headDummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>tailDummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>cur<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">,</span><span class="token operator">*</span>tail<span class="token operator">=</span>tailDummy<span class="token punctuation">;</span>
+        headDummy<span class="token operator">-&gt;</span>next<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        
+        head<span class="token operator">=</span>headDummy<span class="token punctuation">;</span>
+		
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>val<span class="token operator">&lt;</span>x<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">//这里把大于X的节点删除，然后连接到另一个链表</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                cur<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                <span class="token comment">//删除大于X的节点</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                <span class="token comment">//连接到新链表</span>
+                tail<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+                tail<span class="token operator">=</span>tail<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//拼接两个链表</span>
+        <span class="token comment">//tail代表tailDummy最后一个节点，它的后面可能还连着，要断掉</span>
+        <span class="token comment">//如输入[1,4,3,2,5,2]就会有错,没有处理5-&gt;2</span>
+        tail<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        
+        head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>tailDummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> headDummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+        
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="876-链表的中间结点"><a href="#876-链表的中间结点" class="headerlink" title="876. 链表的中间结点"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/middle-of-the-linked-list/">876. 链表的中间结点</a></h4><blockquote><p>给定一个带有头结点 <code>head</code> 的非空单链表，返回链表的中间结点。</p><p>如果有两个中间结点，则返回第二个中间结点。</p></blockquote><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">middleNode</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ListNode <span class="token operator">*</span>slow<span class="token punctuation">,</span><span class="token operator">*</span>fast<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+       <span class="token punctuation">{</span>
+           slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+           fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+       <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>总结：如果链表长度是偶数，返回中间偏右的位置</p><p>且fast如果初始化为head-&gt;next 返回中间偏左的位置。</p><p>奇数长度则两者相同。</p><h4 id="148-排序链表"><a href="#148-排序链表" class="headerlink" title="148. 排序链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/sort-list/">148. 排序链表</a></h4><blockquote><p>在 O(n log n) 时间复杂度和常数级空间复杂度下，对链表进行排序。</p><p>示例 1:</p><p>输入: 4-&gt;2-&gt;1-&gt;3<br>输出: 1-&gt;2-&gt;3-&gt;4<br>示例 2:</p><p>输入: -1-&gt;5-&gt;3-&gt;4-&gt;0<br>输出: -1-&gt;0-&gt;3-&gt;4-&gt;5</p></blockquote><h5 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h5><p>归并排序链表，找中点和合并操作</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode<span class="token operator">*</span> <span class="token function">sortList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">mergeSort</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token comment">//寻找链表中点，快慢指针，快的到达终点，慢的刚好到中点 </span>
+    <span class="token comment">//当链表的长度是奇数时，slow 恰巧停在中点位置；如果长度是偶数，slow 最终的位置是中间偏右：</span>
+    <span class="token comment">//此题我们让head先走，则停在中间偏左的位置</span>
+    <span class="token comment">//148 143 141都有快慢指针</span>
+    ListNode <span class="token operator">*</span><span class="token function">findMiddle</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        ListNode <span class="token operator">*</span>slow<span class="token punctuation">,</span><span class="token operator">*</span>fast<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+
+        <span class="token punctuation">{</span>
+            slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">//合并两个链表，参考归并排序</span>
+    ListNode <span class="token operator">*</span> <span class="token function">mergeTwoLists</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span>left<span class="token punctuation">,</span>ListNode<span class="token operator">*</span>right<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        ListNode <span class="token operator">*</span>dummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>head<span class="token operator">=</span>dummy<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>right<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>left<span class="token operator">-&gt;</span>val<span class="token operator">&gt;</span>right<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>right<span class="token punctuation">;</span>
+                right<span class="token operator">=</span>right<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>left<span class="token punctuation">;</span>
+                left<span class="token operator">=</span>left<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>   
+            <span class="token comment">//下一个</span>
+            head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//处理剩下节点</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>left<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>left<span class="token punctuation">;</span>
+                head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                left<span class="token operator">=</span>left<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">while</span><span class="token punctuation">(</span>right<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>right<span class="token punctuation">;</span>
+                head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                right<span class="token operator">=</span>right<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+	
+    ListNode <span class="token operator">*</span><span class="token function">mergeSort</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token operator">||</span>head<span class="token operator">-&gt;</span>next<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        ListNode <span class="token operator">*</span>middle<span class="token operator">=</span><span class="token function">findMiddle</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">// 断开中间节点</span>
+        ListNode<span class="token operator">*</span> tail<span class="token operator">=</span>middle<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        middle<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token comment">//左右分别进行归并排序</span>
+        ListNode <span class="token operator">*</span>left<span class="token operator">=</span><span class="token function">mergeSort</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>right<span class="token operator">=</span><span class="token function">mergeSort</span><span class="token punctuation">(</span>tail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>res<span class="token operator">=</span><span class="token function">mergeTwoLists</span><span class="token punctuation">(</span>left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> res<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="143-重排链表"><a href="#143-重排链表" class="headerlink" title="143. 重排链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/reorder-list/">143. 重排链表</a></h4><blockquote><p>给定一个单链表 L：L0→L1→…→Ln-1→Ln ，<br>将其重新排列后变为： L0→Ln→L1→Ln-1→L2→Ln-2→…</p><p>你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。</p><p>示例 1:</p><p>给定链表 1-&gt;2-&gt;3-&gt;4, 重新排列为 1-&gt;4-&gt;2-&gt;3.<br>示例 2:</p><p>给定链表 1-&gt;2-&gt;3-&gt;4-&gt;5, 重新排列为 1-&gt;5-&gt;2-&gt;4-&gt;3.</p></blockquote><p>此题目为2019年计算机统考408真题</p><p>思路：找到中点断开，翻转后面部分，然后合并前后两个链表</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode() : val(0), next(nullptr) {}
+ *     ListNode(int x) : val(x), next(nullptr) {}
+ *     ListNode(int x, ListNode *next) : val(x), next(next) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    
+    <span class="token comment">//快慢指针找中点，同上一题 </span>
+    <span class="token comment">//148 143 141都有快慢指针</span>
+    ListNode <span class="token operator">*</span> <span class="token function">findMiddle</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        ListNode <span class="token operator">*</span>slow<span class="token punctuation">,</span><span class="token operator">*</span>fast<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token comment">//如果是偶数个节点，返回中间偏右的位置 </span>
+        <span class="token comment">//你改成fast=head-&gt;next返回中间偏左也是对的</span>
+        <span class="token comment">//有趣吧，画个图就知道了</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    
+    <span class="token comment">//合并两个链表</span>
+    ListNode <span class="token operator">*</span> <span class="token function">mergeTwoLists</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> l1<span class="token punctuation">,</span>ListNode<span class="token operator">*</span>l2<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        ListNode<span class="token operator">*</span> dummy<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">ListNode</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">bool</span>  toggle <span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>head<span class="token operator">=</span>dummy<span class="token punctuation">;</span>
+        <span class="token comment">//间断连接两个链表</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l1<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>l2<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>toggle<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l1<span class="token punctuation">;</span>
+                l1<span class="token operator">=</span>l1<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">else</span>
+            <span class="token punctuation">{</span>
+                head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l2<span class="token punctuation">;</span>
+                l2<span class="token operator">=</span>l2<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            toggle<span class="token operator">=</span><span class="token operator">!</span>toggle<span class="token punctuation">;</span>
+            head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//连接剩下的节点</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l1<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l1<span class="token punctuation">;</span>
+            l1<span class="token operator">=</span>l1<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>l2<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            head<span class="token operator">-&gt;</span>next<span class="token operator">=</span>l2<span class="token punctuation">;</span>
+            l2<span class="token operator">=</span>l2<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> dummy<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">void</span> <span class="token function">reorderList</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token operator">||</span>head<span class="token operator">-&gt;</span>next<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token punctuation">;</span>
+        
+        <span class="token comment">//找到中点 断开</span>
+        ListNode <span class="token operator">*</span>middle<span class="token operator">=</span><span class="token function">findMiddle</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>tail<span class="token operator">=</span>middle<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        middle<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token comment">//翻转链表</span>
+        ListNode <span class="token operator">*</span>cur<span class="token punctuation">,</span><span class="token operator">*</span>pre<span class="token punctuation">;</span>
+        pre<span class="token operator">=</span>tail<span class="token punctuation">;</span>
+        cur<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>pre<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            ListNode <span class="token operator">*</span>temp<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+            pre<span class="token operator">=</span>pre<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            temp<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            cur<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        tail<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+        
+        <span class="token comment">//合并链表</span>
+        head<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token function">mergeTwoLists</span><span class="token punctuation">(</span>head<span class="token punctuation">,</span>tail<span class="token punctuation">)</span><span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>                
+    <span class="token punctuation">}</span>
+    
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="141-环形链表"><a href="#141-环形链表" class="headerlink" title="141. 环形链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle/">141. 环形链表</a></h4><blockquote><p>给定一个链表，判断链表中是否有环。</p><p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p></blockquote><blockquote><p>示例 1：</p><p>输入：head = [3,2,0,-4], pos = 1</p><p>输出：true</p><p>解释：链表中有一个环，其尾部连接到第二个节点。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/cn/posts/26939/circularlinkedlistss.png" alt="img"></p><p>示例 2：</p><p>输入：head = [1,2], pos = 0</p><p>输出：true</p><p>解释：链表中有一个环，其尾部连接到第一个节点。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/cn/posts/26939/circularlinkedlist_test2.png" alt="img"></p><p>示例 3：</p><p>输入：head = [1], pos = -1<br>输出：false<br>解释：链表中没有环。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/cn/posts/26939/circularlinkedlist_test3.png" alt="img"></p></blockquote><p>快慢指针即可，就像你在操场跑步，操场有环，只要你和她速度不一样，你们总能与她相遇，如果是直线，她到了终点，你就再也追不上她</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token comment">//148 143 141 142都有快慢指针</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">bool</span> <span class="token function">hasCycle</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>fast<span class="token punctuation">,</span><span class="token operator">*</span>slow<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token comment">// 比较指针是否相等</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>slow<span class="token operator">==</span>fast<span class="token punctuation">)</span>
+                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142. 环形链表 II"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/linked-list-cycle-ii/">142. 环形链表 II</a></h4><blockquote><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。</p><p>为了表示给定链表中的环，我们使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果 pos 是 -1，则在该链表中没有环。</p><p>说明：不允许修改给定的链表。</p><p>示例 ：</p><p>输入：head = [3,2,0,-4], pos = 1<br>输出：tail connects to node index 1<br>解释：链表中有一个环，其尾部连接到第二个节点。</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/cn/posts/26939/circularlinkedlist.png" alt="img"></p></blockquote><p>。</p><h5 id="Floyd-算法"><a href="#Floyd-算法" class="headerlink" title="Floyd 算法"></a>Floyd 算法</h5><p>你在操场跑步，操场有环，只要你和她速度不一样，你们总能与她相遇，如果是直线，她到了终点，你就再也追不上她。此题分为两个阶段，第一个阶段先用快慢指针测试是否有环，第二阶段慢指针回到头head,然后各自以相同速度前进，相遇点即为入环处（可以自己画图尝试）。严格的数学证明可参考leetcode官方题解。</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    ListNode <span class="token operator">*</span><span class="token function">detectCycle</span><span class="token punctuation">(</span>ListNode <span class="token operator">*</span>head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>slow<span class="token punctuation">,</span><span class="token operator">*</span>fast<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token punctuation">;</span><span class="token comment">//如果这里是fast=fast-&gt;next，那么下面该怎么改？</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>slow<span class="token operator">==</span>fast<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token comment">//回到起点，各自以相同速度前进</span>
+                slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+                <span class="token keyword">while</span><span class="token punctuation">(</span>slow<span class="token operator">!=</span>fast<span class="token punctuation">)</span>
+                <span class="token punctuation">{</span>
+                    slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+                    fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+                <span class="token punctuation">}</span>
+                <span class="token keyword">return</span> slow<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>                        
+        <span class="token punctuation">}</span>     
+        <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="234-回文链表"><a href="#234-回文链表" class="headerlink" title="234. 回文链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/palindrome-linked-list/">234. 回文链表</a></h4><blockquote><p>请判断一个链表是否为回文链表。</p><p><strong>示例 1:</strong></p><pre class="line-numbers language-none"><code class="language-none">&gt;输入: 1-&gt;2
+&gt;输出: false<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><strong>示例 2:</strong></p><pre class="line-numbers language-none"><code class="language-none">&gt;输入: 1-&gt;2-&gt;2-&gt;1
+&gt;输出: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></blockquote><p>先找到链表中点，然后后面的翻转链表，一个个比较。</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">bool</span> <span class="token function">isPalindrome</span><span class="token punctuation">(</span>ListNode<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token operator">||</span>head<span class="token operator">-&gt;</span>next<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        ListNode <span class="token operator">*</span>slow<span class="token punctuation">,</span><span class="token operator">*</span>fast<span class="token punctuation">;</span>
+        slow<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        fast<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>fast<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            slow<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            fast<span class="token operator">=</span>fast<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//偶数长度slow是中间偏左的节点</span>
+        <span class="token comment">//奇数长度slow是中点</span>
+
+        ListNode <span class="token operator">*</span>cur<span class="token punctuation">,</span><span class="token operator">*</span>pre<span class="token punctuation">,</span><span class="token operator">*</span>tail<span class="token punctuation">,</span><span class="token operator">*</span>temp<span class="token punctuation">;</span>
+		<span class="token comment">//分离两个链表</span>
+        tail<span class="token operator">=</span>slow<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        slow<span class="token operator">-&gt;</span>next<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+		<span class="token comment">//翻转链表</span>
+        pre<span class="token operator">=</span>tail<span class="token punctuation">;</span>
+        cur<span class="token operator">=</span><span class="token constant">NULL</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>pre<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            temp<span class="token operator">=</span>pre<span class="token punctuation">;</span>
+            pre<span class="token operator">=</span>pre<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            temp<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+            cur<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//原链表的最后一个节点现在变成头结点</span>
+        tail<span class="token operator">=</span>cur<span class="token punctuation">;</span>
+
+        <span class="token keyword">while</span><span class="token punctuation">(</span>head<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>tail<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>tail<span class="token operator">-&gt;</span>val<span class="token operator">!=</span>head<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            head<span class="token operator">=</span>head<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            tail<span class="token operator">=</span>tail<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="138-复制带随机指针的链表"><a href="#138-复制带随机指针的链表" class="headerlink" title="138. 复制带随机指针的链表"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/copy-list-with-random-pointer/">138. 复制带随机指针的链表</a></h4><blockquote><p>给定一个链表，每个节点包含一个额外增加的随机指针，该指针可以指向链表中的任何节点或空节点。</p><p>要求返回这个链表的 深拷贝。</p><p>我们用一个由 n 个节点组成的链表来表示输入/输出中的链表。每个节点用一个 [val, random_index] 表示：</p><p>val：一个表示 Node.val 的整数。<br>random_index：随机指针指向的节点索引（范围从 0 到 n-1）；如果不指向任何节点，则为 null 。</p></blockquote><p>复制节点跟在原节点后面即可</p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
+// Definition for a Node.
+class Node {
+public:
+    int val;
+    Node* next;
+    Node* random;
+    
+    Node(int _val) {
+        val = _val;
+        next = NULL;
+        random = NULL;
+    }
+};
+*/</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    Node<span class="token operator">*</span> <span class="token function">copyRandomList</span><span class="token punctuation">(</span>Node<span class="token operator">*</span> head<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>head<span class="token operator">==</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+        <span class="token keyword">auto</span> cur<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token comment">//复制节点到后面</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">auto</span> clone<span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">Node</span><span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            clone<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            clone<span class="token operator">-&gt;</span>random<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>random<span class="token punctuation">;</span>
+            cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>clone<span class="token punctuation">;</span>
+            cur<span class="token operator">=</span>clone<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+         <span class="token comment">//处理random指针</span>
+        cur<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>cur<span class="token operator">-&gt;</span>random<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>random<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>random<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            cur<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//分离链表</span>
+        cur<span class="token operator">=</span>head<span class="token punctuation">;</span>
+        <span class="token keyword">auto</span> cloneHead<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cur<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token operator">&amp;&amp;</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">!=</span><span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">auto</span> temp<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            cur<span class="token operator">-&gt;</span>next<span class="token operator">=</span>cur<span class="token operator">-&gt;</span>next<span class="token operator">-&gt;</span>next<span class="token punctuation">;</span>
+            cur<span class="token operator">=</span>temp<span class="token punctuation">;</span>
+            
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> cloneHead<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://czqu.net">Czq</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://czqu.net/posts/26939/">https://czqu.net/posts/26939/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://czqu.net" target="_blank">Czq's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/cn/tags/cpp/">cpp</a><a class="post-meta__tags" href="/cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a><a class="post-meta__tags" href="/cn/tags/%E7%AE%97%E6%B3%95/">算法</a><a class="post-meta__tags" href="/cn/tags/%E9%93%BE%E8%A1%A8/">链表</a></div><div class="post_share"><div class="social-share" data-image="/cn/img/Doraemon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="/cn/pluginsSrc/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload='this.media="all"'><script src="/cn/pluginsSrc/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/cn/posts/34566/" title="Rest Client在idea的使用"><div class="cover" style="background:var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Rest Client在idea的使用</div></div></a></div><div class="next-post pull-right"><a href="/cn/posts/31496/" title="远程解锁常见问题"><div class="cover" style="background:var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">远程解锁常见问题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/cn/posts/49261/" title="算法与数据结构学习笔记：二叉树"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-06</div><div class="title">算法与数据结构学习笔记：二叉树</div></div></a></div><div><a href="/cn/posts/51468/" title="算法与数据结构学习笔记：栈和队列"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-11</div><div class="title">算法与数据结构学习笔记：栈和队列</div></div></a></div><div><a href="/cn/posts/48007/" title="算法与数据结构学习笔记：二进制"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-07</div><div class="title">算法与数据结构学习笔记：二进制</div></div></a></div><div><a href="/cn/posts/26904/" title="算法与数据结构学习笔记：动态规划"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-11</div><div class="title">算法与数据结构学习笔记：动态规划</div></div></a></div><div><a href="/cn/posts/59351/" title="算法与数据结构学习笔记：二分法"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-11</div><div class="title">算法与数据结构学习笔记：二分法</div></div></a></div><div><a href="/cn/posts/23513/" title="使用vscode快速搭建单片机开发环境"><div class="cover" style="background:var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-10</div><div class="title">使用vscode快速搭建单片机开发环境</div></div></a></div></div></div><hr><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/cn/img/Doraemon.png" onerror='this.onerror=null,this.src="/cn/img/friend_404.gif"' alt="avatar"></div><div class="author-info__name">Czq</div><div class="author-info__description">Czq's Blog</div></div><div class="card-info-data site-data is-center"><a href="/cn/archives/"><div class="headline">文章</div><div class="length-num">70</div></a><a href="/cn/tags/"><div class="headline">标签</div><div class="length-num">56</div></a><a href="/cn/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/czqu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/czqu" target="_blank" title="Github"><i class="fab fa-github"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.</span> <span class="toc-text">核心知识点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">例题：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#83-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0"><span class="toc-number">2.1.</span> <span class="toc-text">83. 删除排序链表中的重复元素</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E6%B3%95%EF%BC%9A"><span class="toc-number">2.1.1.</span> <span class="toc-text">直接法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#82-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0-II"><span class="toc-number">2.2.</span> <span class="toc-text">82. 删除排序链表中的重复元素 II</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E5%93%91%E7%BB%93%E7%82%B9-%EF%BC%9A"><span class="toc-number">2.2.1.</span> <span class="toc-text">利用哑结点 ：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="toc-number">2.3.</span> <span class="toc-text">206. 反转链表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="toc-number">2.3.1.</span> <span class="toc-text">双指针</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#92-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8-II"><span class="toc-number">2.4.</span> <span class="toc-text">92. 反转链表 II</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%B3%95%EF%BC%9A"><span class="toc-number">2.4.1.</span> <span class="toc-text">迭代法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-number">2.5.</span> <span class="toc-text">21. 合并两个有序链表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3%E6%B3%95%EF%BC%9A-1"><span class="toc-number">2.5.1.</span> <span class="toc-text">迭代法：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#86-%E5%88%86%E9%9A%94%E9%93%BE%E8%A1%A8"><span class="toc-number">2.6.</span> <span class="toc-text">86. 分隔链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#876-%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E9%97%B4%E7%BB%93%E7%82%B9"><span class="toc-number">2.7.</span> <span class="toc-text">876. 链表的中间结点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#148-%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8"><span class="toc-number">2.8.</span> <span class="toc-text">148. 排序链表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%80%92%E5%BD%92"><span class="toc-number">2.8.1.</span> <span class="toc-text">递归</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#143-%E9%87%8D%E6%8E%92%E9%93%BE%E8%A1%A8"><span class="toc-number">2.9.</span> <span class="toc-text">143. 重排链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8"><span class="toc-number">2.10.</span> <span class="toc-text">141. 环形链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#142-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8-II"><span class="toc-number">2.11.</span> <span class="toc-text">142. 环形链表 II</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Floyd-%E7%AE%97%E6%B3%95"><span class="toc-number">2.11.1.</span> <span class="toc-text">Floyd 算法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#234-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8"><span class="toc-number">2.12.</span> <span class="toc-text">234. 回文链表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#138-%E5%A4%8D%E5%88%B6%E5%B8%A6%E9%9A%8F%E6%9C%BA%E6%8C%87%E9%92%88%E7%9A%84%E9%93%BE%E8%A1%A8"><span class="toc-number">2.13.</span> <span class="toc-text">138. 复制带随机指针的链表</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cn/posts/20069/" title="Wireshark Basic Usage">Wireshark Basic Usage</a><time datetime="2023-03-03T16:56:00.000Z" title="发表于 2023-03-04 00:56:00">2023-03-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cn/posts/3655275722/" title="The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.">The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</a><time datetime="2023-03-03T16:14:00.000Z" title="发表于 2023-03-04 00:14:00">2023-03-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cn/posts/1231995594/" title="docker in Mac在IDEA上无法连接">docker in Mac在IDEA上无法连接</a><time datetime="2022-03-14T16:27:14.000Z" title="发表于 2022-03-15 00:27:14">2022-03-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cn/posts/33090/" title="OpenSSL在Windows和Linux下的编译">OpenSSL在Windows和Linux下的编译</a><time datetime="2021-11-13T05:10:11.000Z" title="发表于 2021-11-13 13:10:11">2021-11-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cn/posts/3450539282/" title="esp8266固件的安装">esp8266固件的安装</a><time datetime="2021-10-05T01:25:00.000Z" title="发表于 2021-10-05 09:25:00">2021-10-05</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By Czq</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/cn/js/utils.js"></script><script src="/cn/js/main.js"></script><script src="/cn/pluginsSrc/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/cn/pluginsSrc/instant.page/instantpage.js" type="module"></script><script src="/cn/pluginsSrc/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function loadGitalk(){function t(){new Gitalk(Object.assign({clientID:"46f31da723dadc12aa91",clientSecret:"b7b88f1ad1f1ae991b3712c102cdfa7b6bea39d2",repo:"czqu.net",owner:"czqu",admin:["czqu"],id:"29b0cafffa1e60d7ccd73cdcdff87d4b",updateCountCallback:commentCount},null)).render("gitalk-container")}"function"==typeof Gitalk?t():(getCSS("/cn/pluginsSrc/gitalk/dist/gitalk.css"),getScript("/cn/pluginsSrc/gitalk/dist/gitalk.min.js").then(t))}function commentCount(t){var n=document.querySelector("#post-meta .gitalk-comment-count");n&&(n.innerHTML=t)}function loadOtherComment(){loadGitalk()}btf.loadComment(document.getElementById("gitalk-container"),loadGitalk)</script></div><script src="/cn/pluginsSrc/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful=!0,POWERMODE.shake=!0,POWERMODE.mobile=!1,document.body.addEventListener("input",POWERMODE)</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div></div></div><div id="search-mask"></div><script src="/cn/js/search/local-search.js"></script></div></body></html>
