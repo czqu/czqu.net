@@ -163,6 +163,50 @@
     <entry>
       
       
+      <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
+      
+      
+      <link href="/posts/56389/"/>
+      
+      
+      <url>/posts/56389/</url>
+      
+      
+        
+      <content type="html"><![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p> If you’re experiencing an issue with your Bluetooth earphones where only one side has sound, you might have been searching for solutions online. Unfortunately, not all online advice is reliable. To help fellow users, I’m sharing my tested solution to this problem.</p><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><ol><li><p>Unpair your earphones from your phone.</p></li><li><p>With both earphones turned on, press and hold the power button for 5 seconds until they turn off. Release the button once they turn off. (Both earphones’ lights should not be on during this process. Skip this step if your earphones are already turned off.)</p></li><li><p>Press and hold both earphones again. When the LED lights start flashing white, keep pressing until they flash red and white twice. (This step is crucial as it clears the previous configuration information on the earphones. Remember to unpair and turn off Bluetooth on your phone.)</p></li><li><p>Turn on the right earphone first and then the left. (Make sure the earphones are inside the charging case. Taking out the right earphone will automatically turn it on, so start with the right one first.)</p></li><li><p>The right earphone should start flashing quickly. When the left earphone stops flashing, the earphones are paired successfully.</p></li><li><p>Pair the earphones with your phone again through the Bluetooth settings.</p></li></ol><p>By following these steps, you should be able to fix the one-sided sound issue on your Redmi Bluetooth earphones.</p>]]></content>
+      
+      
+      
+      
+      <categories>
+        
+          
+          
+        <category> Life Hacks </category>
+        
+          
+      
+      </categories>
+      
+      
+      
+        
+      <tags>
+        
+            
+            
+        <tag> Life Hacks </tag>
+        
+            
+        
+      </tags>
+      
+      
+    
+    </entry>
+    <entry>
+      
+      
       <title>docker in Mac在IDEA上无法连接</title>
       
       
