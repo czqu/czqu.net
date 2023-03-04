@@ -39,13 +39,13 @@ jobs:
       - name: build
         run: yarn build
       - name: ready to build cn
-        run: cd ./cn
+        run: cd $GITHUB_WORKSPACE/cn
       - name: Install dependencies for cn
         run: yarn install --prefer-offline --frozen-lockfile
       - name: build for cn
         run: yarn build
       - name: mv file
-        run: mv -f $GITHUB_WORKSPACE/cn/public/*  $GITHUB_WORKSPACE/public/cn/
+        run: mv -f $GITHUB_WORKSPACE/cn/public/*  $GITHUB_WORKSPACE/public/cn/ && cd $GITHUB_WORKSPACE/
       - name: clean
         run: mkdir ~/_the_next/ && mv -f $GITHUB_WORKSPACE/public/* ~/_the_next/ && rm -rf $GITHUB_WORKSPACE/ && mkdir $GITHUB_WORKSPACE 
       - name: Checkout pre
