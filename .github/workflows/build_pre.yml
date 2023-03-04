@@ -42,10 +42,8 @@ jobs:
         run: cd $GITHUB_WORKSPACE/cn/ && yarn install --prefer-offline --frozen-lockfile
       - name: build for cn
         run: cd $GITHUB_WORKSPACE/cn/ && yarn build
-      - name: test
-        run: ls $GITHUB_WORKSPACE/cn/ -al
       - name: mv file
-        run: mv -f $GITHUB_WORKSPACE/cn/public/*  $GITHUB_WORKSPACE/public/cn/ && cd $GITHUB_WORKSPACE/
+        run: mkdir $GITHUB_WORKSPACE/public/cn/ && mv -f $GITHUB_WORKSPACE/cn/public/*  $GITHUB_WORKSPACE/public/cn/ && cd $GITHUB_WORKSPACE/
       - name: clean
         run: mkdir ~/_the_next/ && mv -f $GITHUB_WORKSPACE/public/* ~/_the_next/ && rm -rf $GITHUB_WORKSPACE/ && mkdir $GITHUB_WORKSPACE 
       - name: Checkout pre
