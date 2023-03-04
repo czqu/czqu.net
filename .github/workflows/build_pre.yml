@@ -38,12 +38,10 @@ jobs:
         run: yarn install --prefer-offline --frozen-lockfile
       - name: build
         run: yarn build
-      - name: ready to build cn
-        run: cd $GITHUB_WORKSPACE/cn
       - name: Install dependencies for cn
-        run: yarn install --prefer-offline --frozen-lockfile
+        run: cd $GITHUB_WORKSPACE/cn/ && yarn install --prefer-offline --frozen-lockfile
       - name: build for cn
-        run: yarn build
+        run: cd $GITHUB_WORKSPACE/cn/ && yarn build
       - name: test
         run: ls $GITHUB_WORKSPACE/cn/ -al
       - name: mv file
