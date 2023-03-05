@@ -84,7 +84,7 @@
     <link href="https://czqu.net/posts/3655275721/"/>
     <id>https://czqu.net/posts/3655275721/</id>
     <published>2023-03-04T00:14:00.000Z</published>
-    <updated>2023-03-04T00:14:00.000Z</updated>
+    <updated>2023-03-05T07:36:00.000Z</updated>
     
     
     <summary type="html">The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</summary>
