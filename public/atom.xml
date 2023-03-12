@@ -6,7 +6,7 @@
   <link href="https://czqu.net/atom.xml" rel="self"/>
   
   <link href="https://czqu.net/"/>
-  <updated>2023-03-04T12:14:00.000Z</updated>
+  <updated>2023-03-12T09:18:00.000Z</updated>
   <id>https://czqu.net/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>How to make braised pork trotters</title>
+    <link href="https://czqu.net/posts/1037676127/"/>
+    <id>https://czqu.net/posts/1037676127/</id>
+    <published>2023-03-12T09:18:00.000Z</published>
+    <updated>2023-03-12T09:18:00.000Z</updated>
+    
+    
+    <summary type="html">How to make braised pork trotters</summary>
+    
+    
+    
+    <category term="Recipe" scheme="https://czqu.net/categories/Recipe/"/>
+    
+    
+    <category term="Life" scheme="https://czqu.net/tags/Life/"/>
+    
+    <category term="Recipe" scheme="https://czqu.net/tags/Recipe/"/>
+    
+  </entry>
   
   <entry>
     <title>How to Retrieve User IPv4 and IPv6 Addresses in a Spring Boot Application</title>
