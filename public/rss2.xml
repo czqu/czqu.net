@@ -9,8 +9,31 @@
     <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>Praising suffering because of incompetence.</description>
-    <pubDate>Sun, 12 Mar 2023 09:18:00 GMT</pubDate>
+    <pubDate>Thu, 16 Mar 2023 12:38:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>How to Execute JavaScript Code and Functions in Java</title>
+      <link>https://czqu.net/posts/2250085940/</link>
+      <guid>https://czqu.net/posts/2250085940/</guid>
+      <pubDate>Thu, 16 Mar 2023 12:38:00 GMT</pubDate>
+      
+      <description>How to Execute JavaScript Code and Functions in Java</description>
+      
+      
+      
+      
+      <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
+      
+      
+      <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
+      
+      <category domain="https://czqu.net/tags/Java/">Java</category>
+      
+      
+      <comments>https://czqu.net/posts/2250085940/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>How to make braised pork trotters</title>
@@ -166,9 +189,9 @@
       <category domain="https://czqu.net/categories/LeetCode/">LeetCode</category>
       
       
-      <category domain="https://czqu.net/tags/LeetCode/">LeetCode</category>
-      
       <category domain="https://czqu.net/tags/Java/">Java</category>
+      
+      <category domain="https://czqu.net/tags/LeetCode/">LeetCode</category>
       
       
       <comments>https://czqu.net/posts/3587124311/#disqus_thread</comments>

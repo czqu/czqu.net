@@ -3,6 +3,54 @@
     <entry>
       
       
+      <title>How to Execute JavaScript Code and Functions in Java</title>
+      
+      
+      <link href="/posts/2250085940/"/>
+      
+      
+      <url>/posts/2250085940/</url>
+      
+      
+        
+      <content type="html"><![CDATA[<p>JavaScript is a popular scripting language used for developing dynamic and interactive web pages. While JavaScript is primarily used in web development, it can also be used in other areas such as server-side scripting, desktop applications, and mobile apps. In this blog, we will explore how to execute JavaScript code and functions in Java.</p><p>To execute JavaScript code in Java, we can use the ScriptEngine class provided by the Java API. The ScriptEngine class is used to execute scripts written in various languages, including JavaScript. Here is a sample code that demonstrates how to execute JavaScript code in Java:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptEngine</span></span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptEngineManager</span></span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptException</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JavaScriptExecutor</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// Create a ScriptEngineManager object</span>        <span class="token class-name">ScriptEngineManager</span> manager <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ScriptEngineManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// Get the JavaScript engine</span>        <span class="token class-name">ScriptEngine</span> engine <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">getEngineByName</span><span class="token punctuation">(</span><span class="token string">"javascript"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">try</span> <span class="token punctuation">{</span>            <span class="token comment">// Execute JavaScript code</span>            <span class="token class-name">String</span> script <span class="token operator">=</span> <span class="token string">"var a = 1 + 2; a;"</span><span class="token punctuation">;</span>            <span class="token class-name">Object</span> result <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// Print the result</span>            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ScriptException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In this example, we create a ScriptEngineManager object and get the JavaScript engine using the getEngineByName method. Then we execute the JavaScript code using the eval method of the ScriptEngine class and store the result in an Object variable. Finally, we print the result to the console.</p><p>To execute JavaScript functions in Java, we can define the function in JavaScript code and then call it from our Java code using the ScriptEngine class. Here is a sample code that demonstrates how to execute JavaScript functions in Java:</p><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptEngine</span></span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptEngineManager</span></span><span class="token punctuation">;</span><span class="token keyword">import</span> <span class="token import"><span class="token namespace">javax<span class="token punctuation">.</span>script<span class="token punctuation">.</span></span><span class="token class-name">ScriptException</span></span><span class="token punctuation">;</span><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">JavaScriptFunctionExecutor</span> <span class="token punctuation">{</span>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment">// Create a ScriptEngineManager object</span>        <span class="token class-name">ScriptEngineManager</span> manager <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ScriptEngineManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment">// Get the JavaScript engine</span>        <span class="token class-name">ScriptEngine</span> engine <span class="token operator">=</span> manager<span class="token punctuation">.</span><span class="token function">getEngineByName</span><span class="token punctuation">(</span><span class="token string">"javascript"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token keyword">try</span> <span class="token punctuation">{</span>            <span class="token comment">// Define a JavaScript function</span>            <span class="token class-name">String</span> script <span class="token operator">=</span> <span class="token string">"function add(a, b) { return a + b; }"</span><span class="token punctuation">;</span>            <span class="token comment">// Execute the JavaScript function and get the result</span>            engine<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span>script<span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token class-name">Object</span> result <span class="token operator">=</span> engine<span class="token punctuation">.</span><span class="token function">eval</span><span class="token punctuation">(</span><span class="token string">"add(1, 2)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">// Print the result</span>            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">ScriptException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token punctuation">}</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>In this example, we define a JavaScript function called add that takes two arguments and returns their sum. Then we execute the function using the eval method of the ScriptEngine class and store the result in an Object variable. Finally, we print the result to the console.</p><p>In conclusion, the ScriptEngine class provided by the Java API allows us to execute JavaScript code and functions in Java. By leveraging the power of both languages, we can create more powerful and dynamic applications.</p>]]></content>
+      
+      
+      
+      
+      <categories>
+        
+          
+          
+        <category> Backend Development </category>
+        
+          
+      
+      </categories>
+      
+      
+      
+        
+      <tags>
+        
+            
+            
+        <tag> Backend Development </tag>
+        
+            
+            
+        <tag> Java </tag>
+        
+            
+        
+      </tags>
+      
+      
+    
+    </entry>
+    <entry>
+      
+      
       <title>How to make braised pork trotters</title>
       
       
@@ -287,11 +335,11 @@
         
             
             
-        <tag> LeetCode </tag>
+        <tag> Java </tag>
         
             
             
-        <tag> Java </tag>
+        <tag> LeetCode </tag>
         
             
         
