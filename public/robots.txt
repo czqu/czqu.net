@@ -1,7 +1,6 @@
 User-agent: *
 Disallow: /tags/
 Disallow: /categories/
-Disallow: /cn/
 Allow:/
 
 sitemap: https://czqu.net/sitemap.xml
