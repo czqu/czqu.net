@@ -53,7 +53,7 @@ jobs:
       - name: clean
         run: mkdir ~/_the_next/ && mv -f $GITHUB_WORKSPACE/public/* ~/_the_next/ && rm -rf $GITHUB_WORKSPACE/ && mkdir $GITHUB_WORKSPACE 
       - name: Checkout 
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: web_page
       - name: clean pre version
