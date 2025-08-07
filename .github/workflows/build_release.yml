@@ -25,11 +25,11 @@ jobs:
       - name: Set Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '17'
+          node-version: '22.18'
         # Cache node modules to accelerate
       - name: Get npm cache directory path
         id: npm-cache-dir-path
-        run: echo "dir=$(npm cache dir)" >> $GITHUB_OUTPUT
+        run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
       - name: Use npm cache
         uses: actions/cache@v4
         id: npm-cache
