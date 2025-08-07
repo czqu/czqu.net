@@ -41,7 +41,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: build
-        run: npm build
+        run: npm run build
       - name: Install dependencies for cn
         run: cd $GITHUB_WORKSPACE/cn/ && npm ci
       - name: build for cn
