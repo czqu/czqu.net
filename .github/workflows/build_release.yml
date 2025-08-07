@@ -27,25 +27,25 @@ jobs:
         with:
           node-version: '17'
         # Cache node modules to accelerate
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
-      - name: Use yarn cache
+      - name: Get npm cache directory path
+        id: npm-cache-dir-path
+        run: echo "dir=$(npm cache dir)" >> $GITHUB_OUTPUT
+      - name: Use npm cache
         uses: actions/cache@v4
-        id: yarn-cache
+        id: npm-cache
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.npm-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-npm-
       - name: Install dependencies
-        run: yarn install --prefer-offline --frozen-lockfile
+        run: npm ci
       - name: build
-        run: yarn build
+        run: npm build
       - name: Install dependencies for cn
-        run: cd $GITHUB_WORKSPACE/cn/ && yarn install --prefer-offline --frozen-lockfile
+        run: cd $GITHUB_WORKSPACE/cn/ && npm ci
       - name: build for cn
-        run: cd $GITHUB_WORKSPACE/cn/ && yarn build
+        run: cd $GITHUB_WORKSPACE/cn/ && npm run build
       - name: set search all
         run: cd $GITHUB_WORKSPACE/ && python $GITHUB_WORKSPACE/search.py 
       - name: mv file
