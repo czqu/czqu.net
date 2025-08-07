@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>陈子琦的博客</title>
+  
+  <subtitle>行路有良友，便是捷径。</subtitle>
+  <link href="https://czqu.net/atom.xml" rel="self"/>
+  
+  <link href="https://czqu.net/"/>
+  <updated>2024-05-22T16:00:00.000Z</updated>
+  <id>https://czqu.net/</id>
+  
+  <author>
+    <name>陈子琦</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>远程解锁常见问题</title>
+    <link href="https://czqu.net/posts/31496/"/>
+    <id>https://czqu.net/posts/31496/</id>
+    <published>2024-05-22T16:00:00.000Z</published>
+    <updated>2024-05-22T16:00:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;联系我们：&quot;&gt;&lt;a href=&quot;#联系我们：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="远程解锁" scheme="https://czqu.net/categories/%E8%BF%9C%E7%A8%8B%E8%A7%A3%E9%94%81/"/>
+    
+    
+    <category term="远程解锁" scheme="https://czqu.net/tags/%E8%BF%9C%E7%A8%8B%E8%A7%A3%E9%94%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker in Mac在IDEA上无法连接</title>
+    <link href="https://czqu.net/posts/1231995594/"/>
+    <id>https://czqu.net/posts/1231995594/</id>
+    <published>2022-03-14T16:27:14.000Z</published>
+    <updated>2022-03-14T16:27:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;错误信息：Connot connect: java.io.IOException: unexpected end of stream on &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="mac" scheme="https://czqu.net/tags/mac/"/>
+    
+    <category term="docker" scheme="https://czqu.net/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenSSL在Windows和Linux下的编译</title>
+    <link href="https://czqu.net/posts/33090/"/>
+    <id>https://czqu.net/posts/33090/</id>
+    <published>2021-11-13T05:10:11.000Z</published>
+    <updated>2021-11-13T05:10:11.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;具体参见&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="运维" scheme="https://czqu.net/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>esp8266固件的安装</title>
+    <link href="https://czqu.net/posts/3450539282/"/>
+    <id>https://czqu.net/posts/3450539282/</id>
+    <published>2021-10-05T01:25:00.000Z</published>
+    <updated>2021-10-05T01:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;安装驱动&quot;&gt;&lt;a href=&quot;#安装驱动&quot; class=&quot;headerlink&quot; title=&quot;安装驱动&quot;&gt;&lt;/a&gt;安装驱动&lt;/h3&gt;&lt;p&gt;首先需要安装驱动，你需要问问卖给你这个设备的卖家。&lt;/p&gt;
+&lt;h3 id=&quot;安装固件&quot;&gt;&lt;a href=&quot;#安装固件&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="远程解锁" scheme="https://czqu.net/categories/%E8%BF%9C%E7%A8%8B%E8%A7%A3%E9%94%81/"/>
+    
+    
+    <category term="esp8266" scheme="https://czqu.net/tags/esp8266/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CNAME记录指向vercel影响了CAA记录导致的SSL证书无法签发的问题</title>
+    <link href="https://czqu.net/posts/3655275721/"/>
+    <id>https://czqu.net/posts/3655275721/</id>
+    <published>2021-09-30T15:16:00.000Z</published>
+    <updated>2023-03-04T23:36:00.000Z</updated>
+    
+    
+    <summary type="html">CNAME记录指向vercel会影响了CAA记录导致的SSL证书无法签发，导致出现&quot;验证失败，您的CAA配置不允许当前CA为您签发证书，请修改为：symantec.com或digicert.com&quot;的错误</summary>
+    
+    
+    
+    
+    <category term="后端" scheme="https://czqu.net/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="踩坑" scheme="https://czqu.net/tags/%E8%B8%A9%E5%9D%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用ffmpeg将MP4转换成m3u8格式的视频切片</title>
+    <link href="https://czqu.net/posts/823464988/"/>
+    <id>https://czqu.net/posts/823464988/</id>
+    <published>2021-09-30T01:25:00.000Z</published>
+    <updated>2021-09-30T01:25:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-获取ffmpeg&quot;&gt;&lt;a href=&quot;#1-获取ffmpeg&quot; class=&quot;headerlink&quot; title=&quot;1.获取ffmpeg&quot;&gt;&lt;/a&gt;1.获取ffmpeg&lt;/h4&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ffmpeg" scheme="https://czqu.net/tags/ffmpeg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo便捷使用方案</title>
+    <link href="https://czqu.net/posts/1115750794/"/>
+    <id>https://czqu.net/posts/1115750794/</id>
+    <published>2021-09-30T01:15:00.000Z</published>
+    <updated>2021-09-30T01:15:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;1-快速提交&quot;&gt;&lt;a href=&quot;#1-快速提交&quot; class=&quot;headerlink&quot; title=&quot;1.快速提交&quot;&gt;&lt;/a&gt;1.快速提交&lt;/h4&gt;&lt;p&gt;将以下内容保存为bat，然后放置在博客目录下&lt;/p&gt;
+&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    
+    <category term="git" scheme="https://czqu.net/tags/git/"/>
+    
+    <category term="hexo" scheme="https://czqu.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jsDelivr+Github构建自己的免费CDN</title>
+    <link href="https://czqu.net/posts/2220992601/"/>
+    <id>https://czqu.net/posts/2220992601/</id>
+    <published>2021-09-28T14:23:05.000Z</published>
+    <updated>2021-09-28T14:23:05.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;CDN的全称是Content Delivery</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://czqu.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>保存Win10锁屏上的壁纸</title>
+    <link href="https://czqu.net/posts/1037488110/"/>
+    <id>https://czqu.net/posts/1037488110/</id>
+    <published>2021-09-28T11:32:11.000Z</published>
+    <updated>2021-09-28T11:32:11.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt; 前言：一些用win10的同学可能都有这种感觉，win10的锁屏界面图片特别漂亮，但可惜的是不知道怎么将它保存下来，错过的可能再也找不回来了，因此本文将给大家介绍两种方法保存win10锁屏界面的图片。 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="https://czqu.net/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo自定义页面方法</title>
+    <link href="https://czqu.net/posts/2603939427/"/>
+    <id>https://czqu.net/posts/2603939427/</id>
+    <published>2021-09-28T02:05:30.000Z</published>
+    <updated>2021-09-28T02:05:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;网上都是这两种方法，但是会导致网页只有body里面的内容，即hexo处理后有一些标签消失了，这里将介绍&lt;a href=&quot;#%E6%88%91%E7%9A%84%E6%96%B9%E6%A1%88&quot;&gt;第三种方法&lt;/a&gt;解决。&lt;/p&gt;
+&lt;h5</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://czqu.net/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Win10 给 ssh 加上代理</title>
+    <link href="https://czqu.net/posts/3664919065/"/>
+    <id>https://czqu.net/posts/3664919065/</id>
+    <published>2021-09-24T16:27:14.000Z</published>
+    <updated>2021-09-24T16:27:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;直接编辑&lt;code&gt;~/.ssh/config&lt;/code&gt;，没有就创建一个&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="https://czqu.net/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>7zip的编译</title>
+    <link href="https://czqu.net/posts/25908/"/>
+    <id>https://czqu.net/posts/25908/</id>
+    <published>2021-05-17T07:44:32.000Z</published>
+    <updated>2021-05-17T07:44:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;编译7z-dll&quot;&gt;&lt;a href=&quot;#编译7z-dll&quot; class=&quot;headerlink&quot; title=&quot;编译7z.dll&quot;&gt;&lt;/a&gt;编译7z.dll&lt;/h4&gt;&lt;h5 id=&quot;1-下载源代码并打开&quot;&gt;&lt;a href=&quot;#1-下载源代码并打开&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>设置Windows10的默认编码为UTF-8以及设置后的已知问题</title>
+    <link href="https://czqu.net/posts/49861/"/>
+    <id>https://czqu.net/posts/49861/</id>
+    <published>2020-11-28T07:44:32.000Z</published>
+    <updated>2020-11-28T07:44:32.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;设置方法&quot;&gt;&lt;a href=&quot;#设置方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>IDEA docker部署springboot项目</title>
+    <link href="https://czqu.net/posts/27992/"/>
+    <id>https://czqu.net/posts/27992/</id>
+    <published>2020-11-17T02:13:51.000Z</published>
+    <updated>2020-11-17T02:13:51.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、docker服务器侧监听配置&quot;&gt;&lt;a href=&quot;#一、docker服务器侧监听配置&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="后端" scheme="https://czqu.net/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="springboot" scheme="https://czqu.net/tags/springboot/"/>
+    
+    <category term="java" scheme="https://czqu.net/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springboot学习笔记</title>
+    <link href="https://czqu.net/posts/59173/"/>
+    <id>https://czqu.net/posts/59173/</id>
+    <published>2020-11-17T01:51:06.000Z</published>
+    <updated>2020-11-17T01:51:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一、Spring-Boot-入门&quot;&gt;&lt;a href=&quot;#一、Spring-Boot-入门&quot; class=&quot;headerlink&quot; title=&quot;一、Spring Boot 入门&quot;&gt;&lt;/a&gt;&lt;strong&gt;一、&lt;/strong&gt;Spring Boot</summary>
+        
+      
+    
+    
+    
+    
+    <category term="后端" scheme="https://czqu.net/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+    <category term="springboot" scheme="https://czqu.net/tags/springboot/"/>
+    
+    <category term="java" scheme="https://czqu.net/tags/java/"/>
+    
+    <category term="spring" scheme="https://czqu.net/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>给你的Powershell做一个“sudo”</title>
+    <link href="https://czqu.net/posts/58638/"/>
+    <id>https://czqu.net/posts/58638/</id>
+    <published>2020-11-14T09:23:48.000Z</published>
+    <updated>2020-11-14T09:23:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="https://czqu.net/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github+docker+阿里云 自动部署</title>
+    <link href="https://czqu.net/posts/35865/"/>
+    <id>https://czqu.net/posts/35865/</id>
+    <published>2020-11-14T03:08:16.000Z</published>
+    <updated>2020-11-14T03:08:16.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;等待更新&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>本站从即日起全面启用全站网页压缩</title>
+    <link href="https://czqu.net/posts/5772/"/>
+    <id>https://czqu.net/posts/5772/</id>
+    <published>2020-11-13T09:01:18.000Z</published>
+    <updated>2020-11-13T09:01:18.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要压缩页面静态资源&quot;&gt;&lt;a href=&quot;#为什么要压缩页面静态资源&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="运维" scheme="https://czqu.net/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="前端" scheme="https://czqu.net/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux内核模块编程小例子之查看虚拟内存VMA(virtual memory areas）信息</title>
+    <link href="https://czqu.net/posts/33535/"/>
+    <id>https://czqu.net/posts/33535/</id>
+    <published>2020-11-13T07:49:03.000Z</published>
+    <updated>2020-11-13T07:49:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;前言：&lt;/p&gt;
+&lt;p&gt;在 32 位的系统上，线性地址空间为 4GB，其中用户进程占有 3GB 线性地址空间，内核占有 1GB 线性地址空间。由于虚拟内存的引入，使的每个进程都可拥有 3GB</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://czqu.net/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>联想 Lenovo Tab3 10 Business TB3-X70F （国际版）线刷</title>
+    <link href="https://czqu.net/posts/13741/"/>
+    <id>https://czqu.net/posts/13741/</id>
+    <published>2020-11-13T07:45:55.000Z</published>
+    <updated>2020-11-13T07:45:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文介绍将联想 Lenovo Tab3 10 Business TB3-X70F 刷成国际版的方法，或者可用此方法破解学习平板定制机&lt;/p&gt;
+&lt;h3 id=&quot;中文&quot;&gt;&lt;a href=&quot;#中文&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="运维" scheme="https://czqu.net/tags/%E8%BF%90%E7%BB%B4/"/>
+    
+    <category term="刷机" scheme="https://czqu.net/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+  </entry>
+  
+</feed>
