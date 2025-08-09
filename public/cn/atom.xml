@@ -86,9 +86,9 @@
     
     
     
-    <category term="后端" scheme="https://czqu.net/tags/%E5%90%8E%E7%AB%AF/"/>
-    
     <category term="Java" scheme="https://czqu.net/tags/Java/"/>
+    
+    <category term="后端" scheme="https://czqu.net/tags/%E5%90%8E%E7%AB%AF/"/>
     
     <category term="Spring" scheme="https://czqu.net/tags/Spring/"/>
     
@@ -115,11 +115,11 @@
     
     
     
-    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
-    
     <category term="基础" scheme="https://czqu.net/tags/%E5%9F%BA%E7%A1%80/"/>
     
     <category term="Jvm" scheme="https://czqu.net/tags/Jvm/"/>
+    
+    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
     
     <category term="泛型" scheme="https://czqu.net/tags/%E6%B3%9B%E5%9E%8B/"/>
     
