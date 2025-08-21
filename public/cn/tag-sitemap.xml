@@ -4,7 +4,7 @@
 
     <url>
         <loc>https://czqu.net/tags/%E8%BF%9C%E7%A8%8B%E8%A7%A3%E9%94%81/</loc>
-        <lastmod>2025-08-21T17:39:39.363Z</lastmod>
+        <lastmod>2025-08-21T18:11:48.983Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -12,55 +12,6 @@
     <url>
         <loc>https://czqu.net/tags/Esp8266/</loc>
         <lastmod>2021-10-05T01:25:00.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/SpringBoot/</loc>
-        <lastmod>2020-11-17T01:51:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/Spring/</loc>
-        <lastmod>2020-11-17T01:51:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/%E5%90%8E%E7%AB%AF/</loc>
-        <lastmod>2020-11-17T01:51:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/Java/</loc>
-        <lastmod>2020-11-17T01:51:06.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/%E6%B3%9B%E5%9E%8B/</loc>
-        <lastmod>2020-08-06T08:13:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/Jvm/</loc>
-        <lastmod>2020-08-06T08:13:10.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://czqu.net/tags/%E5%9F%BA%E7%A1%80/</loc>
-        <lastmod>2020-08-06T08:13:10.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
