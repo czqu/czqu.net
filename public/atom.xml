@@ -1,302 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Czq&#39;s Blog</title>
-  
-  <subtitle>Praising suffering because of incompetence.</subtitle>
-  <link href="https://czqu.net/atom.xml" rel="self"/>
-  
-  <link href="https://czqu.net/"/>
-  <updated>2025-08-28T18:39:25.595Z</updated>
-  <id>https://czqu.net/</id>
-  
   <author>
     <name>czqu</name>
-    
   </author>
-  
   <generator uri="https://hexo.io/">Hexo</generator>
-  
+  <id>https://czqu.net/</id>
+  <link href="https://czqu.net/" rel="alternate"/>
+  <link href="https://czqu.net/atom.xml" rel="self"/>
+  <rights>All rights reserved 2026, czqu</rights>
+  <subtitle>Praising suffering because of incompetence.</subtitle>
+  <title>Czq's Blog</title>
+  <updated>2026-04-01T13:07:00.134Z</updated>
   <entry>
-    <title>RemoteFingerUnlock FAQ</title>
-    <link href="https://czqu.net/posts/31496/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="RemoteFingerUnlock" scheme="https://czqu.net/categories/RemoteFingerUnlock/"/>
+    <category term="RemoteFingerUnlock" scheme="https://czqu.net/tags/RemoteFingerUnlock/"/>
     <id>https://czqu.net/posts/31496/</id>
-    <published>2025-08-28T18:39:25.595Z</published>
-    <updated>2025-08-28T18:39:25.595Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Contact-Us&quot;&gt;&lt;a href=&quot;#Contact-Us&quot; class=&quot;headerlink&quot; title=&quot;Contact Us:&quot;&gt;&lt;/a&gt;Contact Us:&lt;/h3&gt;&lt;p&gt;Discord:  &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="RemoteFingerUnlock" scheme="https://czqu.net/categories/RemoteFingerUnlock/"/>
-    
-    
-    <category term="RemoteFingerUnlock" scheme="https://czqu.net/tags/RemoteFingerUnlock/"/>
-    
+    <link href="https://czqu.net/posts/31496/"/>
+    <published>2026-04-01T13:07:00.134Z</published>
+    <summary>
+      <![CDATA[<h3 id="Contact-Us"><a href="#Contact-Us" class="headerlink" title="Contact Us:"></a>Contact Us:</h3><p>Discord:  <a]]>
+    </summary>
+    <title>RemoteFingerUnlock FAQ</title>
+    <updated>2026-04-01T13:07:00.134Z</updated>
   </entry>
-  
   <entry>
-    <title>RemoteFingerUnlock API Documentation</title>
-    <link href="https://czqu.net/posts/2167915263/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="RemoteFingerUnlock" scheme="https://czqu.net/categories/RemoteFingerUnlock/"/>
+    <category term="RemoteFingerUnlock" scheme="https://czqu.net/tags/RemoteFingerUnlock/"/>
     <id>https://czqu.net/posts/2167915263/</id>
+    <link href="https://czqu.net/posts/2167915263/"/>
     <published>2025-08-21T22:14:19.000Z</published>
+    <summary>
+      <![CDATA[<h1 id="Remote-Unlock-API-Documentation"><a href="#Remote-Unlock-API-Documentation" class="headerlink" title="Remote Unlock  API]]>
+    </summary>
+    <title>RemoteFingerUnlock API Documentation</title>
     <updated>2025-08-21T22:14:19.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Remote-Unlock-API-Documentation&quot;&gt;&lt;a href=&quot;#Remote-Unlock-API-Documentation&quot; class=&quot;headerlink&quot; title=&quot;Remote Unlock  API</summary>
-        
-      
-    
-    
-    
-    <category term="RemoteFingerUnlock" scheme="https://czqu.net/categories/RemoteFingerUnlock/"/>
-    
-    
-    <category term="RemoteFingerUnlock" scheme="https://czqu.net/tags/RemoteFingerUnlock/"/>
-    
   </entry>
-  
   <entry>
-    <title>How to Install a Specific Version of Docker on CentOS</title>
-    <link href="https://czqu.net/posts/3776602279/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
     <id>https://czqu.net/posts/3776602279/</id>
+    <link href="https://czqu.net/posts/3776602279/"/>
     <published>2023-05-02T21:02:00.000Z</published>
+    <summary>How to Install a Specific Version of Docker on CentOS</summary>
+    <title>How to Install a Specific Version of Docker on CentOS</title>
     <updated>2023-05-03T09:02:00.000Z</updated>
-    
-    
-    <summary type="html">How to Install a Specific Version of Docker on CentOS</summary>
-    
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
   </entry>
-  
   <entry>
-    <title>How to Get Log4j Log File Path in Java</title>
-    <link href="https://czqu.net/posts/735037507/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
+    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
     <id>https://czqu.net/posts/735037507/</id>
+    <link href="https://czqu.net/posts/735037507/"/>
     <published>2023-03-20T22:02:00.000Z</published>
+    <summary>How to Get Log4j Log File Path in Java</summary>
+    <title>How to Get Log4j Log File Path in Java</title>
     <updated>2023-03-20T22:02:00.000Z</updated>
-    
-    
-    <summary type="html">How to Get Log4j Log File Path in Java</summary>
-    
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
-    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
-    
   </entry>
-  
   <entry>
-    <title>How to Execute JavaScript Code and Functions in Java</title>
-    <link href="https://czqu.net/posts/2250085940/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
+    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
     <id>https://czqu.net/posts/2250085940/</id>
+    <link href="https://czqu.net/posts/2250085940/"/>
     <published>2023-03-16T12:38:00.000Z</published>
+    <summary>How to Execute JavaScript Code and Functions in Java</summary>
+    <title>How to Execute JavaScript Code and Functions in Java</title>
     <updated>2023-03-16T12:38:00.000Z</updated>
-    
-    
-    <summary type="html">How to Execute JavaScript Code and Functions in Java</summary>
-    
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
-    <category term="Java" scheme="https://czqu.net/tags/Java/"/>
-    
   </entry>
-  
   <entry>
-    <title>How to make braised pork trotters</title>
-    <link href="https://czqu.net/posts/1037676127/"/>
-    <id>https://czqu.net/posts/1037676127/</id>
-    <published>2023-03-12T09:18:00.000Z</published>
-    <updated>2023-03-12T09:18:00.000Z</updated>
-    
-    
-    <summary type="html">How to make braised pork trotters</summary>
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="Recipe" scheme="https://czqu.net/categories/Recipe/"/>
-    
-    
     <category term="Life" scheme="https://czqu.net/tags/Life/"/>
-    
     <category term="Recipe" scheme="https://czqu.net/tags/Recipe/"/>
-    
+    <id>https://czqu.net/posts/1037676127/</id>
+    <link href="https://czqu.net/posts/1037676127/"/>
+    <published>2023-03-12T09:18:00.000Z</published>
+    <summary>How to make braised pork trotters</summary>
+    <title>How to make braised pork trotters</title>
+    <updated>2023-03-12T09:18:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>How to Retrieve User Addresses in a Spring Boot Application</title>
-    <link href="https://czqu.net/posts/1268933518/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
     <id>https://czqu.net/posts/1268933518/</id>
+    <link href="https://czqu.net/posts/1268933518/"/>
     <published>2023-03-04T12:14:00.000Z</published>
+    <summary>This blog post covers how to retrieve the current request context and user IP addresses in a Spring Boot application, providing useful information for logging and security purposes.</summary>
+    <title>How to Retrieve User Addresses in a Spring Boot Application</title>
     <updated>2023-03-04T12:14:00.000Z</updated>
-    
-    
-    <summary type="html">This blog post covers how to retrieve the current request context and user IP addresses in a Spring Boot application, providing useful information for logging and security purposes.</summary>
-    
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
   </entry>
-  
   <entry>
-    <title>Java Thread Context: How to Determine Whether You&#39;re in a Request Context</title>
-    <link href="https://czqu.net/posts/2685105031/"/>
+    <author>
+      <name>czqu</name>
+    </author>
+    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
+    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
+    <category term="Trap" scheme="https://czqu.net/tags/Trap/"/>
     <id>https://czqu.net/posts/2685105031/</id>
+    <link href="https://czqu.net/posts/2685105031/"/>
     <published>2023-03-04T11:14:00.000Z</published>
+    <summary>Java Thread Context: How to Determine Whether You're in a Request Context.</summary>
+    <title>Java Thread Context: How to Determine Whether You're in a Request Context</title>
     <updated>2023-03-04T11:14:00.000Z</updated>
-    
-    
-    <summary type="html">Java Thread Context: How to Determine Whether You&#39;re in a Request Context.</summary>
-    
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/categories/Backend-Development/"/>
-    
-    
-    <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
-    <category term="Trap" scheme="https://czqu.net/tags/Trap/"/>
-    
   </entry>
-  
   <entry>
-    <title>Wireshark Basic Usage</title>
-    <link href="https://czqu.net/posts/20069/"/>
-    <id>https://czqu.net/posts/20069/</id>
-    <published>2023-03-04T00:56:00.000Z</published>
-    <updated>2023-03-04T00:56:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一、Introduction&quot;&gt;&lt;a href=&quot;#一、Introduction&quot; class=&quot;headerlink&quot; title=&quot;一、Introduction&quot;&gt;&lt;/a&gt;一、Introduction&lt;/h2&gt;&lt;p&gt;Wireshark is</summary>
-        
-      
-    
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="Information Security" scheme="https://czqu.net/tags/Information-Security/"/>
-    
+    <id>https://czqu.net/posts/20069/</id>
+    <link href="https://czqu.net/posts/20069/"/>
+    <published>2023-03-04T00:56:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="一、Introduction"><a href="#一、Introduction" class="headerlink" title="一、Introduction"></a>一、Introduction</h2><p>Wireshark is]]>
+    </summary>
+    <title>Wireshark Basic Usage</title>
+    <updated>2023-03-04T00:56:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</title>
-    <link href="https://czqu.net/posts/3655275721/"/>
-    <id>https://czqu.net/posts/3655275721/</id>
-    <published>2023-03-04T00:14:00.000Z</published>
-    <updated>2023-03-05T07:36:00.000Z</updated>
-    
-    
-    <summary type="html">The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</summary>
-    
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="Backend Development" scheme="https://czqu.net/tags/Backend-Development/"/>
-    
     <category term="Trap" scheme="https://czqu.net/tags/Trap/"/>
-    
+    <id>https://czqu.net/posts/3655275721/</id>
+    <link href="https://czqu.net/posts/3655275721/"/>
+    <published>2023-03-04T00:14:00.000Z</published>
+    <summary>The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message 'Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com'.</summary>
+    <title>The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</title>
+    <updated>2023-03-05T07:36:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
-    <link href="https://czqu.net/posts/56389/"/>
-    <id>https://czqu.net/posts/56389/</id>
-    <published>2023-03-03T10:00:00.000Z</published>
-    <updated>2023-03-03T10:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt; If you’re experiencing an</summary>
-        
-      
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="Life Hacks" scheme="https://czqu.net/categories/Life-Hacks/"/>
-    
-    
     <category term="Life Hacks" scheme="https://czqu.net/tags/Life-Hacks/"/>
-    
+    <id>https://czqu.net/posts/56389/</id>
+    <link href="https://czqu.net/posts/56389/"/>
+    <published>2023-03-03T10:00:00.000Z</published>
+    <summary>
+      <![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p> If you’re experiencing an]]>
+    </summary>
+    <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
+    <updated>2023-03-03T10:00:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>LeetCode 46. Permutations</title>
-    <link href="https://czqu.net/posts/3587124311/"/>
-    <id>https://czqu.net/posts/3587124311/</id>
-    <published>2023-03-01T23:16:00.000Z</published>
-    <updated>2023-03-01T23:16:00.000Z</updated>
-    
-    
-    <summary type="html">LeetCode 46. Permutations</summary>
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="LeetCode" scheme="https://czqu.net/categories/LeetCode/"/>
-    
-    
     <category term="Java" scheme="https://czqu.net/tags/Java/"/>
-    
     <category term="LeetCode" scheme="https://czqu.net/tags/LeetCode/"/>
-    
+    <id>https://czqu.net/posts/3587124311/</id>
+    <link href="https://czqu.net/posts/3587124311/"/>
+    <published>2023-03-01T23:16:00.000Z</published>
+    <summary>LeetCode 46. Permutations</summary>
+    <title>LeetCode 46. Permutations</title>
+    <updated>2023-03-01T23:16:00.000Z</updated>
   </entry>
-  
   <entry>
-    <title>Solutions to exercises and projects in the textbook C Programming: A Modern Approach, 2nd Edition</title>
-    <link href="https://czqu.net/posts/28638/"/>
-    <id>https://czqu.net/posts/28638/</id>
-    <published>2020-11-13T12:46:33.000Z</published>
-    <updated>2020-11-13T12:46:33.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Chapter-2&quot;&gt;&lt;a href=&quot;#Chapter-2&quot; class=&quot;headerlink&quot; title=&quot;Chapter 2&quot;&gt;&lt;/a&gt;Chapter 2&lt;/h3&gt;&lt;h4 id=&quot;Answers-to-Selected-Exercises&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
+    <author>
+      <name>czqu</name>
+    </author>
     <category term="C" scheme="https://czqu.net/tags/C/"/>
-    
+    <id>https://czqu.net/posts/28638/</id>
+    <link href="https://czqu.net/posts/28638/"/>
+    <published>2020-11-13T12:46:33.000Z</published>
+    <summary>
+      <![CDATA[<h3 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h3><h4 id="Answers-to-Selected-Exercises"><a]]>
+    </summary>
+    <title>Solutions to exercises and projects in the textbook C Programming: A Modern Approach, 2nd Edition</title>
+    <updated>2020-11-13T12:46:33.000Z</updated>
   </entry>
-  
 </feed>

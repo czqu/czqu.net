@@ -1,325 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"
-  xmlns:atom="http://www.w3.org/2005/Atom"
-  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Czq&#39;s Blog</title>
+    <title>Czq's Blog</title>
     <link>https://czqu.net/</link>
-    
-    <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
-    
     <description>Praising suffering because of incompetence.</description>
-    <pubDate>Thu, 28 Aug 2025 18:39:25 GMT</pubDate>
-    <generator>http://hexo.io/</generator>
-    
+    <language>en</language>
+    <copyright>All rights reserved 2026, czqu</copyright>
+    <lastBuildDate>Wed, 01 Apr 2026 13:07:00 GMT</lastBuildDate>
+    <generator>Hexo</generator>
+    <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>RemoteFingerUnlock FAQ</title>
       <link>https://czqu.net/posts/31496/</link>
-      <guid>https://czqu.net/posts/31496/</guid>
-      <pubDate>Thu, 28 Aug 2025 18:39:25 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h3 id=&quot;Contact-Us&quot;&gt;&lt;a href=&quot;#Contact-Us&quot; class=&quot;headerlink&quot; title=&quot;Contact Us:&quot;&gt;&lt;/a&gt;Contact Us:&lt;/h3&gt;&lt;p&gt;Discord:  &lt;a</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h3 id="Contact-Us"><a href="#Contact-Us" class="headerlink" title="Contact Us:"></a>Contact Us:</h3><p>Discord:  <a]]>
+      </description>
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/RemoteFingerUnlock/">RemoteFingerUnlock</category>
-      
-      
       <category domain="https://czqu.net/tags/RemoteFingerUnlock/">RemoteFingerUnlock</category>
-      
-      
-      <comments>https://czqu.net/posts/31496/#disqus_thread</comments>
-      
+      <pubDate>Wed, 01 Apr 2026 13:07:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>RemoteFingerUnlock API Documentation</title>
       <link>https://czqu.net/posts/2167915263/</link>
-      <guid>https://czqu.net/posts/2167915263/</guid>
-      <pubDate>Thu, 21 Aug 2025 22:14:19 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h1 id=&quot;Remote-Unlock-API-Documentation&quot;&gt;&lt;a href=&quot;#Remote-Unlock-API-Documentation&quot; class=&quot;headerlink&quot; title=&quot;Remote Unlock  API</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h1 id="Remote-Unlock-API-Documentation"><a href="#Remote-Unlock-API-Documentation" class="headerlink" title="Remote Unlock  API]]>
+      </description>
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/RemoteFingerUnlock/">RemoteFingerUnlock</category>
-      
-      
       <category domain="https://czqu.net/tags/RemoteFingerUnlock/">RemoteFingerUnlock</category>
-      
-      
-      <comments>https://czqu.net/posts/2167915263/#disqus_thread</comments>
-      
+      <pubDate>Thu, 21 Aug 2025 22:14:19 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to Install a Specific Version of Docker on CentOS</title>
       <link>https://czqu.net/posts/3776602279/</link>
-      <guid>https://czqu.net/posts/3776602279/</guid>
-      <pubDate>Tue, 02 May 2023 21:02:00 GMT</pubDate>
-      
       <description>How to Install a Specific Version of Docker on CentOS</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
-      
-      
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
-      
-      <comments>https://czqu.net/posts/3776602279/#disqus_thread</comments>
-      
+      <pubDate>Tue, 02 May 2023 21:02:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to Get Log4j Log File Path in Java</title>
       <link>https://czqu.net/posts/735037507/</link>
-      <guid>https://czqu.net/posts/735037507/</guid>
-      <pubDate>Mon, 20 Mar 2023 22:02:00 GMT</pubDate>
-      
       <description>How to Get Log4j Log File Path in Java</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
-      
-      
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
       <category domain="https://czqu.net/tags/Java/">Java</category>
-      
-      
-      <comments>https://czqu.net/posts/735037507/#disqus_thread</comments>
-      
+      <pubDate>Mon, 20 Mar 2023 22:02:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to Execute JavaScript Code and Functions in Java</title>
       <link>https://czqu.net/posts/2250085940/</link>
-      <guid>https://czqu.net/posts/2250085940/</guid>
-      <pubDate>Thu, 16 Mar 2023 12:38:00 GMT</pubDate>
-      
       <description>How to Execute JavaScript Code and Functions in Java</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
-      
-      
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
       <category domain="https://czqu.net/tags/Java/">Java</category>
-      
-      
-      <comments>https://czqu.net/posts/2250085940/#disqus_thread</comments>
-      
+      <pubDate>Thu, 16 Mar 2023 12:38:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to make braised pork trotters</title>
       <link>https://czqu.net/posts/1037676127/</link>
-      <guid>https://czqu.net/posts/1037676127/</guid>
-      <pubDate>Sun, 12 Mar 2023 09:18:00 GMT</pubDate>
-      
       <description>How to make braised pork trotters</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Recipe/">Recipe</category>
-      
-      
       <category domain="https://czqu.net/tags/Life/">Life</category>
-      
       <category domain="https://czqu.net/tags/Recipe/">Recipe</category>
-      
-      
-      <comments>https://czqu.net/posts/1037676127/#disqus_thread</comments>
-      
+      <pubDate>Sun, 12 Mar 2023 09:18:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to Retrieve User Addresses in a Spring Boot Application</title>
       <link>https://czqu.net/posts/1268933518/</link>
-      <guid>https://czqu.net/posts/1268933518/</guid>
-      <pubDate>Sat, 04 Mar 2023 12:14:00 GMT</pubDate>
-      
       <description>This blog post covers how to retrieve the current request context and user IP addresses in a Spring Boot application, providing useful information for logging and security purposes.</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
-      
-      
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
-      
-      <comments>https://czqu.net/posts/1268933518/#disqus_thread</comments>
-      
+      <pubDate>Sat, 04 Mar 2023 12:14:00 GMT</pubDate>
     </item>
-    
     <item>
-      <title>Java Thread Context: How to Determine Whether You&#39;re in a Request Context</title>
+      <title>Java Thread Context: How to Determine Whether You're in a Request Context</title>
       <link>https://czqu.net/posts/2685105031/</link>
-      <guid>https://czqu.net/posts/2685105031/</guid>
-      <pubDate>Sat, 04 Mar 2023 11:14:00 GMT</pubDate>
-      
-      <description>Java Thread Context: How to Determine Whether You&#39;re in a Request Context.</description>
-      
-      
-      
-      
+      <description>Java Thread Context: How to Determine Whether You're in a Request Context.</description>
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Backend-Development/">Backend Development</category>
-      
-      
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
       <category domain="https://czqu.net/tags/Trap/">Trap</category>
-      
-      
-      <comments>https://czqu.net/posts/2685105031/#disqus_thread</comments>
-      
+      <pubDate>Sat, 04 Mar 2023 11:14:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>Wireshark Basic Usage</title>
       <link>https://czqu.net/posts/20069/</link>
-      <guid>https://czqu.net/posts/20069/</guid>
-      <pubDate>Sat, 04 Mar 2023 00:56:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;一、Introduction&quot;&gt;&lt;a href=&quot;#一、Introduction&quot; class=&quot;headerlink&quot; title=&quot;一、Introduction&quot;&gt;&lt;/a&gt;一、Introduction&lt;/h2&gt;&lt;p&gt;Wireshark is</description>
-          
-        
-      
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h2 id="一、Introduction"><a href="#一、Introduction" class="headerlink" title="一、Introduction"></a>一、Introduction</h2><p>Wireshark is]]>
+      </description>
+      <author>czqu</author>
       <category domain="https://czqu.net/tags/Information-Security/">Information Security</category>
-      
-      
-      <comments>https://czqu.net/posts/20069/#disqus_thread</comments>
-      
+      <pubDate>Sat, 04 Mar 2023 00:56:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>The issue of SSL certificate being unable to issue due to the CNAME record pointing to Vercel affecting the CAA record.</title>
       <link>https://czqu.net/posts/3655275721/</link>
-      <guid>https://czqu.net/posts/3655275721/</guid>
-      <pubDate>Sat, 04 Mar 2023 00:14:00 GMT</pubDate>
-      
-      <description>The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message &#39;Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com&#39;.</description>
-      
-      
-      
-      
-      
+      <description>The CNAME record pointing to Vercel affected the CAA record, resulting in the inability to issue SSL certificates, causing the error message 'Verification failed, your CAA configuration does not allow the current CA to issue certificates for you, please modify to: symantec.com or digicert.com'.</description>
+      <author>czqu</author>
       <category domain="https://czqu.net/tags/Backend-Development/">Backend Development</category>
-      
       <category domain="https://czqu.net/tags/Trap/">Trap</category>
-      
-      
-      <comments>https://czqu.net/posts/3655275721/#disqus_thread</comments>
-      
+      <pubDate>Sat, 04 Mar 2023 00:14:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>How to Fix Redmi Bluetooth Earphones with One-Sided Sound Issue</title>
       <link>https://czqu.net/posts/56389/</link>
-      <guid>https://czqu.net/posts/56389/</guid>
-      <pubDate>Fri, 03 Mar 2023 10:00:00 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h2 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h2&gt;&lt;p&gt; If you’re experiencing an</description>
-          
-        
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p> If you’re experiencing an]]>
+      </description>
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/Life-Hacks/">Life Hacks</category>
-      
-      
       <category domain="https://czqu.net/tags/Life-Hacks/">Life Hacks</category>
-      
-      
-      <comments>https://czqu.net/posts/56389/#disqus_thread</comments>
-      
+      <pubDate>Fri, 03 Mar 2023 10:00:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>LeetCode 46. Permutations</title>
       <link>https://czqu.net/posts/3587124311/</link>
-      <guid>https://czqu.net/posts/3587124311/</guid>
-      <pubDate>Wed, 01 Mar 2023 23:16:00 GMT</pubDate>
-      
       <description>LeetCode 46. Permutations</description>
-      
-      
-      
-      
+      <author>czqu</author>
       <category domain="https://czqu.net/categories/LeetCode/">LeetCode</category>
-      
-      
       <category domain="https://czqu.net/tags/Java/">Java</category>
-      
       <category domain="https://czqu.net/tags/LeetCode/">LeetCode</category>
-      
-      
-      <comments>https://czqu.net/posts/3587124311/#disqus_thread</comments>
-      
+      <pubDate>Wed, 01 Mar 2023 23:16:00 GMT</pubDate>
     </item>
-    
     <item>
       <title>Solutions to exercises and projects in the textbook C Programming: A Modern Approach, 2nd Edition</title>
       <link>https://czqu.net/posts/28638/</link>
-      <guid>https://czqu.net/posts/28638/</guid>
-      <pubDate>Fri, 13 Nov 2020 12:46:33 GMT</pubDate>
-      
-        
-        
-          
-          
-      <description>&lt;h3 id=&quot;Chapter-2&quot;&gt;&lt;a href=&quot;#Chapter-2&quot; class=&quot;headerlink&quot; title=&quot;Chapter 2&quot;&gt;&lt;/a&gt;Chapter 2&lt;/h3&gt;&lt;h4 id=&quot;Answers-to-Selected-Exercises&quot;&gt;&lt;a</description>
-          
-        
-      
-      
-      
-      
-      
+      <description>
+        <![CDATA[<h3 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h3><h4 id="Answers-to-Selected-Exercises"><a]]>
+      </description>
+      <author>czqu</author>
       <category domain="https://czqu.net/tags/C/">C</category>
-      
-      
-      <comments>https://czqu.net/posts/28638/#disqus_thread</comments>
-      
+      <pubDate>Fri, 13 Nov 2020 12:46:33 GMT</pubDate>
     </item>
-    
   </channel>
 </rss>
