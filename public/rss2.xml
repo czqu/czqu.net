@@ -6,7 +6,7 @@
     <description>Praising suffering because of incompetence.</description>
     <language>en</language>
     <copyright>All rights reserved 2026, czqu</copyright>
-    <lastBuildDate>Wed, 01 Apr 2026 13:07:00 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 01 Apr 2026 14:31:28 GMT</lastBuildDate>
     <generator>Hexo</generator>
     <atom:link href="https://czqu.net/rss2.xml" rel="self" type="application/rss+xml"/>
     <item>
@@ -18,7 +18,7 @@
       <author>czqu</author>
       <category domain="https://czqu.net/categories/RemoteFingerUnlock/">RemoteFingerUnlock</category>
       <category domain="https://czqu.net/tags/RemoteFingerUnlock/">RemoteFingerUnlock</category>
-      <pubDate>Wed, 01 Apr 2026 13:07:00 GMT</pubDate>
+      <pubDate>Wed, 01 Apr 2026 14:31:28 GMT</pubDate>
     </item>
     <item>
       <title>RemoteFingerUnlock API Documentation</title>
@@ -125,8 +125,8 @@
       <description>LeetCode 46. Permutations</description>
       <author>czqu</author>
       <category domain="https://czqu.net/categories/LeetCode/">LeetCode</category>
-      <category domain="https://czqu.net/tags/Java/">Java</category>
       <category domain="https://czqu.net/tags/LeetCode/">LeetCode</category>
+      <category domain="https://czqu.net/tags/Java/">Java</category>
       <pubDate>Wed, 01 Mar 2023 23:16:00 GMT</pubDate>
     </item>
     <item>
