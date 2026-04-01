@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: set python 
-        uses: actions/setup-python@v4 
+        uses: actions/setup-python@v6
         with:
           python-version: 'pypy3.9' 
       - name: Checkout source
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         with:
           repository: ${{ secrets.GH_SOURCE }}
           token: ${{ secrets.GH_TOKEN }} # `GH_TOKEN` is a secret that contains your PAT
@@ -23,7 +23,7 @@ jobs:
       - name: move file
         run:  mv -f $GITHUB_WORKSPACE/_source/*  $GITHUB_WORKSPACE 
       - name: Set Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v6
         with:
           node-version: '22.18'
         # Cache node modules to accelerate
@@ -31,7 +31,7 @@ jobs:
         id: npm-cache-dir-path
         run: echo "dir=$(npm config get cache)" >> ${GITHUB_OUTPUT}
       - name: Use npm cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         id: npm-cache
         with:
           path: ${{ steps.npm-cache-dir-path.outputs.dir }}
@@ -62,7 +62,7 @@ jobs:
         run: cp -r -f ~/_the_next/* $GITHUB_WORKSPACE/public 
       - name: Import GPG key
         id: import_gpg
-        uses: crazy-max/ghaction-import-gpg@v5
+        uses: crazy-max/ghaction-import-gpg@v7
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
@@ -76,7 +76,7 @@ jobs:
           git add .
           git commit -m "build new html" 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: ad-m/github-push-action@v1.0.0
         env:
           TOKEN: ${{ secrets.GH_TOKEN }}
         with:
